@@ -1,12 +1,9 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import { StatusBar } from 'react-native';
 import SplashScreen from './src/screens/Splash'
 import ProductInformation from './src/screens/ProductInformation'
 import Home from './src/screens/Home'
+import Profile from './src/screens/Profile'
 import { AppFooter } from './src/Components/CommonComponets/FooterContent'
 
 export default App = () => {
@@ -15,7 +12,8 @@ export default App = () => {
       <StatusBar backgroundColor="white" barStyle="dark-content" />
       {/* <SplashScreen /> */}
       {/* <ProductInformation /> */}
-      <Home />
+      {/* <Home /> */}
+      <Profile />
     <AppFooter />
     </>
   );
