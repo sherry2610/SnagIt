@@ -6,17 +6,16 @@ import {
 } from 'react-native';
 import SplashScreen from './src/screens/Splash'
 import ProductInformation from './src/screens/ProductInformation'
+import Home from './src/screens/Home'
 import { AppFooter } from './src/Components/CommonComponets/FooterContent'
 
 export default App = () => {
   return (
     <>
-    <View>
       <StatusBar backgroundColor="white" barStyle="dark-content" />
       {/* <SplashScreen /> */}
-      <ProductInformation />
-        
-    </View>
+      {/* <ProductInformation /> */}
+      <Home />
     <AppFooter />
     </>
   );

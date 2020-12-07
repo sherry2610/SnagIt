@@ -4,7 +4,6 @@ export const Footer = styled.View`
   position: absolute;
   width: 100%;
   height: 48px;
-  left: 0px;
   bottom: 0px;
   background: #FFFFFF;
 `
