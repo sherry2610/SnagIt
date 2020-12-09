@@ -5,6 +5,7 @@ import ProductInformation from './src/screens/ProductInformation'
 import Home from './src/screens/Home'
 import Profile from './src/screens/Profile'
 import EditProfile from './src/screens/EditProfile'
+import ChangePassword from './src/screens/ChangePassword'
 import { AppFooter } from './src/Components/CommonComponets/FooterContent'
 
 export default App = () => {
@@ -15,7 +16,8 @@ export default App = () => {
       {/* <ProductInformation /> */}
       {/* <Home /> */}
       {/* <Profile /> */}
-      <EditProfile />
+      {/* <EditProfile /> */}
+      <ChangePassword />
     <AppFooter />
     </>
   );
