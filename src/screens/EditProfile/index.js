@@ -26,13 +26,15 @@ const EditProfile = () => {
 
   return (
     <EditProfileWrapper
-      contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}}>
+      contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}}
+      showsVerticalScrollIndicator={false}
+      >
       <ExitButton source={skipIcon} />
 
       <EditProfileContent behavior="padding">
         <EditProfileHeading>Edit Your Account</EditProfileHeading>
         <InputWrapper>
-          {firstNameFocus && <Legend>First Name</Legend>}
+          {firstNameFocus && <Legend widthValue='70px' >First Name</Legend>}
 
           <FirstNameInput
             placeholder="Jonithan"
@@ -44,7 +46,7 @@ const EditProfile = () => {
         </InputWrapper>
 
         <InputWrapper>
-          {lastNameFocus && <Legend>Last Name</Legend>}
+          {lastNameFocus && <Legend widthValue='70px' >Last Name</Legend>}
           <LastNameInput
             placeholder="Davis"
             onFocus={() => setLastNameFocus(true)}
@@ -55,7 +57,7 @@ const EditProfile = () => {
         </InputWrapper>
 
         <InputWrapper>
-          {emailFocus && <Legend>Email</Legend>}
+          {emailFocus && <Legend widthValue='40px' >Email</Legend>}
           <EmailInput
             placeholder="jonithan123@gmail.com"
             onFocus={() => setEmailFocus(true)}
@@ -66,7 +68,7 @@ const EditProfile = () => {
         </InputWrapper>
 
         <InputWrapper>
-          {phoneFocus && <Legend>Phone</Legend>}
+          {phoneFocus && <Legend widthValue='40px' >Phone</Legend>}
           <PhoneInput
             placeholder="123-321-1234"
             onFocus={() => setPhoneFocus(true)}

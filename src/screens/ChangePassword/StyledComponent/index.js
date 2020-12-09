@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const EditProfileWrapper = styled.ScrollView`
+export const ChangePasswordWrapper = styled.ScrollView`
   width: 343px;
   margin: 0px auto;
   position: relative;
@@ -13,23 +13,22 @@ export const ExitButton = styled.Image`
   right: 0;
 `
 
-export const EditProfileContent = styled.KeyboardAvoidingView`
+export const ChangePasswordContent = styled.KeyboardAvoidingView`
   position: relative;
   top: 162px;
   width: 100%;
   margin-bottom: 350px;
 `
 
-export const EditProfileHeading = styled.Text`
+export const ChangePasswordHeading = styled.Text`
   width: 100%;
   text-align: center;
-  height: 24px;
 
   font-family: Mazzard;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
-  line-height: 30px;
+  line-height: 29px;
 
   text-transform: capitalize;
 
@@ -44,7 +43,7 @@ export const InputWrapper = styled.View`
   padding-horizontal: 10px;
 `
 
-export const FirstNameInput = styled.TextInput`
+export const OldPasswordInput = styled.TextInput`
   width: 100%;
   height: 45px;
   padding-left: 20px;
@@ -56,7 +55,7 @@ export const FirstNameInput = styled.TextInput`
 
 export const InputIcon = styled.Image`
   position: absolute;
-  bottom: 25px;
+  bottom: 21px;
   right: 24px;
 `
 
@@ -78,7 +77,7 @@ export const Legend = styled.Text`
 
 `
 
-export const LastNameInput = styled.TextInput`
+export const NewPasswordInput = styled.TextInput`
   width: 100%;
   height: 45px;
   padding-left: 20px;
@@ -88,7 +87,7 @@ export const LastNameInput = styled.TextInput`
   border: ${props => props.isFocused?"1px solid #EDA920" : "0px"};
 `
 
-export const EmailInput = styled.TextInput`
+export const ConfirmNewPasswordInput = styled.TextInput`
   width: 100%;
   height: 45px;
   padding-left: 20px;
