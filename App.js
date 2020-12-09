@@ -6,6 +6,7 @@ import Home from './src/screens/Home'
 import Profile from './src/screens/Profile'
 import EditProfile from './src/screens/EditProfile'
 import ChangePassword from './src/screens/ChangePassword'
+import PaymentMethod from './src/screens/PaymentMethod'
 import { AppFooter } from './src/Components/CommonComponets/FooterContent'
 
 export default App = () => {
@@ -17,7 +18,8 @@ export default App = () => {
       {/* <Home /> */}
       {/* <Profile /> */}
       {/* <EditProfile /> */}
-      <ChangePassword />
+      {/* <ChangePassword /> */}
+      <PaymentMethod />
     <AppFooter />
     </>
   );
