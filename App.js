@@ -7,6 +7,7 @@ import Profile from './src/screens/Profile'
 import EditProfile from './src/screens/EditProfile'
 import ChangePassword from './src/screens/ChangePassword'
 import PaymentMethod from './src/screens/PaymentMethod'
+import OnlinePayment from './src/screens/OnlinePayment'
 import { AppFooter } from './src/Components/CommonComponets/FooterContent'
 
 export default App = () => {
@@ -19,7 +20,8 @@ export default App = () => {
       {/* <Profile /> */}
       {/* <EditProfile /> */}
       {/* <ChangePassword /> */}
-      <PaymentMethod />
+      {/* <PaymentMethod /> */}
+      <OnlinePayment />
     <AppFooter />
     </>
   );
