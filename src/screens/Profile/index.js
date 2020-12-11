@@ -62,16 +62,16 @@ const Profile = (props) => {
             Logout
           </Logout> 
         </OtherOptions>
-
-      </ProfileContent>
-      <Image
+        <Image
         source={bottomTabNavigation}
         style={{
-          marginBottom:55,
-          width: "100%",
+          marginTop:39,
+          width: "130%",
         }}
         
       />
+      </ProfileContent>
+
     </ScrollView>
   );
 };
