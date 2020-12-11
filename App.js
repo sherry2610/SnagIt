@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, View } from 'react-native';
 import SplashScreen from './src/screens/Splash'
 import ProductInformation from './src/screens/ProductInformation'
 import Home from './src/screens/Home'
@@ -10,6 +10,7 @@ import ChangePassword from './src/screens/ChangePassword'
 import PaymentMethod from './src/screens/PaymentMethod'
 import OnlinePayment from './src/screens/OnlinePayment'
 import CardDetail from './src/screens/CardDetail'
+import CreateAccount from './src/screens/CreateAccount'
 import { AppFooter } from './src/Components/CommonComponets/FooterContent'
 import MyCart from './src/Components/MyCart'
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -19,29 +20,11 @@ const Drawer = createDrawerNavigator();
 
 export default App = () => {
   return (
-    <NavigationContainer>
-      <StatusBar backgroundColor="white" barStyle="dark-content" />
-      {/* <SplashScreen /> */}
-      {/* <ProductInformation /> */}
-      {/* <Home /> */}
-      {/* <Profile /> */}
-      {/* <EditProfile /> */}
-      {/* <ChangePassword /> */}
-      {/* <PaymentMethod /> */}
-      {/* <OnlinePayment /> */}
-      {/* <CardDetail /> */}
-
-        <Drawer.Navigator
-          initialRouteName="Home"
-          drawerPosition="right"
-          drawerContent={MyCart}
-          drawerStyle={{width:'81%'}}
-        >
-          <Drawer.Screen name="Home" component={Home} />
-          {/* <Drawer.Screen name="Notifications" component={NotificationsScreen} /> */}
-        </Drawer.Navigator>
-
+    <View>
+    <StatusBar backgroundColor="white" barStyle="dark-content" />
+    <CreateAccount />
     <AppFooter />
-    </NavigationContainer>
+    </View>
+
   );
 };
