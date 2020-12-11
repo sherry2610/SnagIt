@@ -27,8 +27,8 @@ export const Search = styled.Image`
   top: 30px;
 `
 
-export const CartWithItems = styled.Image`
-  position: absolute;
-  right: 11px;
+export const CartWithItems = styled.TouchableOpacity`
+  position: relative;
+  left: 287px;
   top: 18px;
 `

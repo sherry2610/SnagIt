@@ -24,10 +24,10 @@ import prodImage2 from '../../assets/productImages/prod2.png'
 import prodImage3 from '../../assets/productImages/prod3.png'
 import prodImage4 from '../../assets/productImages/prod4.png'
 
-export default ProductsHome = () => {
+export default ProductsHome = ({ navDispatch }) => {
   return (
     <>
-      <AppHeader />
+      <AppHeader navDispatch={navDispatch} />
         <CategoryWidget source={categoryWidget} />
         <CategoryWidgetSeparator></CategoryWidgetSeparator>
       <ScrollView contentContainerStyle={{marginBottom:30}}>
