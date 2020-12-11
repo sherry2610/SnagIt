@@ -5,12 +5,13 @@ export const ProfileContent = styled.View`
   position: relative;
   justify-content: center;
   align-items: center;
-  
+  height: 500px;
   margin: 10px auto;
 `
 
 export const ProfileImageWrapper = styled.View`
   position: relative;
+  height: 140px;
 `
 
 
@@ -27,8 +28,8 @@ export const EditIcon = styled.Image`
 
 export const AddIcon = styled.Image`
   position: absolute;
-  bottom: 28px;
-  left: 75px;
+  bottom: 2px;
+  left: 73px;
 `
 
 export const ProfileName = styled.Text`
@@ -50,7 +51,7 @@ export const ProfileName = styled.Text`
 
 export const ProfileContactDetail = styled.View`
   height: 45px;
-  margin-bottom: 30px;
+  
 `
 
 export const ProfileEmail = styled.Text`
@@ -88,8 +89,8 @@ export const ChangePassword = styled.Text`
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 20px;
-  padding: 20px 0px;
+  line-height: 10px;
+  padding: 24px 0px 15px;
 
   text-align: center;
 
@@ -104,8 +105,8 @@ export const PastRecentOrders = styled.Text`
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 20px;
-  padding: 20px 0px;
+  line-height: 10px;
+  padding: 24px 0px 15px;
 
   text-align: center;
 
@@ -120,8 +121,8 @@ export const PaymentMethod = styled.Text`
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 20px;
-  padding: 20px 0px;
+  line-height: 10px;
+  padding: 24px 0px 15px;
 
   text-align: center;
 
@@ -136,8 +137,8 @@ export const Logout = styled.Text`
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 20px;
-  padding: 20px 0px;
+  line-height: 10px;
+  padding: 24px 0px 15px;
 
   text-align: center;
 

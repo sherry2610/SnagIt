@@ -18,12 +18,12 @@ export default App = () => {
       {/* <SplashScreen /> */}
       {/* <ProductInformation /> */}
       {/* <Home /> */}
-      {/* <Profile /> */}
+      <Profile />
       {/* <EditProfile /> */}
       {/* <ChangePassword /> */}
       {/* <PaymentMethod /> */}
       {/* <OnlinePayment /> */}
-      <CardDetail />
+      {/* <CardDetail /> */}
     <AppFooter />
     </>
   );
