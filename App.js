@@ -11,6 +11,7 @@ import PaymentMethod from './src/screens/PaymentMethod'
 import OnlinePayment from './src/screens/OnlinePayment'
 import CardDetail from './src/screens/CardDetail'
 import CreateAccount from './src/screens/CreateAccount'
+import Search from './src/screens/Search'
 import { AppFooter } from './src/Components/CommonComponets/FooterContent'
 import MyCart from './src/Components/MyCart'
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -22,7 +23,7 @@ export default App = () => {
   return (
     <View>
     <StatusBar backgroundColor="white" barStyle="dark-content" />
-    <CreateAccount />
+    <Search />
     <AppFooter />
     </View>
 
