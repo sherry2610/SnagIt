@@ -1,20 +1,17 @@
 import { Dimensions } from 'react-native'
 import styled from 'styled-components'
+
 const winHeight = Dimensions.get('window').height
 
-
-export const PaymentMethodWrapper = styled.View`
+export const Wrapper = styled.View`
   width: 363px;
   margin: 0px auto;
-  height: ${winHeight - 150}px;
+  height: ${winHeight - 130}px;
   position: relative;
   flex-direction: column;
   margin-top: 30px;
   align-items: center;
-
-  
 `
-
 export const HeadingView = styled.View`
   position: relative;
   width: 100%;
@@ -43,31 +40,23 @@ export const MainHeading = styled.Text`
 
 export const Description = styled.Text`
   width: 100%;
-  height: 41px;
   font-family: Mazzard;
   font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-  color: #545454;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #1E201D;
 `
 
-export const PaymentOptions = styled.View`
+export const Options = styled.View`
   width: 100%;
-  height: 59px;
   flex-direction: row;
-  background: #FFFFFF;
-  border: 1px solid #EFEFEF;
+  border-bottom-width: 2px;
+  border-bottom-color: #ECECEC;
   margin-top: 25px;
-  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.06);
-  border-radius: 14px;
-  padding-bottom: 20px;
+  padding-bottom: 19px;
   padding-top: 18px;
-  padding-left: 19px;
-`
-
-export const RadioButton = styled.Image`
-  margin-right: 14px;
 `
 
 export const Option = styled.Text`
@@ -86,7 +75,7 @@ export const Option = styled.Text`
   border-right-width: 1px;
 `
 
-export const ForwardIcon = styled.Image`
+export const OnOffButton = styled.Image`
   position: absolute;
   right: 23px;
   top: 23px;
