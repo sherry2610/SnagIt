@@ -15,6 +15,7 @@ import Search from './src/screens/Search'
 import Settings from './src/screens/Settings'
 import ContactUs from './src/screens/ContactUs'
 import TermsOfServices from './src/screens/TermsOfServices'
+import AboutUs from './src/screens/AboutUs'
 import { AppFooter } from './src/Components/CommonComponets/FooterContent'
 import MyCart from './src/Components/MyCart'
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -26,7 +27,7 @@ export default App = () => {
   return (
     <View style={{backgroundColor: "white"}}>
     <StatusBar backgroundColor="white" barStyle="dark-content" />
-    <TermsOfServices />
+    <AboutUs />
     <AppFooter />
     </View>
 
