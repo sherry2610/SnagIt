@@ -7,14 +7,17 @@ import mainLogo from '../../assets/general/mainLogo.png'
 import { Image } from 'react-native'
 import { DrawerActions } from '@react-navigation/native';
 
-export default AppHeader = ({ navDispatch }) => {
+export default AppHeader = ({ leftDrawerDispatch, navDispatch }) => {
 
   return (
   <AppHeaderWrapper>
-    <Hamburger source={hamburger} />
+    {/* <Hamburger source={hamburger} onPress={()=>navigation.dipatch(DrawerActions.openDrawer())} /> */}
+    <Hamburger onPress={()=>leftDrawerDispatch()}>
+      <Image source={hamburger} />
+    </Hamburger>
     <MainLogo source={mainLogo} />
-    <Search source={searchIcon} />
-    <CartWithItems onPress={()=>navDispatch(DrawerActions.openDrawer())}>
+    <Search source={searchIcon}  />
+    <CartWithItems onPress={()=>navDispatch()}>
     <Image source={cartWithTwoItems} />
     </CartWithItems>
   </AppHeaderWrapper>

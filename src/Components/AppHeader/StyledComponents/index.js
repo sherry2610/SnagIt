@@ -9,7 +9,7 @@ export const AppHeaderWrapper = styled.View`
   position: relative;
 `
 
-export const Hamburger = styled.Image`
+export const Hamburger = styled.TouchableOpacity`
   margin: 18px 15px;
 `
 

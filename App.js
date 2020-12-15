@@ -1,6 +1,9 @@
-import 'react-native-gesture-handler';
-import React from 'react';
-import { StatusBar, View } from 'react-native';
+import  'react-native-gesture-handler' ;
+enableScreens ();
+
+import  React  from  'react' ;
+import  { enableScreens }  from  'react-native-screens' ;
+import { Text, StatusBar, View } from 'react-native';
 import SplashScreen from './src/screens/Splash'
 import ProductInformation from './src/screens/ProductInformation'
 import Home from './src/screens/Home'
@@ -18,18 +21,15 @@ import TermsOfServices from './src/screens/TermsOfServices'
 import AboutUs from './src/screens/AboutUs'
 import { AppFooter } from './src/Components/CommonComponets/FooterContent'
 import MyCart from './src/Components/MyCart'
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
+import Navigation from './src/Navigations/NavigationContainer'
+import {Provider} from 'react-redux';
 
-const Drawer = createDrawerNavigator();
+import {store} from './src/redux/configureStore';
 
 export default App = () => {
   return (
-    <View style={{backgroundColor: "white"}}>
-    <StatusBar backgroundColor="white" barStyle="dark-content" />
-    <AboutUs />
-    <AppFooter />
-    </View>
-
+    <Provider store={store}>
+    <Navigation />
+    </Provider>
   );
 };
