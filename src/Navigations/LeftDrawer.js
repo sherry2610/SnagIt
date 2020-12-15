@@ -192,7 +192,7 @@ export const CustomDrawerComp = (props) => {
               resizeMode="contain"
             />
           )}
-          onPress={() => alert("this screen is under maintainance! Sorry for the inconvenience")}
+          onPress={() => navigation.navigate('PastOrders')}
         />
 
 
