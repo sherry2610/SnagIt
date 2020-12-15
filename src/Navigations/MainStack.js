@@ -6,6 +6,7 @@ import  AboutUs  from  '../screens/AboutUs' ;
 import  ContactUs  from  '../screens/ContactUs' ;
 import  TermsOfServices  from  '../screens/TermsOfServices' ;
 import  Settings  from  '../screens/Settings' ;
+import  PastOrders  from  '../screens/PastOrders' ;
 // import  Users  from  '../screens/Users' ;
 
 const  Stack  =  createStackNavigator() ;
@@ -36,6 +37,11 @@ export  default  ( { navigation } )  =>  {
         <Stack.Screen  
         name="TermsOfServices"
         component={ TermsOfServices } 
+        options={{headerShown: false}}
+        />
+        <Stack.Screen  
+        name="PastOrders"
+        component={ PastOrders } 
         options={{headerShown: false}}
         />
       {/* <Stack.Screen  name = "UsersScreen"  component = { Users } /> */}
