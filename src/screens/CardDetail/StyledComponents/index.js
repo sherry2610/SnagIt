@@ -1,7 +1,10 @@
 import styled from 'styled-components'
+import { Dimensions } from 'react-native'
+
+const winWidth = Dimensions.get('window').width
 
 export const Wrapper = styled.ScrollView`
-  width: 363px;
+  width: ${winWidth - 32}px;
   margin: 20px auto;
 `
 

@@ -48,7 +48,7 @@ const OnlinePayment = (props) => {
 
         <AddCard>
           <AddCardText>Add card</AddCardText>
-          <AddCardImage onPress={()=>navigation.navigate('CardDetails')} >
+          <AddCardImage onPress={()=>navigation.navigate('CardDetail')} >
             <Image source={addCard} />
           </AddCardImage>
         </AddCard>

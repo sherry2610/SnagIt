@@ -1,6 +1,7 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
 import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import {Image, TouchableOpacity, View} from 'react-native';
 import {AppConfigActions} from '../redux/actions';
 import Home from '../screens/Home';
@@ -20,14 +21,57 @@ import EditProfile from '../screens/EditProfile';
 import PaymentMethod from '../screens/PaymentMethod';
 import OnlinePayment from '../screens/OnlinePayment';
 import CardDetail from '../screens/CardDetail';
-// import homeTabIcon from '../assets/general/homeTab.png'
-// import profileTabIcon from '../assets/general/profileTab.png'
-// import historyTabIcon from '../assets/general/historyTab.png'
+import homeTabIcon from '../assets/general/homeTab.png'
+import profileTabIcon from '../assets/general/profileTab.png'
+import historyTabIcon from '../assets/general/historyTab.png'
 import { AppFooter } from '../Components/CommonComponets/FooterContent';
 import CreateAccount from '../screens/CreateAccount';
 import SignIn from '../screens/SignIn';
+import Search from '../screens/Search';
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const HomeScreen = () => {
+  return (
+  <Tab.Navigator
+    initialRouteName="Home"
+    screenOptions={({ route }) => ({
+      tabBarIcon: ({ focused, color, size }) => {
+        let iconName;
+
+        if (route.name === 'Home') {
+          iconName = homeTabIcon
+        } else if (route.name === 'Profile') {
+          iconName = profileTabIcon
+        } else if (route.name === 'PastOrders') {
+          iconName = historyTabIcon
+        }
+
+        return <Image source={iconName} size={size} color={color} />;
+      },
+    })}
+    tabBarOptions={{
+      inactiveBackgroundColor: '#D51E16',
+      activeBackgroundColor: '#D51E16',
+      paddingTop: 40,
+      showLabel: false,
+      tabStyle:{borderRightColor:'white', borderRightWidth:1,},
+      style:{
+        height:62,
+        position: 'relative',
+        bottom: 50
+      }
+    }}
+
+  >
+    
+    <Tab.Screen name="Profile" component={Profile} />
+    <Tab.Screen name="Home" component={Home} />
+    <Tab.Screen name="PastOrders" component={PastOrders} />
+  </Tab.Navigator>
+  )
+}
 
 export default ({navigation}) => {
 
@@ -65,7 +109,7 @@ export default ({navigation}) => {
       <View style={{flexDirection: 'row', marginRight:8}} >
       <TouchableOpacity
         style={{marginTop:15}}
-        onPress={() => alert("Search!")}>
+        onPress={() => navigation.navigate('Search')}>
         <Image source={searchIcon} />
       </TouchableOpacity>
       <TouchableOpacity
@@ -83,20 +127,21 @@ export default ({navigation}) => {
 
   return (
     <>
-      <Stack.Navigator initialRouteName="SignIn" >
-      <Stack.Screen options={options} name="Home" component={Home} />
+      <Stack.Navigator initialRouteName="HomeScreen" >
+      <Stack.Screen options={options} name="HomeScreen" component={HomeScreen} />
       <Stack.Screen options={{...options,headerShown:false}} name="ProductInformation" component={ProductInformation} />
       <Stack.Screen options={options} name="Settings" component={Settings} />
       <Stack.Screen options={options} name="AboutUs" component={AboutUs} />
       <Stack.Screen options={options} name="ContactUs" component={ContactUs} />
       <Stack.Screen options={options} name="TermsOfServices" component={TermsOfServices} />
-      <Stack.Screen options={options} name="PastOrders" component={PastOrders} />
-      <Stack.Screen options={options} name="Profile" component={Profile} />
+      {/* <Stack.Screen options={options} name="PastOrders" component={PastOrders} /> */}
+      {/* <Stack.Screen options={options} name="Profile" component={Profile} /> */}
       <Stack.Screen options={{...options,headerShown:false}} name="EditProfile" component={EditProfile} />
       <Stack.Screen options={{...options,headerShown:false}} name="ChangePassword" component={ChangePassword} />
       <Stack.Screen options={options} name="PaymentMethod" component={PaymentMethod} />
       <Stack.Screen options={{...options,headerShown:false}} name="OnlinePayment" component={OnlinePayment} />
       <Stack.Screen options={{...options,headerShown:false}} name="CardDetail" component={CardDetail} />
+      <Stack.Screen options={{...options,headerShown:false}} name="Search" component={Search} />
       <Stack.Screen options={{...options,headerShown:false}} name="CreateAccount" component={CreateAccount} />
       <Stack.Screen options={{...options,headerShown:false}} name="SignIn" component={SignIn} />
       </Stack.Navigator>
