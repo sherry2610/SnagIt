@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+export const Wrapper = styled.View`
+  background-color: #FFFFFF;
+`
+
 export const EditProfileWrapper = styled.ScrollView`
   width: 343px;
   margin: 0px auto;
@@ -7,7 +11,7 @@ export const EditProfileWrapper = styled.ScrollView`
   
 `
 
-export const ExitButton = styled.Image`
+export const ExitButton = styled.TouchableOpacity`
   position: absolute;
   top: 18px;
   right: 0;
@@ -23,7 +27,7 @@ export const EditProfileContent = styled.KeyboardAvoidingView`
 export const EditProfileHeading = styled.Text`
   width: 100%;
   text-align: center;
-  height: 24px;
+
 
   font-family: Mazzard;
   font-style: normal;
@@ -41,6 +45,7 @@ export const InputWrapper = styled.View`
   width: 100%;
   position: relative;
   margin-bottom: 10px;
+  justify-content: center;
   padding-horizontal: 10px;
 `
 
@@ -56,8 +61,7 @@ export const FirstNameInput = styled.TextInput`
 
 export const InputIcon = styled.Image`
   position: absolute;
-  bottom: 25px;
-  right: 24px;
+  right: 30px;
 `
 
 export const Legend = styled.Text`

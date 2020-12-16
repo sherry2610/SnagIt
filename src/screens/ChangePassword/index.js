@@ -16,19 +16,23 @@ import {
   ExitButton,
   Legend,
 } from './StyledComponent';
+import { Image } from 'react-native';
 
-const ChangePassword = () => {
+const ChangePassword = (props) => {
   const [oldPassFocus, setOldPassFocus] = useState(false);
   const [newPassFocus, setNewPassFocus] = useState(false);
   const [confirmNewPassFocus, setConfirmNewPassFocus] = useState(false);
   const [phoneFocus, setPhoneFocus] = useState(false);
 
+  const { navigation } = props
   return (
     <ChangePasswordWrapper
       contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}}
       showsVerticalScrollIndicator={false}
       >
-      <ExitButton source={skipIcon} />
+      <ExitButton onPress={()=>navigation.goBack()} >
+      <Image source={skipIcon} />
+      </ExitButton>
 
       <ChangePasswordContent behavior="padding">
         <ChangePasswordHeading>Change Password</ChangePasswordHeading>
@@ -45,7 +49,7 @@ const ChangePassword = () => {
         </InputWrapper>
 
         <InputWrapper>
-          {newPassFocus && <Legend widthValue='110px' >Enter new password</Legend>}
+          {newPassFocus && <Legend widthValue='120px' >Enter new password</Legend>}
           <NewPasswordInput
             placeholder="Enter New Password"
             onFocus={() => setNewPassFocus(true)}

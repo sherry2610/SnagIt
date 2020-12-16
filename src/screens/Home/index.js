@@ -7,19 +7,9 @@ import { DrawerActions } from '@react-navigation/native';
 
 export default Home = ({navigation}) => {
 
-  const dispatch = useDispatch();
-
-  rightDrawerDispatch = () => {
-    dispatch(AppConfigActions.toggleRightDrawer())
-  }
-
-  leftDrawerDispatch = () => {
-    navigation.dispatch(DrawerActions.openDrawer())
-  }
-
   return (
     <HomeWrapper>
-      <ProductHome navDispatch={rightDrawerDispatch} leftDrawerDispatch={leftDrawerDispatch} />
+      <ProductHome navigation={navigation} />
     </HomeWrapper>
   );
 };

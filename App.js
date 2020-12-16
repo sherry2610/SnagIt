@@ -29,7 +29,7 @@ import {store} from './src/redux/configureStore';
 export default App = () => {
   return (
     <Provider store={store}>
-    <Navigation />
+    <Navigation  />
     </Provider>
   );
 };

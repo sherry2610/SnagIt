@@ -29,10 +29,11 @@ import {
   TermRadioBtn,
   AgreeOurText,
   TermsOfServicesText,
-  Note
+  Note,
+  Wrapper
 } from './StyledComponents';
 
-const CreateAccount = () => {
+const CreateAccount = ({navigation}) => {
   const [firstNameFocus, setFirstNameFocus] = useState(false);
   const [lastNameFocus, setLastNameFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
@@ -40,11 +41,14 @@ const CreateAccount = () => {
   const [passwordFocus, setPasswordFocus] = useState(false);
 
   return (
+    <Wrapper>
     <CreateAccountWrapper
       contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}}
       showsVerticalScrollIndicator={false}
       >
-      <ExitButton source={skipIcon} />
+      <ExitButton onPress={()=>navigation.goBack()} >
+      <Image source={skipIcon} />
+      </ExitButton>
 
       <CreateAccountContent behavior="padding">
         <CreateAccountHeading>Create Your Free {"\n"} Account</CreateAccountHeading>
@@ -129,6 +133,7 @@ const CreateAccount = () => {
 
       </CreateAccountContent>
     </CreateAccountWrapper>
+    </Wrapper>
   );
 };
 

@@ -1,12 +1,17 @@
 import styled from 'styled-components'
+import { Dimensions } from 'react-native'
 
-export const ProdInfoWrapper = styled.View`
+const winWidth = Dimensions.get('window').width
+
+
+
+export const ProdInfoWrapper = styled.ScrollView`
   display:flex;
-  width:100%;
+  width: 80%;
+  margin: 70px auto;
   flex-direction:column;
-  justify-content:center;
   position:relative;
-  padding:30px 70px;
+  
 `
 
 export const ProductNameSection = styled.View`
@@ -15,7 +20,8 @@ export const ProductNameSection = styled.View`
   flex-direction:row;
   width: 173px;
   height: 24px;
-  margin:10px 0px 40px 0px;
+  margin:10px 0px 50px 0px;
+  align-items: center;
 `
 export const ProductName = styled.Text`
   width: 243px;
@@ -34,8 +40,7 @@ export const ProductImageSection = styled.View`
 `
 
 export const ProductDescriptionSection = styled.View`
-  margin:0px 0px 0px -40px;
-  width: 343px;  
+  width: 100%;  
 `
 
 export const DescriptionHeading = styled.Text`

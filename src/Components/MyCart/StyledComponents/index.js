@@ -5,7 +5,7 @@ export const Wrapper = styled.View`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  
 `
 
 export const SkipButton = styled.Image`
@@ -28,7 +28,6 @@ export const HeadingView = styled.View`
 `
 
 export const CartHeading = styled.Text`
-  width: 105px;
   font-family: Mazzard;
   font-style: normal;
   font-weight: 600;
@@ -51,7 +50,7 @@ export const ItemCountSubHeading = styled.Text`
 export const ItemContainer = styled.View`
   flex-direction: row;
   justify-content: space-around;
-  width: 280px;
+  width: 90%;
   height: 64px;
   background: #FFFFFF;
   border: 1px solid #EFEFEF;

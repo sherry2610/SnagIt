@@ -2,9 +2,10 @@ import { Dimensions } from 'react-native'
 import styled from 'styled-components'
 
 const winHeight = Dimensions.get('window').height
+const winWidth = Dimensions.get('window').width
 
 export const Wrapper = styled.ScrollView`
-  width: 363px;
+  width: ${winWidth - 32}px;
   margin: 0px auto;
   height: 552px;
   position: relative;
@@ -20,7 +21,7 @@ export const HeadingView = styled.View`
   margin-bottom: 25px;
 `
 
-export const BackArrow = styled.Image`
+export const BackArrow = styled.TouchableOpacity`
   position: absolute;
   top: 5px;
   left: 0px;
@@ -53,6 +54,15 @@ export const Options = styled.View`
   padding-top: 18px;
   
 `
+export const OptionImage = styled.View`
+  width: 58px;
+  height: 58px;
+  border-radius: 58px;
+  border: 1px solid #EDA920;
+  position: relative;
+  margin-right: 16px;
+`
+
 export const OptionDetails = styled.View`
   width: 80%;
   flex-direction: column;
@@ -79,7 +89,8 @@ export const OptionText = styled.Text`
 `
 
 export const OptionIcon = styled.Image`
-  width: 58px;
-  height: 58px;
-  margin-right: 16px;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  
 `

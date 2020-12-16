@@ -1,9 +1,6 @@
 import React from 'react';
 import {Image} from 'react-native';
-import AppHeader from '../../Components/AppHeader';
-import bottomTabNavigation from '../../assets/general/dummyBottomNavigation.png';
 import backArrow from '../../assets/paymentMethod/backArrow.png';
-import callIcon from '../../assets/contact/callIcon.jpeg'
 import {
   Wrapper,
   HeadingView,
@@ -12,14 +9,19 @@ import {
   DescriptionHeading,
   Description,
 } from './StyledComponents';
+import { DrawerActions } from '@react-navigation/native';
+import { AppConfigActions } from '../../redux/actions';
+import { useDispatch } from 'react-redux';
 
-const Settings = () => {
+const TermsOfServices = ({ navigation }) => {
+
   return (
     <>
-      <AppHeader />
-      <Wrapper>
+      <Wrapper contentContainerStyle={{alignItems: 'center', justifyContent: 'center'}} >
         <HeadingView>
-          <BackArrow source={backArrow} />
+          <BackArrow onPress={()=>navigation.goBack()}>
+            <Image source={backArrow} />
+          </BackArrow>
           <MainHeading>Terms Of Services</MainHeading>
         </HeadingView>
 
@@ -32,12 +34,8 @@ const Settings = () => {
         </Description>
 
       </Wrapper>
-      <Image
-        source={bottomTabNavigation}
-        style={{width: '100%', position: 'absolute', bottom: 49}}
-      />
     </>
   );
 };
 
-export default Settings;
+export default TermsOfServices;

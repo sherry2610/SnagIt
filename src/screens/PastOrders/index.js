@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from 'react-native'
 import {
   Wrapper,
   HeadingView,
@@ -17,15 +18,18 @@ import {
 } from './StyledComponents'
 import back from '../../assets/general/backArrow.png'
 import remove from '../../assets/general/remove.png'
-import AppHeader from '../../Components/AppHeader'
 
-const PastOrders = () => {
+const PastOrders = (props) => {
+
+  const { navigation } = props
+
   return (
     <>
-    <AppHeader />
     <Wrapper>
       <HeadingView>
-        <BackArrow source={back} />
+        <BackArrow onPress={()=>navigation.goBack()} >
+          <Image source={back} />
+        </BackArrow>
         <MainHeading>Past Orders</MainHeading>
         <OrderCount>(3)</OrderCount>
       </HeadingView>

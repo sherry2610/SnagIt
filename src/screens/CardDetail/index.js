@@ -20,14 +20,19 @@ import paypal from '../../assets/cardDetail/paypal.png'
 import card from '../../assets/cardDetail/card.png'
 import passwordIcon from '../../assets/cardDetail/pass.png'
 import dropdown from '../../assets/cardDetail/dropdown.png'
+import { Image } from 'react-native';
 
-const CardDetail = () => {
+const CardDetail = (props) => {
+
+  const { navigation } = props
   return (
     
     <Wrapper 
     showsVerticalScrollIndicator={false}
     >
-      <SkipButton source={skip} />
+      <SkipButton onPress={()=>navigation.goBack()}>
+        <Image source={skip} />
+      </SkipButton>
 
       <WrapperContent  
           behavior="padding" enabled

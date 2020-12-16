@@ -5,7 +5,7 @@ export const Wrapper = styled.ScrollView`
   margin: 20px auto;
 `
 
-export const SkipButton = styled.Image`
+export const SkipButton = styled.TouchableOpacity`
   position: absolute;
   top: 0px;
   right: 0px;

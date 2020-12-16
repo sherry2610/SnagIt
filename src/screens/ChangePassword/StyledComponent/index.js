@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 
+
+
 export const ChangePasswordWrapper = styled.ScrollView`
-  width: 343px;
+  width: 100%;
   margin: 0px auto;
-  position: relative;
-  
+  position: relative;  
+  background-color: #FFFFFF;
 `
 
-export const ExitButton = styled.Image`
+export const ExitButton = styled.TouchableOpacity`
   position: absolute;
   top: 18px;
   right: 0;
@@ -37,8 +39,9 @@ export const ChangePasswordHeading = styled.Text`
 `
 
 export const InputWrapper = styled.View`
-  width: 100%;
+  width: 343px;
   position: relative;
+  margin: 0px auto;
   margin-bottom: 10px;
   padding-horizontal: 10px;
 `
@@ -88,14 +91,13 @@ export const NewPasswordInput = styled.TextInput`
 `
 
 export const ConfirmNewPasswordInput = styled.TextInput`
-  width: 100%;
-  height: 45px;
-  padding-left: 20px;
-  background-color: ${props=>props.isFocused?"white":"#F6F6F6"};
-  border: ${props => props.isFocused?"1px solid #EDA920" : "0px"};
-  background: #F6F6F6;
-  border-radius: 59px;
-  margin-bottom: 5px;
+width: 100%;
+height: 45px;
+padding-left: 20px;
+background-color: ${props=>props.isFocused?"white":"#F6F6F6"};
+border-radius: 59px;
+margin-bottom: 5px;
+border: ${props => props.isFocused?"1px solid #EDA920" : "0px"};
 `
 
 export const PhoneInput = styled.TextInput`

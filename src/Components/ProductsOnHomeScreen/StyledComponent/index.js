@@ -1,25 +1,29 @@
 import styled from 'styled-components'
+import { Dimensions } from 'react-native'
 
-export const CategoryWidget = styled.Image`
-  width: 99%;
-  height: 86px;
-  margin: 25px 0px 30px 10px;
+const winWidth = Dimensions.get('window').width
+
+export const Wrapper = styled.View`
+  width: 100%;
+  flex: 1;
+  margin-bottom: 50px;
 `
 
-export const CategoryWidgetSeparator = styled.View`
-  position: absolute;
-  width: 343px;
-  left: 33px;
-  top: 220px;
+export const CategoryWidget = styled.Image`
+  width: ${winWidth}px;
+  height: 86px;
+  margin: 25px 0px 10px 0px;
+`
 
+export const CategoryWidgetSeparator = styled.View`  
+  width: ${winWidth-32}px;
+  margin: 15px auto;
   border: 1px solid #E9E9E9;
 `
 export const ProductsDisplay = styled.View`
   position: relative;
-  width: 343px;
-  left: 33px;
-  marginTop: 30px;
-
+  width: ${winWidth-32}px;
+  margin: 0px auto;
 `
 
 export const ProductsCategory = styled.Text`
@@ -43,7 +47,7 @@ export const ProductsWrapper = styled.View`
 
 export const ProductContainer = styled.View`
   position: relative;
-  flex: 0 47%;
+  flex: 0 46%;
   height: 190px;
   width: 100%;
   background: #FFFFFF;
@@ -53,10 +57,11 @@ export const ProductContainer = styled.View`
   border-radius: 24px;
 `
 
-export const ProductInfoIcon = styled.Image`
+export const ProductInfoIcon = styled.TouchableOpacity`
   position: absolute;
   top: 0px;
   right: 0px;
+  z-index: 10;
 `
 
 export const ProductImage = styled.Image`

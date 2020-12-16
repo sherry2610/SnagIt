@@ -1,13 +1,22 @@
 import styled from 'styled-components'
+import { Dimensions } from 'react-native'
+
+const winWidth = Dimensions.get('window').width
+
+export const Wrapper = styled.View`
+  width: 100%;
+  background-color: #FFFFFF;
+`
+
 
 export const CreateAccountWrapper = styled.ScrollView`
-  width: 343px;
+  width: ${winWidth - 32}px;
   margin: 0px auto;
   position: relative;
   
 `
 
-export const ExitButton = styled.Image`
+export const ExitButton = styled.TouchableOpacity`
   position: absolute;
   top: 18px;
   right: 0;

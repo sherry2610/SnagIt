@@ -1,7 +1,5 @@
 import React from 'react';
 import {Image} from 'react-native';
-import AppHeader from '../../Components/AppHeader';
-import bottomTabNavigation from '../../assets/general/dummyBottomNavigation.png';
 import backArrow from '../../assets/paymentMethod/backArrow.png';
 import onOff from '../../assets/general/onOff.png'
 import {
@@ -14,14 +12,20 @@ import {
   Option,
   OnOffButton,
 } from './StyledComponents';
+import { DrawerActions } from '@react-navigation/native';
+import { AppConfigActions } from '../../redux/actions';
+import { useDispatch } from 'react-redux';
 
-const Settings = () => {
+const Settings = ({ navigation }) => {
+
+
   return (
     <>
-      <AppHeader />
       <Wrapper>
         <HeadingView>
-          <BackArrow source={backArrow} />
+          <BackArrow onPress={()=>navigation.goBack()}>
+            <Image source={backArrow} />
+          </BackArrow>
           <MainHeading>Settings</MainHeading>
         </HeadingView>
 
@@ -35,10 +39,6 @@ const Settings = () => {
         </Options>
 
       </Wrapper>
-      <Image
-        source={bottomTabNavigation}
-        style={{width: '100%', position: 'absolute', bottom: 49}}
-      />
     </>
   );
 };

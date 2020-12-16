@@ -1,7 +1,5 @@
 import React from 'react';
-import {Dimensions, View, Image, Text, ScrollView} from 'react-native';
-import AppHeader from '../../Components/AppHeader';
-import bottomTabNavigation from '../../assets/general/dummyBottomNavigation.png';
+import {Dimensions, View, Image, Text, ScrollView, TouchableOpacity} from 'react-native';
 import profilePic from '../../assets/profile/profilepic.png';
 import editIcon from '../../assets/profile/edit.png';
 import addProfilePic from '../../assets/profile/addprofilepic.png';
@@ -25,11 +23,14 @@ import {
 const height = Dimensions.get('window').height;
 
 const Profile = (props) => {
+  const { navigation } = props
+
   return (
     <ScrollView>
-      <AppHeader />
       <ProfileContent>
-        <EditIcon source={editIcon} />
+        <EditIcon  onPress={()=>navigation.navigate('EditProfile')}>
+        <Image source={editIcon} />
+        </EditIcon>
         <ProfileImageWrapper>
           <ProfileImage source={profilePic} />
           <AddIcon source={addProfilePic} />
@@ -49,27 +50,21 @@ const Profile = (props) => {
         </ProfileContactDetail>
         
         <OtherOptions>
-          <ChangePassword>
+          <ChangePassword onPress={()=>navigation.navigate('ChangePassword')}>
             Change Password
           </ChangePassword>
-          <PastRecentOrders>
+          <PastRecentOrders onPress={()=>navigation.navigate('PastOrders')} >
             Past/Recent Orders
           </PastRecentOrders>
-          <PaymentMethod>
+          <PaymentMethod onPress={()=>navigation.navigate('PaymentMethod')} >
             Payment Method
           </PaymentMethod>
-          <Logout>
-            Logout
-          </Logout> 
+          
+            <Logout onPress={()=>navigation.navigate('CreateAccount')} >
+              Logout
+            </Logout>
+          
         </OtherOptions>
-        <Image
-        source={bottomTabNavigation}
-        style={{
-          marginTop:39,
-          width: "130%",
-        }}
-        
-      />
       </ProfileContent>
 
     </ScrollView>

@@ -2,9 +2,10 @@ import { Dimensions } from 'react-native'
 import styled from 'styled-components'
 
 const winHeight = Dimensions.get('window').height
+const winWidth = Dimensions.get('window').width
 
 export const Wrapper = styled.View`
-  width: 363px;
+  width: ${winWidth - 32}px;
   margin: 0px auto;
   height: ${winHeight - 130}px;
   position: relative;
@@ -21,7 +22,7 @@ export const HeadingView = styled.View`
   margin-bottom: 25px;
 `
 
-export const BackArrow = styled.Image`
+export const BackArrow = styled.TouchableOpacity`
   position: absolute;
   top: 5px;
   left: 0px;
@@ -79,8 +80,20 @@ export const OptionText = styled.Text`
   color: #545454
 `
 
-export const OptionIcon = styled.Image`
+export const OptionImage = styled.View`
   width: 58px;
   height: 58px;
+  border-radius: 58px;
+  border: 1px solid #EDA920;
+  position: relative;
   margin-right: 16px;
+`
+
+
+
+export const OptionIcon = styled.Image`
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  
 `

@@ -26,6 +26,7 @@ import {
   Heading,
 } from './StyledComponents/LeftDrawer';
 
+
 const Drawer = createDrawerNavigator();
 
 export default () => {
@@ -42,10 +43,12 @@ export const CustomDrawerComp = (props) => {
 
   return (
     <DrawerContentScrollView {...props}>
-      <Wrapper>
+        <Wrapper>
         <Header>
           <Heading>Menu</Heading>
-          <SkipButton source={skip} />
+          <SkipButton onPress={()=>navigation.goBack()} >
+          <Image source={skip} />
+          </SkipButton>
         </Header>
 
         <DrawerItem

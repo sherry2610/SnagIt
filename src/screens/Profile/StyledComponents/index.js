@@ -19,7 +19,7 @@ export const ProfileImage = styled.Image`
 
 `
 
-export const EditIcon = styled.Image`
+export const EditIcon = styled.TouchableOpacity`
   position: absolute;
   top: 0;
   right: 0;
@@ -33,19 +33,13 @@ export const AddIcon = styled.Image`
 `
 
 export const ProfileName = styled.Text`
-
- 
-  height: 24px;
-
   font-family: Mazzard;
   font-style: normal;
   font-weight: 600;
   font-size: 27px;
   line-height: 28px;
   margin-bottom: 9px;
-
   text-transform: capitalize;
-
   color: #1E201D;
 `
 

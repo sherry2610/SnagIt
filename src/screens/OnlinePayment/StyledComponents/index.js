@@ -9,7 +9,7 @@ export const Wrapper = styled.View`
   position: relative;
 `
 
-export const BackButton = styled.Image`
+export const BackButton = styled.TouchableOpacity`
   position: absolute;
   top: 0px;
   left: 0px;
@@ -77,7 +77,7 @@ export const AddCardText = styled.Text`
   color: #545454;
 `
 
-export const AddCardImage = styled.Image`
+export const AddCardImage = styled.TouchableOpacity`
   position: absolute;
   right: 0px;
 `

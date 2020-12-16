@@ -1,9 +1,7 @@
 import React from 'react';
 import {Image} from 'react-native';
-import AppHeader from '../../Components/AppHeader';
-import bottomTabNavigation from '../../assets/general/dummyBottomNavigation.png';
 import backArrow from '../../assets/paymentMethod/backArrow.png';
-import callIcon from '../../assets/contact/callIcon.jpeg'
+import callIcon from '../../assets/aboutus/search_about.png'
 import {
   Wrapper,
   HeadingView,
@@ -15,15 +13,18 @@ import {
   OptionTag,
   OptionText,
   OptionIcon,
+  OptionImage
 } from './StyledComponents';
 
-const Settings = () => {
+const Settings = ({ navigation }) => {
+  
   return (
     <>
-      <AppHeader />
       <Wrapper>
         <HeadingView>
-          <BackArrow source={backArrow} />
+          <BackArrow onPress={()=>navigation.goBack()}>
+            <Image source={backArrow} />
+          </BackArrow>
           <MainHeading>How Can We Help?</MainHeading>
         </HeadingView>
 
@@ -32,7 +33,9 @@ const Settings = () => {
         </Description>
 
         <Options>
+          <OptionImage>
           <OptionIcon source={callIcon} />
+          </OptionImage>
           <OptionDetails>
           <OptionTag>call us</OptionTag>
           <OptionText>M-F 8am-8pm, Sa-Sun 8am-7pm</OptionText>
@@ -40,7 +43,9 @@ const Settings = () => {
         </Options>
 
         <Options>
+        <OptionImage>
           <OptionIcon source={callIcon} />
+          </OptionImage>
           <OptionDetails>
           <OptionTag>email us</OptionTag>
           <OptionText>We’ll get back to your in 1-2 days</OptionText>
@@ -48,10 +53,6 @@ const Settings = () => {
         </Options>
 
       </Wrapper>
-      <Image
-        source={bottomTabNavigation}
-        style={{width: '100%', position: 'absolute', bottom: 49}}
-      />
     </>
   );
 };

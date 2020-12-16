@@ -8,7 +8,7 @@ export const Wrapper = styled.View`
   margin-bottom: 50px;
 `
 
-export const SkipButton = styled.Image`
+export const SkipButton = styled.TouchableOpacity`
   margin-left: 80px;
 `
 

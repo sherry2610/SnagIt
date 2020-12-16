@@ -1,7 +1,5 @@
 import React from 'react';
 import {Image} from 'react-native';
-import AppHeader from '../../Components/AppHeader';
-import bottomTabNavigation from '../../assets/general/dummyBottomNavigation.png';
 import backArrow from '../../assets/paymentMethod/backArrow.png';
 import radioBtn from '../../assets/paymentMethod/radioBtn.png';
 import miniForward from '../../assets/paymentMethod/miniForward.png';
@@ -17,13 +15,15 @@ import {
   ForwardIcon,
 } from './StyledComponents';
 
-const PaymentMethod = () => {
+const PaymentMethod = ({ navigation }) => {
+
   return (
     <>
-      <AppHeader />
       <PaymentMethodWrapper>
         <HeadingView>
-          <BackArrow source={backArrow} />
+          <BackArrow onPress={()=>navigation.goBack()}>
+            <Image source={backArrow} />
+          </BackArrow>
           <MainHeading>Payment Method</MainHeading>
         </HeadingView>
 
@@ -32,16 +32,14 @@ const PaymentMethod = () => {
           industry.{' '}
         </Description>
 
-        <PaymentOptions>
+        <PaymentOptions  >
           <RadioButton source={radioBtn} />
           <Option>Online Payment</Option>
-          <ForwardIcon source={miniForward} />
+          <ForwardIcon  onPress={()=>navigation.navigate('OnlinePayment')}>
+            <Image source={miniForward} />
+          </ForwardIcon>
         </PaymentOptions>
       </PaymentMethodWrapper>
-      <Image
-        source={bottomTabNavigation}
-        style={{width: '100%', position: 'absolute', bottom: 49}}
-      />
     </>
   );
 };

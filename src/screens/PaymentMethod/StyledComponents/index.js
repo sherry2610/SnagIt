@@ -1,18 +1,17 @@
 import { Dimensions } from 'react-native'
 import styled from 'styled-components'
 const winHeight = Dimensions.get('window').height
+const winWidth = Dimensions.get('window').width
 
 
 export const PaymentMethodWrapper = styled.View`
-  width: 363px;
+  width: ${winWidth - 32}px;
   margin: 0px auto;
   height: ${winHeight - 150}px;
   position: relative;
   flex-direction: column;
   margin-top: 30px;
   align-items: center;
-
-  
 `
 
 export const HeadingView = styled.View`
@@ -24,7 +23,7 @@ export const HeadingView = styled.View`
   margin-bottom: 25px;
 `
 
-export const BackArrow = styled.Image`
+export const BackArrow = styled.TouchableOpacity`
   position: absolute;
   top: 5px;
   left: 0px;
@@ -86,7 +85,7 @@ export const Option = styled.Text`
   border-right-width: 1px;
 `
 
-export const ForwardIcon = styled.Image`
+export const ForwardIcon = styled.TouchableOpacity`
   position: absolute;
   right: 23px;
   top: 23px;

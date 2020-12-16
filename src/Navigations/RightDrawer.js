@@ -1,34 +1,34 @@
-import  React ,  { useEffect }  from  'react' ;
-import  { createDrawerNavigator }  from  '@react-navigation/drawer';
-import  { DrawerActions }  from  '@react-navigation/native';
+import React, {useEffect} from 'react';
+import {
+  createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItem,
+} from '@react-navigation/drawer';
+import LeftDrawer from './LeftDrawer';
+import {useDispatch, useSelector} from 'react-redux';
+import {DrawerActions} from '@react-navigation/native';
+import {AppConfigActions} from '../redux/actions';
+import {View} from 'react-native';
 import MyCart from '../Components/MyCart'
-import  { useDispatch ,  useSelector }  from  'react-redux' ;
-import { AppConfigActions } from '../redux/actions'
 
-import  LeftDrawer  from  './LeftDrawer' ;
+const Drawer = createDrawerNavigator();
 
-const  Drawer  =  createDrawerNavigator ( ) ;
+export default ({navigation}) => {
+  const {rightDrawerState} = useSelector((state) => state.appConfig);
+  const dispatch = useDispatch();
 
-export  default  ( { navigation } )  =>  {
-
-  const  { rightDrawerState }  =  useSelector(state=>  state.appConfig) ;
-  const  dispatch  =  useDispatch() ;
-
-  useEffect (()  =>  {
-    if  ( rightDrawerState === 'toggle' )  {
+  useEffect(() => {
+    if (rightDrawerState === 'toggle') {
       navigation.dispatch(DrawerActions.openDrawer());
       dispatch(AppConfigActions.resetRightDrawer());
     }
-  } ,[rightDrawerState === 'toggle']);
+  }, [rightDrawerState === 'toggle']);
 
-  return  (
+  return (
     <Drawer.Navigator
-    // initialRouteName="Home"
-    drawerPosition="right"
-    drawerContent={MyCart}
-    drawerStyle={{width:'81%'}}
-  >
-      <Drawer.Screen  name="LeftDrawer"  component={ LeftDrawer } />
+      drawerPosition="right"
+      drawerContent={(props) => <MyCart {...props} />}>
+      <Drawer.Screen name="LeftDrawer" component={LeftDrawer} />
     </Drawer.Navigator>
-  ) ;
+  );
 };

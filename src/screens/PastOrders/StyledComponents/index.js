@@ -19,7 +19,7 @@ export const HeadingView = styled.View`
   margin-top: 25px;
 `
 
-export const BackArrow = styled.Image`
+export const BackArrow = styled.TouchableOpacity`
   position: absolute;
   top: 5px;
   left: 0px;
@@ -56,16 +56,14 @@ export const OrderContainer = styled.View`
 `
 
 export const OrderSubContainer1 = styled.View`
-  width: 45%;
-  height: 90%;
   margin-left: -10px;
 `
 
 export const OrderSubContainer2 = styled.View`
-  width: 27%;
-  height: 90%;
+  
+
   justify-content: center;
-  margin-right: -17px;
+  
 `
 
 export const DeleteOrder = styled.Image`
@@ -122,7 +120,6 @@ export const ReOrder = styled.Text`
   font-weight: bold;
   font-size: 16px;
   line-height: 17px;
-  text-align: right;
   text-transform: uppercase;
   color: #D51E16;
 `

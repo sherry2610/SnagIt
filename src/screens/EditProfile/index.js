@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Image } from 'react-native'
 import skipIcon from '../../assets/editProfile/skip.png';
 import userIcon from '../../assets/editProfile/person.png';
 import emailIcon from '../../assets/editProfile/email.png';
@@ -16,20 +17,25 @@ import {
   SaveButton,
   ExitButton,
   Legend,
+  Wrapper
 } from './StyledComponents';
 
-const EditProfile = () => {
+const EditProfile = (props) => {
   const [firstNameFocus, setFirstNameFocus] = useState(false);
   const [lastNameFocus, setLastNameFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
   const [phoneFocus, setPhoneFocus] = useState(false);
 
+  const { navigation } = props
   return (
+    <Wrapper>
     <EditProfileWrapper
       contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}}
       showsVerticalScrollIndicator={false}
       >
-      <ExitButton source={skipIcon} />
+      <ExitButton  onPress={()=>navigation.goBack()}>
+      <Image source={skipIcon} />
+      </ExitButton>
 
       <EditProfileContent behavior="padding">
         <EditProfileHeading>Edit Your Account</EditProfileHeading>
@@ -82,6 +88,7 @@ const EditProfile = () => {
 
       </EditProfileContent>
     </EditProfileWrapper>
+    </Wrapper>
   );
 };
 

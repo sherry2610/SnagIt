@@ -1,9 +1,7 @@
 import React from 'react';
 import {Image} from 'react-native';
-import AppHeader from '../../Components/AppHeader';
-import bottomTabNavigation from '../../assets/general/dummyBottomNavigation.png';
 import backArrow from '../../assets/paymentMethod/backArrow.png';
-import callIcon from '../../assets/contact/callIcon.jpeg'
+import searchImg from '../../assets/aboutus/search_about.png'
 import {
   Wrapper,
   HeadingView,
@@ -15,15 +13,18 @@ import {
   OptionTag,
   OptionText,
   OptionIcon,
+  OptionImage
 } from './StyledComponents';
 
-const Settings = () => {
+const About = ({ navigation }) => {
+
   return (
     <>
-      <AppHeader />
-      <Wrapper>
+      <Wrapper showsVerticalScrollIndicator={false} >
         <HeadingView>
-          <BackArrow source={backArrow} />
+          <BackArrow onPress={()=>navigation.goBack()} >
+          <Image source={backArrow} />
+          </BackArrow>
           <MainHeading>About</MainHeading>
         </HeadingView>
 
@@ -32,7 +33,10 @@ const Settings = () => {
         </Description>
 
         <Options>
-          <OptionIcon source={callIcon} />
+        <OptionImage>
+          <OptionIcon source={searchImg} />
+          </OptionImage>
+
           <OptionDetails>
           <OptionTag>Search</OptionTag>
           <OptionText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</OptionText>
@@ -40,7 +44,10 @@ const Settings = () => {
         </Options>
 
         <Options>
-          <OptionIcon source={callIcon} />
+          <OptionImage>
+          <OptionIcon source={searchImg} />
+          </OptionImage>
+          
           <OptionDetails>
           <OptionTag>Search</OptionTag>
           <OptionText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</OptionText>
@@ -48,7 +55,10 @@ const Settings = () => {
         </Options>
 
         <Options>
-          <OptionIcon source={callIcon} />
+        <OptionImage>
+          <OptionIcon source={searchImg} />
+          </OptionImage>
+
           <OptionDetails>
           <OptionTag>Search</OptionTag>
           <OptionText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</OptionText>
@@ -56,7 +66,10 @@ const Settings = () => {
         </Options>
         
         <Options>
-          <OptionIcon source={callIcon} />
+        <OptionImage>
+          <OptionIcon source={searchImg} />
+          </OptionImage>
+
           <OptionDetails>
           <OptionTag>Search</OptionTag>
           <OptionText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</OptionText>
@@ -64,19 +77,18 @@ const Settings = () => {
         </Options>
 
         <Options lastOption={true}>
-          <OptionIcon source={callIcon} />
+        <OptionImage>
+          <OptionIcon source={searchImg} />
+          </OptionImage>
+
           <OptionDetails>
           <OptionTag>Search</OptionTag>
           <OptionText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</OptionText>
           </OptionDetails>
         </Options>
       </Wrapper>
-      <Image
-        source={bottomTabNavigation}
-        style={{width: '100%', position: 'absolute', bottom: 46, zIndex: 10}}
-      />
     </>
   );
 };
 
-export default Settings;
+export default About;

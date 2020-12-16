@@ -1,6 +1,5 @@
 import React from 'react'
-import { View, Image, ScrollView, Text } from 'react-native'
-import AppHeader from '../AppHeader'
+import { View, Image, ScrollView, Dimensions } from 'react-native'
 import BottomSearch from '../BottomSearch'
 import { 
   CategoryWidget,
@@ -12,9 +11,9 @@ import {
   ProductInfoIcon,
   ProductImage,
   ProductTitle,
-  ProductPrice
+  ProductPrice,
+  Wrapper
 } from './StyledComponent'
-import bottomTabNavigation from '../../assets/general/dummyBottomNavigation.png'
 import categoryWidget from '../../assets/productHome/categoryWidget.png'
 import prodInfoIcon from '../../assets/productHome/prodInfo.png'
 import priceTag from '../../assets/productHome/priceTag.png'
@@ -24,97 +23,127 @@ import prodImage2 from '../../assets/productImages/prod2.png'
 import prodImage3 from '../../assets/productImages/prod3.png'
 import prodImage4 from '../../assets/productImages/prod4.png'
 
-export default ProductsHome = ({ navDispatch, leftDrawerDispatch }) => {
+
+const winHeight = Dimensions.get('screen').height
+
+
+export default ProductsHome = ({navigation}) => {
   return (
-    <>
-      <AppHeader navDispatch={navDispatch} leftDrawerDispatch={leftDrawerDispatch} />
+    // <View >
+    <Wrapper>
         <CategoryWidget source={categoryWidget} />
         <CategoryWidgetSeparator></CategoryWidgetSeparator>
-      <ScrollView contentContainerStyle={{marginBottom:30}}>
+      <ScrollView >
           <ProductsDisplay>
             <ProductsCategory>
               Top Sellers
             </ProductsCategory>
             <ProductsWrapper>
               <ProductContainer>
-                <ProductInfoIcon source={prodInfoIcon} />
+                <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation')}>
+                  <Image source={prodInfoIcon} />
+                </ProductInfoIcon>
                 <ProductImage source={prodImage1} />
                 <ProductTitle>Lorem Ispum</ProductTitle>
                 <ProductPrice source={priceTag} />
               </ProductContainer>
               <ProductContainer>
-                <ProductInfoIcon source={prodInfoIcon} />
+              <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation')}>
+                  <Image source={prodInfoIcon} />
+                </ProductInfoIcon>
                 <ProductImage source={prodImage2} />
                 <ProductTitle>Lorem Ispum</ProductTitle>
                 <ProductPrice source={priceTag} />
               </ProductContainer>
               <ProductContainer>
-                <ProductInfoIcon source={prodInfoIcon} />
+              <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation')}>
+                  <Image source={prodInfoIcon} />
+                </ProductInfoIcon>
                 <ProductImage source={prodImage3} />
                 <ProductTitle>Lorem Ispum</ProductTitle>
                 <ProductPrice source={priceTag} />
               </ProductContainer>
               <ProductContainer>
-                <ProductInfoIcon source={prodInfoIcon} />
+              <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation')}>
+                  <Image source={prodInfoIcon} />
+                </ProductInfoIcon>
                 <ProductImage source={prodImage4} />
                 <ProductTitle>Lorem Ispum</ProductTitle>
                 <ProductPrice source={priceTag} />
               </ProductContainer>
               <ProductContainer>
-                <ProductInfoIcon source={prodInfoIcon} />
+              <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation')}>
+                  <Image source={prodInfoIcon} />
+                </ProductInfoIcon>
                 <ProductImage source={prodImage1} />
                 <ProductTitle>Lorem Ispum</ProductTitle>
                 <ProductPrice source={priceTag} />
               </ProductContainer>
               <ProductContainer>
-                <ProductInfoIcon source={prodInfoIcon} />
+              <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation')}>
+                  <Image source={prodInfoIcon} />
+                </ProductInfoIcon>
                 <ProductImage source={prodImage2} />
                 <ProductTitle>Lorem Ispum</ProductTitle>
                 <ProductPrice source={priceTag} />
               </ProductContainer>
               <ProductContainer>
-                <ProductInfoIcon source={prodInfoIcon} />
+              <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation')}>
+                  <Image source={prodInfoIcon} />
+                </ProductInfoIcon>
                 <ProductImage source={prodImage3} />
                 <ProductTitle>Lorem Ispum</ProductTitle>
                 <ProductPrice source={priceTag} />
               </ProductContainer>
               <ProductContainer>
-                <ProductInfoIcon source={prodInfoIcon} />
+              <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation')}>
+                  <Image source={prodInfoIcon} />
+                </ProductInfoIcon>
                 <ProductImage source={prodImage4} />
                 <ProductTitle>Lorem Ispum</ProductTitle>
                 <ProductPrice source={priceTag} />
               </ProductContainer>
               <ProductContainer>
-                <ProductInfoIcon source={prodInfoIcon} />
+              <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation')}>
+                  <Image source={prodInfoIcon} />
+                </ProductInfoIcon>
                 <ProductImage source={prodImage1} />
                 <ProductTitle>Lorem Ispum</ProductTitle>
                 <ProductPrice source={priceTag} />
               </ProductContainer>
               <ProductContainer>
-                <ProductInfoIcon source={prodInfoIcon} />
+              <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation')}>
+                  <Image source={prodInfoIcon} />
+                </ProductInfoIcon>
                 <ProductImage source={prodImage2} />
                 <ProductTitle>Lorem Ispum</ProductTitle>
                 <ProductPrice source={priceTag} />
               </ProductContainer>
               <ProductContainer>
-                <ProductInfoIcon source={prodInfoIcon} />
+              <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation')}>
+                  <Image source={prodInfoIcon} />
+                </ProductInfoIcon>
                 <ProductImage source={prodImage3} />
                 <ProductTitle>Lorem Ispum</ProductTitle>
                 <ProductPrice source={priceTag} />
               </ProductContainer>
               <ProductContainer>
-                <ProductInfoIcon source={prodInfoIcon} />
+              <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation')}>
+                  <Image source={prodInfoIcon} />
+                </ProductInfoIcon>
                 <ProductImage source={prodImage4} />
                 <ProductTitle>Lorem Ispum</ProductTitle>
                 <ProductPrice source={priceTag} />
               </ProductContainer>
             </ProductsWrapper>
           </ProductsDisplay>
-          <Image source={loader} style={{marginLeft:190,marginTop:30,marginBottom:30}} />
+          <View style={{width: '100%',alignItems: 'center', marginTop:25, marginBottom:25}}>
+          <Image source={loader}  />
+          </View>
           <BottomSearch />
       </ScrollView>
-      <Image source={bottomTabNavigation} style={{width:'100%',marginBottom:50}} />
-    </>
+    {/* </View> */}
+    </Wrapper>
 
   )
 }

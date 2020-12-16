@@ -2,15 +2,15 @@ import { Dimensions } from 'react-native'
 import styled from 'styled-components'
 
 const winHeight = Dimensions.get('window').height
+const winWidth = Dimensions.get('window').width
 
-export const Wrapper = styled.View`
-  width: 363px;
+export const Wrapper = styled.ScrollView`
+  width: ${winWidth-32}px;
   margin: 0px auto;
   height: ${winHeight - 130}px;
   position: relative;
   flex-direction: column;
   margin-top: 30px;
-  align-items: center;
 `
 export const HeadingView = styled.View`
   position: relative;
@@ -21,7 +21,7 @@ export const HeadingView = styled.View`
   margin-bottom: 25px;
 `
 
-export const BackArrow = styled.Image`
+export const BackArrow = styled.TouchableOpacity`
   position: absolute;
   top: 5px;
   left: 0px;

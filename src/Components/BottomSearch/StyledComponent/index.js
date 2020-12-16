@@ -11,11 +11,12 @@ export const BottomSearchView = styled.View`
 `
 
 export const BottomSearchInput = styled.TextInput`
-  width: 380px;
-  height: 39px;
+  width: 100%;
+  margin: 0px auto;
   border-radius: 59px;
-  padding: 12px 29px;
+  padding: 9px 29px;
   background-color: white;
+  font-size: 12px;
 `
 
 export const LeftIconInInput = styled.Image`
