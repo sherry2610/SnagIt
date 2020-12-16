@@ -60,7 +60,7 @@ const Profile = (props) => {
             Payment Method
           </PaymentMethod>
           
-            <Logout onPress={()=>navigation.navigate('CreateAccount')} >
+            <Logout onPress={()=>navigation.navigate('SignIn')} >
               Logout
             </Logout>
           

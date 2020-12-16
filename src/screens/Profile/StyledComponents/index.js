@@ -66,8 +66,7 @@ export const ProfileContact = styled.Text`
   font-size: 14px;
   line-height: 20px; 
   margin-left: 24px;
-  
-
+  margin-bottom: 24px;
   color: #545454;
 `
 
@@ -117,7 +116,6 @@ export const PaymentMethod = styled.Text`
   font-size: 16px;
   line-height: 10px;
   padding: 24px 0px 15px;
-
   text-align: center;
 
   color: #EDA920;

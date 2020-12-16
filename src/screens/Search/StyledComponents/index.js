@@ -8,7 +8,7 @@ export const Wrapper = styled.View`
   width: 100%;
   flex-direction: column;
   align-items: center;
-  height: ${winHeight - 25}px;
+  height: ${winHeight - 30}px;
   margin: 0px auto;
 
 `
@@ -46,9 +46,9 @@ export const InputRightIcon = styled.Image`
 `
 
 export const NothingFoundImage = styled.Image`
-  width: ${winWidth - 32}px;
+  width: 100%;;
   position: relative;
   top: 129px;
   height: 200px;
-  margin-bottom: 250px;
+  margin-bottom: 235px;
 `
