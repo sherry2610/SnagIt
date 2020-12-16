@@ -25,6 +25,7 @@ import CardDetail from '../screens/CardDetail';
 // import historyTabIcon from '../assets/general/historyTab.png'
 import { AppFooter } from '../Components/CommonComponets/FooterContent';
 import CreateAccount from '../screens/CreateAccount';
+import SignIn from '../screens/SignIn';
 
 const Stack = createStackNavigator();
 
@@ -82,7 +83,7 @@ export default ({navigation}) => {
 
   return (
     <>
-      <Stack.Navigator initialRouteName="Profile" >
+      <Stack.Navigator initialRouteName="SignIn" >
       <Stack.Screen options={options} name="Home" component={Home} />
       <Stack.Screen options={{...options,headerShown:false}} name="ProductInformation" component={ProductInformation} />
       <Stack.Screen options={options} name="Settings" component={Settings} />
@@ -97,6 +98,7 @@ export default ({navigation}) => {
       <Stack.Screen options={{...options,headerShown:false}} name="OnlinePayment" component={OnlinePayment} />
       <Stack.Screen options={{...options,headerShown:false}} name="CardDetail" component={CardDetail} />
       <Stack.Screen options={{...options,headerShown:false}} name="CreateAccount" component={CreateAccount} />
+      <Stack.Screen options={{...options,headerShown:false}} name="SignIn" component={SignIn} />
       </Stack.Navigator>
       <AppFooter />
       </>
