@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Dimensions, View, Image, Text, ScrollView, TouchableOpacity} from 'react-native';
 import profilePic from '../../assets/profile/profilepic.png';
 import editIcon from '../../assets/profile/edit.png';
 import addProfilePic from '../../assets/profile/addprofilepic.png';
+import AsyncStorage from '@react-native-community/async-storage'
 import {
   ProfileContent,
   ProfileImage,
@@ -23,7 +24,29 @@ import {
 const height = Dimensions.get('window').height;
 
 const Profile = (props) => {
+
+  const [userProfile, setUserProfile] = useState(false)
+
   const { navigation } = props
+
+
+  useEffect(()=>{
+    async function fetchProfile() {
+      const userData = await AsyncStorage.getItem('userData')
+      if(userData !== null){
+        console.log("userData",JSON.parse(userData))
+        setUserProfile(JSON.parse(userData))
+      }else{
+        setUserProfile(false)
+      }      
+    }  
+    fetchProfile();
+  },[userProfile!==false])
+
+
+  // fetchProfile();
+  console.log("userProfile ------",userProfile)
+
 
   return (
     <ScrollView>
@@ -37,15 +60,15 @@ const Profile = (props) => {
         </ProfileImageWrapper>
 
         <ProfileName>
-        Jonithan Davis
+        {userProfile ? `${userProfile.firstname} ${userProfile.lastname}` : 'Jonathan Davis'}
         </ProfileName>
 
         <ProfileContactDetail>
           <ProfileEmail>
-            jonithan123@gmail.com
+            {userProfile ? userProfile.email : 'jonithan123@gmail.com'}
           </ProfileEmail>
           <ProfileContact>
-            123-321-1234
+            {userProfile ? userProfile.phone_num : '123-321-1234'}
           </ProfileContact>
         </ProfileContactDetail>
         
@@ -60,7 +83,10 @@ const Profile = (props) => {
             Payment Method
           </PaymentMethod>
           
-            <Logout onPress={()=>navigation.navigate('SignIn')} >
+            <Logout onPress={()=>{
+              navigation.navigate('SignIn')
+              AsyncStorage.clear()
+              }} >
               Logout
             </Logout>
           

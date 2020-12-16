@@ -61,6 +61,7 @@ export const InputWrapper = styled.View`
   position: relative;
   margin-bottom: 10px;
   padding-horizontal: 10px;
+  justify-content: center;
 `
 
 export const FirstNameInput = styled.TextInput`
@@ -75,7 +76,7 @@ export const FirstNameInput = styled.TextInput`
 
 export const InputIcon = styled.Image`
   position: absolute;
-  bottom: 25px;
+  bottom: ${props => props.bottom? props.bottom : '0' }px
   right: 24px;
 `
 
@@ -94,6 +95,7 @@ export const Legend = styled.Text`
   line-height: 18px;
   color: #EDA920;
   background-color: white;
+  display: ${props => props.display ? 'flex' : 'none'};
 
 `
 
@@ -108,14 +110,14 @@ export const LastNameInput = styled.TextInput`
 `
 
 export const EmailInput = styled.TextInput`
-  width: 100%;
-  height: 45px;
-  padding-left: 20px;
-  background-color: ${props=>props.isFocused?"white":"#F6F6F6"};
-  border: ${props => props.isFocused?"1px solid #EDA920" : "0px"};
-  background: #F6F6F6;
-  border-radius: 59px;
-  margin-bottom: 5px;
+width: 100%;
+height: 45px;
+background: #F6F6F6;
+border-radius: 59px;
+margin-bottom: 15px;
+padding-left: 20px;
+background-color: ${props=>props.isFocused?"white":"#F6F6F6"};
+border: ${props => props.isFocused?"1px solid #EDA920" : "0px"};
 `
 
 export const PhoneInput = styled.TextInput`

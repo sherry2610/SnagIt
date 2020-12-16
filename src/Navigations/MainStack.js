@@ -127,7 +127,9 @@ export default ({navigation}) => {
 
   return (
     <>
-      <Stack.Navigator initialRouteName="HomeScreen" >
+      <Stack.Navigator initialRouteName="SignIn" >
+      <Stack.Screen options={{...options,headerShown:false}} name="CreateAccount" component={CreateAccount} />
+      <Stack.Screen options={{...options,headerShown:false}} name="SignIn" component={SignIn} />
       <Stack.Screen options={options} name="HomeScreen" component={HomeScreen} />
       <Stack.Screen options={{...options,headerShown:false}} name="ProductInformation" component={ProductInformation} />
       <Stack.Screen options={options} name="Settings" component={Settings} />
@@ -142,8 +144,7 @@ export default ({navigation}) => {
       <Stack.Screen options={{...options,headerShown:false}} name="OnlinePayment" component={OnlinePayment} />
       <Stack.Screen options={{...options,headerShown:false}} name="CardDetail" component={CardDetail} />
       <Stack.Screen options={{...options,headerShown:false}} name="Search" component={Search} />
-      <Stack.Screen options={{...options,headerShown:false}} name="CreateAccount" component={CreateAccount} />
-      <Stack.Screen options={{...options,headerShown:false}} name="SignIn" component={SignIn} />
+      
       </Stack.Navigator>
       <AppFooter />
       </>

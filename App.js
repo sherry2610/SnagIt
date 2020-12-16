@@ -1,7 +1,7 @@
 import  'react-native-gesture-handler' ;
 enableScreens ();
 
-import  React  from  'react' ;
+import  React, { useEffect }  from  'react' ;
 import  { enableScreens }  from  'react-native-screens' ;
 import { Text, StatusBar, View } from 'react-native';
 import SplashScreen from './src/screens/Splash'
