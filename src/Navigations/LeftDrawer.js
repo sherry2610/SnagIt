@@ -58,6 +58,7 @@ export const CustomDrawerComp = (props) => {
             paddingBottom: 5,
             borderBottomWidth: 1,
             borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
           }}
           labelStyle={{
             marginLeft: -10,
@@ -79,6 +80,7 @@ export const CustomDrawerComp = (props) => {
             paddingBottom: 5,
             borderBottomWidth: 1,
             borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
           }}
           labelStyle={{
             marginLeft: -10,
@@ -100,6 +102,7 @@ export const CustomDrawerComp = (props) => {
             paddingBottom: 5,
             borderBottomWidth: 1,
             borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular'
           }}
           labelStyle={{
             marginLeft: -10,
@@ -121,6 +124,7 @@ export const CustomDrawerComp = (props) => {
             paddingBottom: 5,
             borderBottomWidth: 1,
             borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
           }}
           labelStyle={{
             marginLeft: -10,
@@ -142,6 +146,7 @@ export const CustomDrawerComp = (props) => {
             paddingBottom: 5,
             borderBottomWidth: 1,
             borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
           }}
           labelStyle={{
             marginLeft: -10,
@@ -163,6 +168,7 @@ export const CustomDrawerComp = (props) => {
             paddingBottom: 5,
             borderBottomWidth: 1,
             borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
           }}
           labelStyle={{
             marginLeft: -10,
@@ -184,6 +190,7 @@ export const CustomDrawerComp = (props) => {
             paddingBottom: 5,
             borderBottomWidth: 1,
             borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
           }}
           labelStyle={{
             marginLeft: -10,
@@ -206,6 +213,7 @@ export const CustomDrawerComp = (props) => {
             paddingBottom: 5,
             borderBottomWidth: 1,
             borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
           }}
           labelStyle={{
             marginLeft: -10,
@@ -227,6 +235,7 @@ export const CustomDrawerComp = (props) => {
             paddingBottom: 5,
             borderBottomWidth: 1,
             borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
           }}
           labelStyle={{
             marginLeft: -10,
@@ -248,6 +257,7 @@ export const CustomDrawerComp = (props) => {
             paddingBottom: 5,
             borderBottomWidth: 1,
             borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
           }}
           labelStyle={{
             marginLeft: -10,
@@ -269,6 +279,7 @@ export const CustomDrawerComp = (props) => {
             paddingBottom: 5,
             borderBottomWidth: 1,
             borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
           }}
           labelStyle={{
             marginLeft: -10,
@@ -290,6 +301,7 @@ export const CustomDrawerComp = (props) => {
             paddingBottom: 5,
             borderBottomWidth: 1,
             borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
           }}
           labelStyle={{
             marginLeft: -10,

@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import { Dimensions } from 'react-native'
 
-
+const winWidth = Dimensions.get('window').width
 
 export const ChangePasswordWrapper = styled.ScrollView`
-  width: 100%;
+  width: ${winWidth - 32}px;
   margin: 0px auto;
   position: relative;  
   background-color: #FFFFFF;
@@ -26,7 +27,7 @@ export const ChangePasswordHeading = styled.Text`
   width: 100%;
   text-align: center;
 
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -39,7 +40,7 @@ export const ChangePasswordHeading = styled.Text`
 `
 
 export const InputWrapper = styled.View`
-  width: 343px;
+  width: 100%;
   position: relative;
   margin: 0px auto;
   margin-bottom: 10px;
@@ -70,7 +71,7 @@ export const Legend = styled.Text`
   text-align: center;
   font-weight: bold;
   z-index: 10;
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: 500;
   font-size: 11px;
@@ -116,7 +117,7 @@ export const SaveButton = styled.Text`
   background: #D51E16;
   border-radius: 59px;
   padding: 15px 0px;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 800;
   font-size: 14px;

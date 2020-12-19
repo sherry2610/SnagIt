@@ -33,7 +33,7 @@ export const AddIcon = styled.Image`
 `
 
 export const ProfileName = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 27px;
@@ -50,7 +50,7 @@ export const ProfileContactDetail = styled.View`
 
 export const ProfileEmail = styled.Text`
   height: 21px;
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -60,7 +60,7 @@ export const ProfileEmail = styled.Text`
 `
 
 export const ProfileContact = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -78,7 +78,7 @@ export const ChangePassword = styled.Text`
   width: 100%;
   border-bottom-width: 1px;
   border-bottom-color: #ECECEC;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -94,7 +94,7 @@ export const PastRecentOrders = styled.Text`
   width: 100%;
   border-bottom-width: 1px;
   border-bottom-color: #ECECEC;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -110,7 +110,7 @@ export const PaymentMethod = styled.Text`
   width: 100%;
   border-bottom-width: 1px;
   border-bottom-color: #ECECEC;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -125,7 +125,7 @@ export const Logout = styled.Text`
   width: 100%;
   border-bottom-width: 1px;
   border-bottom-color: #ECECEC;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;

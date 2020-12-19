@@ -27,7 +27,7 @@ export const BackArrow = styled.TouchableOpacity`
 
 export const MainHeading = styled.Text`
   height: 24px;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
@@ -73,7 +73,7 @@ export const DeleteOrder = styled.Image`
 ` 
 
 export const OrderId = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -84,7 +84,7 @@ export const OrderId = styled.Text`
 `
 
 export const ItemCount = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -93,7 +93,7 @@ export const ItemCount = styled.Text`
 `
 
 export const ItemNames = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -103,7 +103,7 @@ export const ItemNames = styled.Text`
 `
 
 export const Amount = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -115,7 +115,7 @@ export const Amount = styled.Text`
 `
 
 export const ReOrder = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;

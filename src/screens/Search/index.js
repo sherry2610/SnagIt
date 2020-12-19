@@ -14,7 +14,7 @@ import nothingFoundImage from '../../assets/search/nothingFound.png'
 const Search = () => {
   return (
     <>
-    <Wrapper>
+    <Wrapper behavior='padding' >
       <InputWrapper>
         
         <SearchInput placeholder="search" />

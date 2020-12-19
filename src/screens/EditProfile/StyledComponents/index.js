@@ -27,14 +27,11 @@ export const EditProfileContent = styled.KeyboardAvoidingView`
 export const EditProfileHeading = styled.Text`
   width: 100%;
   text-align: center;
-
-
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
-
   text-transform: capitalize;
 
   color: #1E201D;
@@ -72,7 +69,7 @@ export const Legend = styled.Text`
   text-align: center;
   font-weight: bold;
   z-index: 10;
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: 500;
   font-size: 11px;
@@ -119,7 +116,7 @@ export const SaveButton = styled.Text`
   background: #D51E16;
   border-radius: 59px;
   padding: 15px 0px;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 800;
   font-size: 14px;

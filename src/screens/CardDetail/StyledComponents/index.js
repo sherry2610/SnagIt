@@ -24,6 +24,15 @@ export const MainHeading = styled.Text`
   font-size: 30px;
   width: 100%;
   text-align: center;
+  font-family: MazzardH-Bold;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 29px;
+
+  text-transform: capitalize;
+
+  color: #1E201D;
 `
 
 export const CardOptionsImages = styled.View`
@@ -76,7 +85,7 @@ export const AddCardButton = styled.Text`
   border-radius: 59px;
   padding: 15px 0px;
   margin: 20px 0px;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 800;
   font-size: 14px;

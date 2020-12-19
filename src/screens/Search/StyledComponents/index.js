@@ -4,7 +4,7 @@ import { Dimensions } from 'react-native'
 const winHeight = Dimensions.get('window').height
 const winWidth = Dimensions.get('window').width
 
-export const Wrapper = styled.View`
+export const Wrapper = styled.KeyboardAvoidingView`
   width: 100%;
   flex-direction: column;
   align-items: center;
@@ -49,6 +49,6 @@ export const NothingFoundImage = styled.Image`
   width: 100%;;
   position: relative;
   top: 129px;
-  height: 200px;
-  margin-bottom: 235px;
+  height: 250px;
+  margin-bottom: 200px;
 `

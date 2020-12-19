@@ -25,7 +25,7 @@ export const WrapperContent = styled.View`
 `
 
 export const MainHeading = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -56,7 +56,7 @@ export const TickIcon = styled.Image`
 `
 
 export const CardNumber = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -72,7 +72,7 @@ export const AddCard = styled.View`
 `
 
 export const AddCardText = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

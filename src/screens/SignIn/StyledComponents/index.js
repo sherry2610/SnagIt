@@ -27,7 +27,7 @@ export const SignInContent = styled.KeyboardAvoidingView`
 export const SignInHeading = styled.Text`
   width: 100%;
   text-align: center;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -60,7 +60,7 @@ export const Legend = styled.Text`
   text-align: center;
   font-weight: bold;
   z-index: 10;
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: 500;
   font-size: 11px;
@@ -85,7 +85,7 @@ export const SaveButton = styled.Text`
   background: #D51E16;
   border-radius: 59px;
   padding: 15px 0px;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 800;
   font-size: 14px;
@@ -108,7 +108,7 @@ export const LastRow = styled.View`
 `
 
 export const RandomText = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -117,7 +117,7 @@ export const RandomText = styled.Text`
 `
 
 export const SignUpLink = styled.Text`
-font-family: Mazzard;
+font-family: MazzardH-Bold;
 font-style: normal;
 font-weight: bold;
 font-size: 15px;

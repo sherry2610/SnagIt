@@ -28,7 +28,7 @@ export const HeadingView = styled.View`
 `
 
 export const CartHeading = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -39,7 +39,7 @@ export const CartHeading = styled.Text`
 
 export const ItemCountSubHeading = styled.Text`
   height: 21px;
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -70,7 +70,7 @@ export const ProdNameContainer = styled.View`
 `
 
 export const ProductName = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -84,7 +84,7 @@ export const Counter = styled.Image`
 `
 
 export const ProductPrice = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   height: 40px;
   font-weight: bold;
@@ -111,7 +111,7 @@ export const TipContainer = styled.View`
 `
 
 export const TipHeading = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -137,7 +137,7 @@ export const TipDropdown = styled.View`
 `
 
 export const TipOption = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   width: 84%;
   font-weight: 600;
@@ -184,7 +184,7 @@ export const TotalRow = styled.View`
 `
 
 export const TotalHeading = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -195,7 +195,7 @@ export const TotalHeading = styled.Text`
 export const TotalAmount = styled.Text`
   position: absolute;
   right: 0px;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
@@ -207,7 +207,7 @@ export const TotalAmount = styled.Text`
 export const DeliveryAddressHeading = styled.Text`
   width: 254px;
   margin-bottom: 5px;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -226,7 +226,7 @@ export const DeliveryAddressInput = styled.TextInput`
 
 export const PreviousAddressHeading = styled.Text`
   width: 251px;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -243,7 +243,7 @@ export const AddressRow = styled.View`
 
 export const AddressText = styled.Text`
   width: 90%;
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -263,7 +263,7 @@ export const OrderNumberRow = styled.View`
 `
 
 export const OrderText = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -272,7 +272,7 @@ export const OrderText = styled.Text`
 `
 
 export const OrderNumber = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;

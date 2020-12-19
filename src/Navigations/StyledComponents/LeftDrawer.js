@@ -25,7 +25,7 @@ export const Header = styled.View`
 
 export const Heading = styled.Text`
   width: 105px;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;

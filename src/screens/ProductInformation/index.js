@@ -15,6 +15,7 @@ export default Splash = ({navigation}) => {
     <ProdInfoWrapper 
       contentContainerStyle={{
         justifyContent:'center',
+        alignItems: 'center'
       }} 
       showsVerticalScrollIndicator={false} >
       <ProductNameSection>

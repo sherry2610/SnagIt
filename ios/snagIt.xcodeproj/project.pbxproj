@@ -16,6 +16,168 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* snagItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* snagItTests.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		28331ECA5DEC4972A6D9DB74 /* MazzardH-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E37B983900D54EBC9E5F05DA /* MazzardH-Black.ttf */; };
+		22DBF4B6016E416B8257A13C /* MazzardH-Black.woff in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4A23308C9467A8471FE95 /* MazzardH-Black.woff */; };
+		78A4586313654915AEC74048 /* MazzardH-Black.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 15FE112EE35A44CE84611A83 /* MazzardH-Black.woff2 */; };
+		723DC4D642CF4633A5504E90 /* MazzardH-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F83CA87E4864CB29ED9F842 /* MazzardH-BlackItalic.ttf */; };
+		BEA8BF0ABB314E6595803BF3 /* MazzardH-BlackItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = D0409F7D04AF4DAF83D1EBAA /* MazzardH-BlackItalic.woff */; };
+		1665926BEB6D45E49043B05A /* MazzardH-BlackItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = A36FD840EC3441EBBCECE905 /* MazzardH-BlackItalic.woff2 */; };
+		E8D83D7378E947398B521452 /* MazzardH-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0CFE283BC0C4EB09DE331E7 /* MazzardH-Bold.ttf */; };
+		CEB1181CB6614548B8027877 /* MazzardH-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 4A1CADA993164F7C9D489D68 /* MazzardH-Bold.woff */; };
+		3C0E85AC37DF4F6C9A7276B0 /* MazzardH-Bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 0B3AE0EB90434195937DF748 /* MazzardH-Bold.woff2 */; };
+		7083AD6916424B04B1F73C49 /* MazzardH-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39D5C7EF14D54346A86B0019 /* MazzardH-BoldItalic.ttf */; };
+		2C0E5AF9FE8C40F78DB6EC98 /* MazzardH-BoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 720E2631785644518AE94AE5 /* MazzardH-BoldItalic.woff */; };
+		23785EBCF8EA4BD191CEE1EF /* MazzardH-BoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = F8AC38BCBD1845CCB22D8456 /* MazzardH-BoldItalic.woff2 */; };
+		3E34CD89CB0B4BD8BC4958CA /* MazzardH-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F00D579F469D4A3FBFC1CE2C /* MazzardH-ExtraBold.ttf */; };
+		20396FB49E034D9783EEEA11 /* MazzardH-ExtraBold.woff in Resources */ = {isa = PBXBuildFile; fileRef = AF67B81B9119438C9FF48D95 /* MazzardH-ExtraBold.woff */; };
+		B6F265A8ABE64442A3B4C216 /* MazzardH-ExtraBold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = E7165BF8755043B996DA8150 /* MazzardH-ExtraBold.woff2 */; };
+		5228CEE82302437DA817A9E0 /* MazzardH-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4751EB70B5274D189A22C206 /* MazzardH-ExtraBoldItalic.ttf */; };
+		3019D91987AE4EB998740D34 /* MazzardH-ExtraBoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = B7CAD2068BEC4504840524CC /* MazzardH-ExtraBoldItalic.woff */; };
+		271E5DB9256B4B1880478357 /* MazzardH-ExtraBoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9AF02AB2540E2A5DEC97F /* MazzardH-ExtraBoldItalic.woff2 */; };
+		A90B6B6F200C4BD38EDA590C /* MazzardH-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59DD242F711C4D088F0C8F0F /* MazzardH-ExtraLight.ttf */; };
+		F3A2E573D4134F7F8AC098E9 /* MazzardH-ExtraLight.woff in Resources */ = {isa = PBXBuildFile; fileRef = 85BDD584DB614D5987CB7708 /* MazzardH-ExtraLight.woff */; };
+		B7B3AFB8F7504BF39F6BC206 /* MazzardH-ExtraLight.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 31E79B8525B04F33BC3A449B /* MazzardH-ExtraLight.woff2 */; };
+		7F69F823843B4D23BCD522B4 /* MazzardH-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8EE7241F0B944A518583C959 /* MazzardH-ExtraLightItalic.ttf */; };
+		FD7BBF38266E4BE4B6B7AA67 /* MazzardH-ExtraLightItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = E2D5C9065A3E42AC8568A69F /* MazzardH-ExtraLightItalic.woff */; };
+		963965ED45AC426B99E0BE4A /* MazzardH-ExtraLightItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = F1344ECE18DE43C683630488 /* MazzardH-ExtraLightItalic.woff2 */; };
+		1B798373E875478D8F784106 /* MazzardH-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E044EFCAA144D12812AAA84 /* MazzardH-Italic.ttf */; };
+		0CD8B5FEB29E4244BBE33507 /* MazzardH-Italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = A6F92B72FE964365B643FB1E /* MazzardH-Italic.woff */; };
+		658E94CA7E2A47888C55483C /* MazzardH-Italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = C3A2A35DEE9C499890B83275 /* MazzardH-Italic.woff2 */; };
+		1288ECE33E644A77BB5AA73A /* MazzardH-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1D2A40BCC2A4017B4A85015 /* MazzardH-Light.ttf */; };
+		C04B77EBD2AA46C19E77CF84 /* MazzardH-Light.woff in Resources */ = {isa = PBXBuildFile; fileRef = A3FD30EF230D4C0FB6F0E372 /* MazzardH-Light.woff */; };
+		4F026B6D2EC14818B28C712E /* MazzardH-Light.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = B36469D972E9493889495E76 /* MazzardH-Light.woff2 */; };
+		86556BAC246447AC98949F2B /* MazzardH-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8873140C64A949E893A915A1 /* MazzardH-LightItalic.ttf */; };
+		F607BFD4AFB240508793CF09 /* MazzardH-LightItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = BC85C073CDCC4F6F8426AF5E /* MazzardH-LightItalic.woff */; };
+		C6483164AA8F4480AC82A679 /* MazzardH-LightItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 33EDBE5E08E24B71B4CF4FF8 /* MazzardH-LightItalic.woff2 */; };
+		66AA26F51DE84A59843F4774 /* MazzardH-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2374D3FEA48940F896F52A05 /* MazzardH-Medium.ttf */; };
+		FC94A3E233B54ACC88C63B5E /* MazzardH-Medium.woff in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D10EAB36540C6BC8673DB /* MazzardH-Medium.woff */; };
+		770503C021024E8C908712AD /* MazzardH-Medium.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = AEDB5CAF911C473B9AF6FB55 /* MazzardH-Medium.woff2 */; };
+		5AE89DBFCABE4DBCBC2860C1 /* MazzardH-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A331037982DC4B7288E95247 /* MazzardH-MediumItalic.ttf */; };
+		49E873824BDD41488324CA2D /* MazzardH-MediumItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = BAD4410EF97B4868A4077A58 /* MazzardH-MediumItalic.woff */; };
+		7BEF5FF3E59841569D8D2878 /* MazzardH-MediumItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = DEB88690847C45FF8A46B4CE /* MazzardH-MediumItalic.woff2 */; };
+		850333366EAE40EAA749D826 /* MazzardH-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDF493AEC2BD4514B52A747D /* MazzardH-Regular.ttf */; };
+		96DAA773FC11423092E6604F /* MazzardH-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 5C8497C6DD4D4A27B290E3F7 /* MazzardH-Regular.woff */; };
+		8F5EAE562B694F5D9BBA42A2 /* MazzardH-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = B7438D053C8E44BF9395DA24 /* MazzardH-Regular.woff2 */; };
+		CF6DAA222A9C494D94835C72 /* MazzardH-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5BC2101877D4C13B79ED339 /* MazzardH-SemiBold.ttf */; };
+		D82F67BCDCC44044ACC15D19 /* MazzardH-SemiBold.woff in Resources */ = {isa = PBXBuildFile; fileRef = FC594F67A36941509E8C259E /* MazzardH-SemiBold.woff */; };
+		3DA1291D04C340178B7F4104 /* MazzardH-SemiBold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = E7236A67BADB412CB8D7CCD6 /* MazzardH-SemiBold.woff2 */; };
+		C066A041D0C04A7984857009 /* MazzardH-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 265879ED576C487BA0055847 /* MazzardH-SemiBoldItalic.ttf */; };
+		87AFD4CEB3984730AE06F4EC /* MazzardH-SemiBoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = C06EBAA492A04836822DD5A9 /* MazzardH-SemiBoldItalic.woff */; };
+		32D131CF8AEA4DFDB328C3D3 /* MazzardH-SemiBoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = CFC31CEF806A4788B765C726 /* MazzardH-SemiBoldItalic.woff2 */; };
+		71D491A1F5354309BBF76067 /* MazzardH-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABAB42E844134E6EB0B10C02 /* MazzardH-Thin.ttf */; };
+		8A0CE012E4D241FDA3D5E272 /* MazzardH-Thin.woff in Resources */ = {isa = PBXBuildFile; fileRef = 419242AD247542878C4F1066 /* MazzardH-Thin.woff */; };
+		B1D5395352E44A2F87EE2ACB /* MazzardH-Thin.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = CF722C90260E4BDB8A4F021B /* MazzardH-Thin.woff2 */; };
+		EF5FFE971BD249E7B2FE313C /* MazzardH-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66B30F61D7854C008DFB43A9 /* MazzardH-ThinItalic.ttf */; };
+		69E174EBDC0A4AE3873BABE2 /* MazzardH-ThinItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 31834B3147E54782BD500D67 /* MazzardH-ThinItalic.woff */; };
+		F50B7CCB2724452583C53D15 /* MazzardH-ThinItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 9D790EE4C52C448E83C4B4E7 /* MazzardH-ThinItalic.woff2 */; };
+		C396EF56D21349D6A5F52B02 /* MazzardL-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD4FF8F9983C4F5183F2ADEA /* MazzardL-Black.ttf */; };
+		6B587064085349739C4FDCD2 /* MazzardL-Black.woff in Resources */ = {isa = PBXBuildFile; fileRef = 218264A77E844CCAA0FF23FA /* MazzardL-Black.woff */; };
+		216F2A67EFD543B797A1B348 /* MazzardL-Black.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = A2FA1522B90746D293DA55B0 /* MazzardL-Black.woff2 */; };
+		B0BCF31BE1FF439BB9FED917 /* MazzardL-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7B79337AA294A358411D5EA /* MazzardL-BlackItalic.ttf */; };
+		CFEDF86A3F144A2A9A389852 /* MazzardL-BlackItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 09B8256851F54399B155BEB3 /* MazzardL-BlackItalic.woff */; };
+		629EBDFE425C44B19694BC82 /* MazzardL-BlackItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 073DE20D32FA4A06942DAAD9 /* MazzardL-BlackItalic.woff2 */; };
+		145104E908514DA7BE0FEBFD /* MazzardL-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECFED5DC0D49426DBD784F6B /* MazzardL-Bold.ttf */; };
+		A91140CE3D8A43B6A409C5D4 /* MazzardL-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 83019EA9E69E4323AAE10B02 /* MazzardL-Bold.woff */; };
+		0FB737D48A6F44D6A3387A98 /* MazzardL-Bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 816EC1F41EE6428E90DE5A86 /* MazzardL-Bold.woff2 */; };
+		C637F9A46ABE401186BCF803 /* MazzardL-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C3B85D4EDF24EBAA762BC98 /* MazzardL-BoldItalic.ttf */; };
+		66085C710B4740208D297D43 /* MazzardL-BoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 85994F22BD694C89A5875B66 /* MazzardL-BoldItalic.woff */; };
+		B336E3A3EAE040C8A5248F35 /* MazzardL-BoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 1AEECB0C6AB14154ADB7435E /* MazzardL-BoldItalic.woff2 */; };
+		5E5EAC0E0F1142CA80A0632B /* MazzardL-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56392CC888DD49A397BFA34E /* MazzardL-ExtraBold.ttf */; };
+		69E5A2DF0FE04990AC74847B /* MazzardL-ExtraBold.woff in Resources */ = {isa = PBXBuildFile; fileRef = A7E7E90294BF44FD85013C5E /* MazzardL-ExtraBold.woff */; };
+		273B7F3F47EC4D07BD52F7FF /* MazzardL-ExtraBold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 89F720FC7C7944DF8E459B8C /* MazzardL-ExtraBold.woff2 */; };
+		25585D49976A454D8C560B65 /* MazzardL-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170D02389ED243B8A3E3A2AA /* MazzardL-ExtraBoldItalic.ttf */; };
+		475A7EEC5909405BA4DD27F5 /* MazzardL-ExtraBoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 4A2BEB810AC043D19EE10868 /* MazzardL-ExtraBoldItalic.woff */; };
+		F043407B3B7B487AA83CEF19 /* MazzardL-ExtraBoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = D95D80DA22DB48929E3B6DC1 /* MazzardL-ExtraBoldItalic.woff2 */; };
+		73367E385F5649348AC7042D /* MazzardL-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267E2AEB423A4C858153D68A /* MazzardL-ExtraLight.ttf */; };
+		E4D718C845E64070B1936DF9 /* MazzardL-ExtraLight.woff in Resources */ = {isa = PBXBuildFile; fileRef = FEF3B548F1B74FC6B32BFB60 /* MazzardL-ExtraLight.woff */; };
+		4D35396F455E4D70B2B955AE /* MazzardL-ExtraLight.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 1CC8A2D1EB0C43E692950AF9 /* MazzardL-ExtraLight.woff2 */; };
+		8C70AEBB3979471DAD7E085E /* MazzardL-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB524A946A194735AFEB3FC7 /* MazzardL-ExtraLightItalic.ttf */; };
+		24EFADF2A61242FDB182F25F /* MazzardL-ExtraLightItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = E5B18E42076E4D6AB059391C /* MazzardL-ExtraLightItalic.woff */; };
+		293F352A35E44A3EAF65C946 /* MazzardL-ExtraLightItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 6AE2E4FCBB0D4B5899EB9EC7 /* MazzardL-ExtraLightItalic.woff2 */; };
+		5B60D3E49A2343488DE185F9 /* MazzardL-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B432B1937914831938ED1A5 /* MazzardL-Italic.ttf */; };
+		8EC5949B22D2497998A1D27F /* MazzardL-Italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 4C0240B6D90C4F87A8E889F2 /* MazzardL-Italic.woff */; };
+		2661E1003B204F52AF1AD7DA /* MazzardL-Italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = B89BD51FBB244825959D8A07 /* MazzardL-Italic.woff2 */; };
+		54146AE6600649D3AA2BCDA2 /* MazzardL-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E13186CB2C7343B9BC2BC497 /* MazzardL-Light.ttf */; };
+		92A26CFED7F946C6AD0614F1 /* MazzardL-Light.woff in Resources */ = {isa = PBXBuildFile; fileRef = 9C314B81471F45959CC71E4D /* MazzardL-Light.woff */; };
+		B2A5D74CCDC2466088E2AE0D /* MazzardL-Light.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = B427B75B782A4C8EB99D4D27 /* MazzardL-Light.woff2 */; };
+		4D03D656046F486184E7EF81 /* MazzardL-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 385C44D4C9ED40D2986EED93 /* MazzardL-LightItalic.ttf */; };
+		0EC7A90EEE804072A43124D8 /* MazzardL-LightItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = AC7C27F664D6458199FBB841 /* MazzardL-LightItalic.woff */; };
+		DE417CEE328747AAB1142C91 /* MazzardL-LightItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 6F398B4146224682BCE0A7AB /* MazzardL-LightItalic.woff2 */; };
+		C90CFA9F30E541E781A4E774 /* MazzardL-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45D9428A8AF84C45877D41AA /* MazzardL-Medium.ttf */; };
+		CC90E6E025AE42FEBC59170E /* MazzardL-Medium.woff in Resources */ = {isa = PBXBuildFile; fileRef = CDC45201F6D940C2AC7C2A07 /* MazzardL-Medium.woff */; };
+		2898111F6A1E4DEEA9F3851F /* MazzardL-Medium.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 18BB81D5619343F5AD3222C1 /* MazzardL-Medium.woff2 */; };
+		4B9E69D6771D49768BB3A0D3 /* MazzardL-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD2003924FB4F3B8D215A46 /* MazzardL-MediumItalic.ttf */; };
+		4CBFB8AC72754E499251FC77 /* MazzardL-MediumItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = A8D154DED7D54E6ABACD4186 /* MazzardL-MediumItalic.woff */; };
+		092A02CEA35D45D3BDE1BD0C /* MazzardL-MediumItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = A8A4A012DFAB4FD98875D767 /* MazzardL-MediumItalic.woff2 */; };
+		470A3A15C37A4913B4DE2DE1 /* MazzardL-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26A8B6C3C506455DA66E5B2F /* MazzardL-Regular.ttf */; };
+		D3202483DACF468CBF8E3872 /* MazzardL-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 22AC75F2FAF444789671251A /* MazzardL-Regular.woff */; };
+		3C41A8A314EC4EABA0E005E2 /* MazzardL-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 12DF598F654949FC9351D73F /* MazzardL-Regular.woff2 */; };
+		6D48ADBAD1A645C783E706B9 /* MazzardL-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 995F6DA520BF4F9298C0B237 /* MazzardL-SemiBold.ttf */; };
+		37776E18CB874D868071AC17 /* MazzardL-SemiBold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 3F2C41E37FDF4E749D460C2F /* MazzardL-SemiBold.woff */; };
+		1E92F1A12C1A4470AD268E04 /* MazzardL-SemiBold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = B0479BD134CC411EABE6D438 /* MazzardL-SemiBold.woff2 */; };
+		5072A4D11C5C4EDEB153933A /* MazzardL-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5637FD32AC804BC681829EA8 /* MazzardL-SemiBoldItalic.ttf */; };
+		60496747567E40F4B8BB52DD /* MazzardL-SemiBoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 711BC142D4BB40FC9B628A22 /* MazzardL-SemiBoldItalic.woff */; };
+		7114FD2C69554C1B84CFCAFB /* MazzardL-SemiBoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = F710A5F5680040EDA89A536E /* MazzardL-SemiBoldItalic.woff2 */; };
+		6303E7EF369042D7BC21FEBE /* MazzardL-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 063866FC44CC434D8102718C /* MazzardL-Thin.ttf */; };
+		B12B3606F5154FEEA62B3F70 /* MazzardL-Thin.woff in Resources */ = {isa = PBXBuildFile; fileRef = 159F80DB6BEE4A1FA062CB92 /* MazzardL-Thin.woff */; };
+		E648B23E3D6F4EE194BBCA14 /* MazzardL-Thin.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 239AD94DE9B148449CABDB6F /* MazzardL-Thin.woff2 */; };
+		65C92C4309C44E12B9188DEC /* MazzardL-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D5868AFDC6441EEA78E9337 /* MazzardL-ThinItalic.ttf */; };
+		4C35E9F97AC74CBABDF1A0D2 /* MazzardL-ThinItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 3F555CED85C645F180C3FB69 /* MazzardL-ThinItalic.woff */; };
+		CB40A8E27AC84CEB98F22E6E /* MazzardL-ThinItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = E2215B1B5615471D9598D56E /* MazzardL-ThinItalic.woff2 */; };
+		280F914C04AC4F70BB456793 /* MazzardM-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 053FB54DBD8A4D6B8D8C6980 /* MazzardM-Black.ttf */; };
+		E04D5A17CE7F44CA98FEE036 /* MazzardM-Black.woff in Resources */ = {isa = PBXBuildFile; fileRef = 301EC3F5EB3F45B3AAFE31A2 /* MazzardM-Black.woff */; };
+		C57A509A3D384E8D91B253BD /* MazzardM-Black.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = F946E333C004496288066F20 /* MazzardM-Black.woff2 */; };
+		829AE90E381C49FF991A808C /* MazzardM-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E40EAD41DA4406C94058479 /* MazzardM-BlackItalic.ttf */; };
+		1EC6A3682104472698F6DF48 /* MazzardM-BlackItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 56FF866348474C7EAFB88F89 /* MazzardM-BlackItalic.woff */; };
+		A96BE3632B764040B4FAF703 /* MazzardM-BlackItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 1FE10ED25DAD46B899B7E270 /* MazzardM-BlackItalic.woff2 */; };
+		4262815335B84C1BBBC93592 /* MazzardM-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC54263A8E1A4037B70AF84A /* MazzardM-Bold.ttf */; };
+		D7286B03588D439EA0576C4B /* MazzardM-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = BD703C1CA9F74C8AAF66BCC9 /* MazzardM-Bold.woff */; };
+		7C90DA1B45194341A206AE61 /* MazzardM-Bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = DBD1B60BC8364DFF97E41CF9 /* MazzardM-Bold.woff2 */; };
+		6470A664AC724CA5B542D4A3 /* MazzardM-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D72F3CBE74542D18C03314F /* MazzardM-BoldItalic.ttf */; };
+		EC06241B1EE8446899F86332 /* MazzardM-BoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = B482CCCCD9F5408085549331 /* MazzardM-BoldItalic.woff */; };
+		4CB80E61E8E74F52A31033AF /* MazzardM-BoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = BCD0B47F1D1E44268C43A790 /* MazzardM-BoldItalic.woff2 */; };
+		DFE19E24D7EC45B4A12FAD2E /* MazzardM-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF960704F63F42F59716ABF3 /* MazzardM-ExtraBold.ttf */; };
+		03A2ED8908C344F49AD5CF65 /* MazzardM-ExtraBold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 5713D663FC9B43B9871E32CE /* MazzardM-ExtraBold.woff */; };
+		B4C6B3B4CDED4F9CB4308B03 /* MazzardM-ExtraBold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = B09E88C2E98A4046AE840F86 /* MazzardM-ExtraBold.woff2 */; };
+		8A2E912982514BE081A9BE64 /* MazzardM-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30EE6D194383469CB2A9915C /* MazzardM-ExtraBoldItalic.ttf */; };
+		4F4B1FBAF9C3447DBB5BF469 /* MazzardM-ExtraBoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 1BE839816A5D4257A3BD8A7D /* MazzardM-ExtraBoldItalic.woff */; };
+		1D3F8BD4BE5E4EC3850774B4 /* MazzardM-ExtraBoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 51995979056B4A9AA6FED616 /* MazzardM-ExtraBoldItalic.woff2 */; };
+		D117326FC0FB42A09BF79391 /* MazzardM-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD11A29418ED4206A99E44F0 /* MazzardM-ExtraLight.ttf */; };
+		880452F2716A41DB964BFFE7 /* MazzardM-ExtraLight.woff in Resources */ = {isa = PBXBuildFile; fileRef = 5B72E6200C14476A90F6EF8E /* MazzardM-ExtraLight.woff */; };
+		94A1F231C0794C8ABFD53F9A /* MazzardM-ExtraLight.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 9B53E44172234A8FA44C43A7 /* MazzardM-ExtraLight.woff2 */; };
+		0D912D8252C04B8491828605 /* MazzardM-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0D8011B16124C3E916E98AF /* MazzardM-ExtraLightItalic.ttf */; };
+		7B478CD16C6B45A8BEBF3AF4 /* MazzardM-ExtraLightItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = E8BC701A9E204993837A566F /* MazzardM-ExtraLightItalic.woff */; };
+		9BA795A5F324405CB323B2F1 /* MazzardM-ExtraLightItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = D86514565E1848B19004D2D1 /* MazzardM-ExtraLightItalic.woff2 */; };
+		929498023A364D95A825974C /* MazzardM-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4AECDF8F1E1040D2AF6BC716 /* MazzardM-Italic.ttf */; };
+		84026CB3A3504B1E8180F030 /* MazzardM-Italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 9C801BC33D4E473D95AEBDD9 /* MazzardM-Italic.woff */; };
+		91197782A54741C78ED13E48 /* MazzardM-Italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 4F543E9AB1204A129005890C /* MazzardM-Italic.woff2 */; };
+		B8A6032B3D43444896DE121A /* MazzardM-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D07F762F7C540E183E9F0D1 /* MazzardM-Light.ttf */; };
+		CBBD94499C2B4E29BF895199 /* MazzardM-Light.woff in Resources */ = {isa = PBXBuildFile; fileRef = 5BB43ED5EF194A17924E47D5 /* MazzardM-Light.woff */; };
+		1B76D03052FA4BFFB1972B2B /* MazzardM-Light.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 8D1C58E703D54B5885AB6AED /* MazzardM-Light.woff2 */; };
+		5D30225DA6A2493B8D5BE91E /* MazzardM-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07DE8608CECB4234B92FAC15 /* MazzardM-LightItalic.ttf */; };
+		28B3F27FB8DB4C42ABBCBBC3 /* MazzardM-LightItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 5E810AE14F4247F7B47276DA /* MazzardM-LightItalic.woff */; };
+		153FC42E7D8E412686EE4FA2 /* MazzardM-LightItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 2B9CE763A5A2457B803B92E7 /* MazzardM-LightItalic.woff2 */; };
+		F9F6F1EF449F43F6A83DE7F3 /* MazzardM-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2303420AEA3A46DBA1C3F4B0 /* MazzardM-Medium.ttf */; };
+		B9DB59EDF0AF4296AA68D64A /* MazzardM-Medium.woff in Resources */ = {isa = PBXBuildFile; fileRef = 008350EBA00E47DC9612DDA6 /* MazzardM-Medium.woff */; };
+		82B827FE94F04B518A205336 /* MazzardM-Medium.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = DE268DE433D14000A7EAB229 /* MazzardM-Medium.woff2 */; };
+		3F6B4D30A0444433B4FE5CC0 /* MazzardM-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B503B70C194B4BA58D15145B /* MazzardM-MediumItalic.ttf */; };
+		D8D4D7C10A864C57B4CDFF5D /* MazzardM-MediumItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 8BDC2E3BD00141E3ACAA8283 /* MazzardM-MediumItalic.woff */; };
+		0C24C0CD65494187ADE1C27F /* MazzardM-MediumItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 5794FB4C1D6E4201A2875C37 /* MazzardM-MediumItalic.woff2 */; };
+		C71D7A8F31B144B99AAE0A77 /* MazzardM-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EA8A5773DE45E88CFA2028 /* MazzardM-Regular.ttf */; };
+		531EE2EC30C944E392EAC8FD /* MazzardM-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = ABF5B38A3A22455086696ABB /* MazzardM-Regular.woff */; };
+		FE6FC3C3A9F44BBCA741E907 /* MazzardM-Regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 12A669828770482389BCFE30 /* MazzardM-Regular.woff2 */; };
+		38157E078A184944BC4EE88D /* MazzardM-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54631C3D2E6D42B4A1E321EA /* MazzardM-SemiBold.ttf */; };
+		736E46C39E9C4B2A87DE9325 /* MazzardM-SemiBold.woff in Resources */ = {isa = PBXBuildFile; fileRef = D0280F78002F4EA0A00711D2 /* MazzardM-SemiBold.woff */; };
+		A19D461271B04703AB514C7C /* MazzardM-SemiBold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 1F071CC4ED014656A07CE698 /* MazzardM-SemiBold.woff2 */; };
+		7D0DEEFD6F4242288BF0C668 /* MazzardM-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D71A0532698347679EA10222 /* MazzardM-SemiBoldItalic.ttf */; };
+		5FEFCA6D414048C988D85F32 /* MazzardM-SemiBoldItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 6E1F761DBC8446E296F5D56F /* MazzardM-SemiBoldItalic.woff */; };
+		B11D5D43D72146B3BAB0C45B /* MazzardM-SemiBoldItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 4CCCCE6B5D194F2585C7F1CD /* MazzardM-SemiBoldItalic.woff2 */; };
+		8D1FFD8056D74645AB6DE98F /* MazzardM-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7668A6D2F604EDFA85446E6 /* MazzardM-Thin.ttf */; };
+		9EB1ABE7B39C4E2FA3299FEF /* MazzardM-Thin.woff in Resources */ = {isa = PBXBuildFile; fileRef = 60757F641483486FB6F6B94E /* MazzardM-Thin.woff */; };
+		730FC8EC71994EC4B1BB3399 /* MazzardM-Thin.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 334618178D3943FC9FAF0801 /* MazzardM-Thin.woff2 */; };
+		66D2395D34834FF0A425AAC6 /* MazzardM-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BE5E86E6B994BBA91ECF619 /* MazzardM-ThinItalic.ttf */; };
+		96946CF67D9D4D57B4FC748E /* MazzardM-ThinItalic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 6FA9EACC36E6426FB013A189 /* MazzardM-ThinItalic.woff */; };
+		36E4A257B3284834850C7868 /* MazzardM-ThinItalic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 9DDDCAC40D6B4B6CB7AA53A3 /* MazzardM-ThinItalic.woff2 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +213,168 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = snagIt/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		E37B983900D54EBC9E5F05DA /* MazzardH-Black.ttf */ = {isa = PBXFileReference; name = "MazzardH-Black.ttf"; path = "../src/assets/font/MazzardH-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3DE4A23308C9467A8471FE95 /* MazzardH-Black.woff */ = {isa = PBXFileReference; name = "MazzardH-Black.woff"; path = "../src/assets/font/MazzardH-Black.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		15FE112EE35A44CE84611A83 /* MazzardH-Black.woff2 */ = {isa = PBXFileReference; name = "MazzardH-Black.woff2"; path = "../src/assets/font/MazzardH-Black.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5F83CA87E4864CB29ED9F842 /* MazzardH-BlackItalic.ttf */ = {isa = PBXFileReference; name = "MazzardH-BlackItalic.ttf"; path = "../src/assets/font/MazzardH-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D0409F7D04AF4DAF83D1EBAA /* MazzardH-BlackItalic.woff */ = {isa = PBXFileReference; name = "MazzardH-BlackItalic.woff"; path = "../src/assets/font/MazzardH-BlackItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A36FD840EC3441EBBCECE905 /* MazzardH-BlackItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardH-BlackItalic.woff2"; path = "../src/assets/font/MazzardH-BlackItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B0CFE283BC0C4EB09DE331E7 /* MazzardH-Bold.ttf */ = {isa = PBXFileReference; name = "MazzardH-Bold.ttf"; path = "../src/assets/font/MazzardH-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4A1CADA993164F7C9D489D68 /* MazzardH-Bold.woff */ = {isa = PBXFileReference; name = "MazzardH-Bold.woff"; path = "../src/assets/font/MazzardH-Bold.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0B3AE0EB90434195937DF748 /* MazzardH-Bold.woff2 */ = {isa = PBXFileReference; name = "MazzardH-Bold.woff2"; path = "../src/assets/font/MazzardH-Bold.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		39D5C7EF14D54346A86B0019 /* MazzardH-BoldItalic.ttf */ = {isa = PBXFileReference; name = "MazzardH-BoldItalic.ttf"; path = "../src/assets/font/MazzardH-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		720E2631785644518AE94AE5 /* MazzardH-BoldItalic.woff */ = {isa = PBXFileReference; name = "MazzardH-BoldItalic.woff"; path = "../src/assets/font/MazzardH-BoldItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F8AC38BCBD1845CCB22D8456 /* MazzardH-BoldItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardH-BoldItalic.woff2"; path = "../src/assets/font/MazzardH-BoldItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F00D579F469D4A3FBFC1CE2C /* MazzardH-ExtraBold.ttf */ = {isa = PBXFileReference; name = "MazzardH-ExtraBold.ttf"; path = "../src/assets/font/MazzardH-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AF67B81B9119438C9FF48D95 /* MazzardH-ExtraBold.woff */ = {isa = PBXFileReference; name = "MazzardH-ExtraBold.woff"; path = "../src/assets/font/MazzardH-ExtraBold.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E7165BF8755043B996DA8150 /* MazzardH-ExtraBold.woff2 */ = {isa = PBXFileReference; name = "MazzardH-ExtraBold.woff2"; path = "../src/assets/font/MazzardH-ExtraBold.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4751EB70B5274D189A22C206 /* MazzardH-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "MazzardH-ExtraBoldItalic.ttf"; path = "../src/assets/font/MazzardH-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B7CAD2068BEC4504840524CC /* MazzardH-ExtraBoldItalic.woff */ = {isa = PBXFileReference; name = "MazzardH-ExtraBoldItalic.woff"; path = "../src/assets/font/MazzardH-ExtraBoldItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6CE9AF02AB2540E2A5DEC97F /* MazzardH-ExtraBoldItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardH-ExtraBoldItalic.woff2"; path = "../src/assets/font/MazzardH-ExtraBoldItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		59DD242F711C4D088F0C8F0F /* MazzardH-ExtraLight.ttf */ = {isa = PBXFileReference; name = "MazzardH-ExtraLight.ttf"; path = "../src/assets/font/MazzardH-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		85BDD584DB614D5987CB7708 /* MazzardH-ExtraLight.woff */ = {isa = PBXFileReference; name = "MazzardH-ExtraLight.woff"; path = "../src/assets/font/MazzardH-ExtraLight.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		31E79B8525B04F33BC3A449B /* MazzardH-ExtraLight.woff2 */ = {isa = PBXFileReference; name = "MazzardH-ExtraLight.woff2"; path = "../src/assets/font/MazzardH-ExtraLight.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8EE7241F0B944A518583C959 /* MazzardH-ExtraLightItalic.ttf */ = {isa = PBXFileReference; name = "MazzardH-ExtraLightItalic.ttf"; path = "../src/assets/font/MazzardH-ExtraLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E2D5C9065A3E42AC8568A69F /* MazzardH-ExtraLightItalic.woff */ = {isa = PBXFileReference; name = "MazzardH-ExtraLightItalic.woff"; path = "../src/assets/font/MazzardH-ExtraLightItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F1344ECE18DE43C683630488 /* MazzardH-ExtraLightItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardH-ExtraLightItalic.woff2"; path = "../src/assets/font/MazzardH-ExtraLightItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4E044EFCAA144D12812AAA84 /* MazzardH-Italic.ttf */ = {isa = PBXFileReference; name = "MazzardH-Italic.ttf"; path = "../src/assets/font/MazzardH-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A6F92B72FE964365B643FB1E /* MazzardH-Italic.woff */ = {isa = PBXFileReference; name = "MazzardH-Italic.woff"; path = "../src/assets/font/MazzardH-Italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C3A2A35DEE9C499890B83275 /* MazzardH-Italic.woff2 */ = {isa = PBXFileReference; name = "MazzardH-Italic.woff2"; path = "../src/assets/font/MazzardH-Italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E1D2A40BCC2A4017B4A85015 /* MazzardH-Light.ttf */ = {isa = PBXFileReference; name = "MazzardH-Light.ttf"; path = "../src/assets/font/MazzardH-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A3FD30EF230D4C0FB6F0E372 /* MazzardH-Light.woff */ = {isa = PBXFileReference; name = "MazzardH-Light.woff"; path = "../src/assets/font/MazzardH-Light.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B36469D972E9493889495E76 /* MazzardH-Light.woff2 */ = {isa = PBXFileReference; name = "MazzardH-Light.woff2"; path = "../src/assets/font/MazzardH-Light.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8873140C64A949E893A915A1 /* MazzardH-LightItalic.ttf */ = {isa = PBXFileReference; name = "MazzardH-LightItalic.ttf"; path = "../src/assets/font/MazzardH-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BC85C073CDCC4F6F8426AF5E /* MazzardH-LightItalic.woff */ = {isa = PBXFileReference; name = "MazzardH-LightItalic.woff"; path = "../src/assets/font/MazzardH-LightItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		33EDBE5E08E24B71B4CF4FF8 /* MazzardH-LightItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardH-LightItalic.woff2"; path = "../src/assets/font/MazzardH-LightItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2374D3FEA48940F896F52A05 /* MazzardH-Medium.ttf */ = {isa = PBXFileReference; name = "MazzardH-Medium.ttf"; path = "../src/assets/font/MazzardH-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9C4D10EAB36540C6BC8673DB /* MazzardH-Medium.woff */ = {isa = PBXFileReference; name = "MazzardH-Medium.woff"; path = "../src/assets/font/MazzardH-Medium.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AEDB5CAF911C473B9AF6FB55 /* MazzardH-Medium.woff2 */ = {isa = PBXFileReference; name = "MazzardH-Medium.woff2"; path = "../src/assets/font/MazzardH-Medium.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A331037982DC4B7288E95247 /* MazzardH-MediumItalic.ttf */ = {isa = PBXFileReference; name = "MazzardH-MediumItalic.ttf"; path = "../src/assets/font/MazzardH-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BAD4410EF97B4868A4077A58 /* MazzardH-MediumItalic.woff */ = {isa = PBXFileReference; name = "MazzardH-MediumItalic.woff"; path = "../src/assets/font/MazzardH-MediumItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DEB88690847C45FF8A46B4CE /* MazzardH-MediumItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardH-MediumItalic.woff2"; path = "../src/assets/font/MazzardH-MediumItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DDF493AEC2BD4514B52A747D /* MazzardH-Regular.ttf */ = {isa = PBXFileReference; name = "MazzardH-Regular.ttf"; path = "../src/assets/font/MazzardH-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5C8497C6DD4D4A27B290E3F7 /* MazzardH-Regular.woff */ = {isa = PBXFileReference; name = "MazzardH-Regular.woff"; path = "../src/assets/font/MazzardH-Regular.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B7438D053C8E44BF9395DA24 /* MazzardH-Regular.woff2 */ = {isa = PBXFileReference; name = "MazzardH-Regular.woff2"; path = "../src/assets/font/MazzardH-Regular.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E5BC2101877D4C13B79ED339 /* MazzardH-SemiBold.ttf */ = {isa = PBXFileReference; name = "MazzardH-SemiBold.ttf"; path = "../src/assets/font/MazzardH-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FC594F67A36941509E8C259E /* MazzardH-SemiBold.woff */ = {isa = PBXFileReference; name = "MazzardH-SemiBold.woff"; path = "../src/assets/font/MazzardH-SemiBold.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E7236A67BADB412CB8D7CCD6 /* MazzardH-SemiBold.woff2 */ = {isa = PBXFileReference; name = "MazzardH-SemiBold.woff2"; path = "../src/assets/font/MazzardH-SemiBold.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		265879ED576C487BA0055847 /* MazzardH-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "MazzardH-SemiBoldItalic.ttf"; path = "../src/assets/font/MazzardH-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C06EBAA492A04836822DD5A9 /* MazzardH-SemiBoldItalic.woff */ = {isa = PBXFileReference; name = "MazzardH-SemiBoldItalic.woff"; path = "../src/assets/font/MazzardH-SemiBoldItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CFC31CEF806A4788B765C726 /* MazzardH-SemiBoldItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardH-SemiBoldItalic.woff2"; path = "../src/assets/font/MazzardH-SemiBoldItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ABAB42E844134E6EB0B10C02 /* MazzardH-Thin.ttf */ = {isa = PBXFileReference; name = "MazzardH-Thin.ttf"; path = "../src/assets/font/MazzardH-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		419242AD247542878C4F1066 /* MazzardH-Thin.woff */ = {isa = PBXFileReference; name = "MazzardH-Thin.woff"; path = "../src/assets/font/MazzardH-Thin.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CF722C90260E4BDB8A4F021B /* MazzardH-Thin.woff2 */ = {isa = PBXFileReference; name = "MazzardH-Thin.woff2"; path = "../src/assets/font/MazzardH-Thin.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		66B30F61D7854C008DFB43A9 /* MazzardH-ThinItalic.ttf */ = {isa = PBXFileReference; name = "MazzardH-ThinItalic.ttf"; path = "../src/assets/font/MazzardH-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		31834B3147E54782BD500D67 /* MazzardH-ThinItalic.woff */ = {isa = PBXFileReference; name = "MazzardH-ThinItalic.woff"; path = "../src/assets/font/MazzardH-ThinItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9D790EE4C52C448E83C4B4E7 /* MazzardH-ThinItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardH-ThinItalic.woff2"; path = "../src/assets/font/MazzardH-ThinItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BD4FF8F9983C4F5183F2ADEA /* MazzardL-Black.ttf */ = {isa = PBXFileReference; name = "MazzardL-Black.ttf"; path = "../src/assets/font/MazzardL-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		218264A77E844CCAA0FF23FA /* MazzardL-Black.woff */ = {isa = PBXFileReference; name = "MazzardL-Black.woff"; path = "../src/assets/font/MazzardL-Black.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A2FA1522B90746D293DA55B0 /* MazzardL-Black.woff2 */ = {isa = PBXFileReference; name = "MazzardL-Black.woff2"; path = "../src/assets/font/MazzardL-Black.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B7B79337AA294A358411D5EA /* MazzardL-BlackItalic.ttf */ = {isa = PBXFileReference; name = "MazzardL-BlackItalic.ttf"; path = "../src/assets/font/MazzardL-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		09B8256851F54399B155BEB3 /* MazzardL-BlackItalic.woff */ = {isa = PBXFileReference; name = "MazzardL-BlackItalic.woff"; path = "../src/assets/font/MazzardL-BlackItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		073DE20D32FA4A06942DAAD9 /* MazzardL-BlackItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardL-BlackItalic.woff2"; path = "../src/assets/font/MazzardL-BlackItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ECFED5DC0D49426DBD784F6B /* MazzardL-Bold.ttf */ = {isa = PBXFileReference; name = "MazzardL-Bold.ttf"; path = "../src/assets/font/MazzardL-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		83019EA9E69E4323AAE10B02 /* MazzardL-Bold.woff */ = {isa = PBXFileReference; name = "MazzardL-Bold.woff"; path = "../src/assets/font/MazzardL-Bold.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		816EC1F41EE6428E90DE5A86 /* MazzardL-Bold.woff2 */ = {isa = PBXFileReference; name = "MazzardL-Bold.woff2"; path = "../src/assets/font/MazzardL-Bold.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5C3B85D4EDF24EBAA762BC98 /* MazzardL-BoldItalic.ttf */ = {isa = PBXFileReference; name = "MazzardL-BoldItalic.ttf"; path = "../src/assets/font/MazzardL-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		85994F22BD694C89A5875B66 /* MazzardL-BoldItalic.woff */ = {isa = PBXFileReference; name = "MazzardL-BoldItalic.woff"; path = "../src/assets/font/MazzardL-BoldItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1AEECB0C6AB14154ADB7435E /* MazzardL-BoldItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardL-BoldItalic.woff2"; path = "../src/assets/font/MazzardL-BoldItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		56392CC888DD49A397BFA34E /* MazzardL-ExtraBold.ttf */ = {isa = PBXFileReference; name = "MazzardL-ExtraBold.ttf"; path = "../src/assets/font/MazzardL-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A7E7E90294BF44FD85013C5E /* MazzardL-ExtraBold.woff */ = {isa = PBXFileReference; name = "MazzardL-ExtraBold.woff"; path = "../src/assets/font/MazzardL-ExtraBold.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		89F720FC7C7944DF8E459B8C /* MazzardL-ExtraBold.woff2 */ = {isa = PBXFileReference; name = "MazzardL-ExtraBold.woff2"; path = "../src/assets/font/MazzardL-ExtraBold.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		170D02389ED243B8A3E3A2AA /* MazzardL-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "MazzardL-ExtraBoldItalic.ttf"; path = "../src/assets/font/MazzardL-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4A2BEB810AC043D19EE10868 /* MazzardL-ExtraBoldItalic.woff */ = {isa = PBXFileReference; name = "MazzardL-ExtraBoldItalic.woff"; path = "../src/assets/font/MazzardL-ExtraBoldItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D95D80DA22DB48929E3B6DC1 /* MazzardL-ExtraBoldItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardL-ExtraBoldItalic.woff2"; path = "../src/assets/font/MazzardL-ExtraBoldItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		267E2AEB423A4C858153D68A /* MazzardL-ExtraLight.ttf */ = {isa = PBXFileReference; name = "MazzardL-ExtraLight.ttf"; path = "../src/assets/font/MazzardL-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FEF3B548F1B74FC6B32BFB60 /* MazzardL-ExtraLight.woff */ = {isa = PBXFileReference; name = "MazzardL-ExtraLight.woff"; path = "../src/assets/font/MazzardL-ExtraLight.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1CC8A2D1EB0C43E692950AF9 /* MazzardL-ExtraLight.woff2 */ = {isa = PBXFileReference; name = "MazzardL-ExtraLight.woff2"; path = "../src/assets/font/MazzardL-ExtraLight.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AB524A946A194735AFEB3FC7 /* MazzardL-ExtraLightItalic.ttf */ = {isa = PBXFileReference; name = "MazzardL-ExtraLightItalic.ttf"; path = "../src/assets/font/MazzardL-ExtraLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E5B18E42076E4D6AB059391C /* MazzardL-ExtraLightItalic.woff */ = {isa = PBXFileReference; name = "MazzardL-ExtraLightItalic.woff"; path = "../src/assets/font/MazzardL-ExtraLightItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6AE2E4FCBB0D4B5899EB9EC7 /* MazzardL-ExtraLightItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardL-ExtraLightItalic.woff2"; path = "../src/assets/font/MazzardL-ExtraLightItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8B432B1937914831938ED1A5 /* MazzardL-Italic.ttf */ = {isa = PBXFileReference; name = "MazzardL-Italic.ttf"; path = "../src/assets/font/MazzardL-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4C0240B6D90C4F87A8E889F2 /* MazzardL-Italic.woff */ = {isa = PBXFileReference; name = "MazzardL-Italic.woff"; path = "../src/assets/font/MazzardL-Italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B89BD51FBB244825959D8A07 /* MazzardL-Italic.woff2 */ = {isa = PBXFileReference; name = "MazzardL-Italic.woff2"; path = "../src/assets/font/MazzardL-Italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E13186CB2C7343B9BC2BC497 /* MazzardL-Light.ttf */ = {isa = PBXFileReference; name = "MazzardL-Light.ttf"; path = "../src/assets/font/MazzardL-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9C314B81471F45959CC71E4D /* MazzardL-Light.woff */ = {isa = PBXFileReference; name = "MazzardL-Light.woff"; path = "../src/assets/font/MazzardL-Light.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B427B75B782A4C8EB99D4D27 /* MazzardL-Light.woff2 */ = {isa = PBXFileReference; name = "MazzardL-Light.woff2"; path = "../src/assets/font/MazzardL-Light.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		385C44D4C9ED40D2986EED93 /* MazzardL-LightItalic.ttf */ = {isa = PBXFileReference; name = "MazzardL-LightItalic.ttf"; path = "../src/assets/font/MazzardL-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AC7C27F664D6458199FBB841 /* MazzardL-LightItalic.woff */ = {isa = PBXFileReference; name = "MazzardL-LightItalic.woff"; path = "../src/assets/font/MazzardL-LightItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6F398B4146224682BCE0A7AB /* MazzardL-LightItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardL-LightItalic.woff2"; path = "../src/assets/font/MazzardL-LightItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		45D9428A8AF84C45877D41AA /* MazzardL-Medium.ttf */ = {isa = PBXFileReference; name = "MazzardL-Medium.ttf"; path = "../src/assets/font/MazzardL-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CDC45201F6D940C2AC7C2A07 /* MazzardL-Medium.woff */ = {isa = PBXFileReference; name = "MazzardL-Medium.woff"; path = "../src/assets/font/MazzardL-Medium.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		18BB81D5619343F5AD3222C1 /* MazzardL-Medium.woff2 */ = {isa = PBXFileReference; name = "MazzardL-Medium.woff2"; path = "../src/assets/font/MazzardL-Medium.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FAD2003924FB4F3B8D215A46 /* MazzardL-MediumItalic.ttf */ = {isa = PBXFileReference; name = "MazzardL-MediumItalic.ttf"; path = "../src/assets/font/MazzardL-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A8D154DED7D54E6ABACD4186 /* MazzardL-MediumItalic.woff */ = {isa = PBXFileReference; name = "MazzardL-MediumItalic.woff"; path = "../src/assets/font/MazzardL-MediumItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A8A4A012DFAB4FD98875D767 /* MazzardL-MediumItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardL-MediumItalic.woff2"; path = "../src/assets/font/MazzardL-MediumItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		26A8B6C3C506455DA66E5B2F /* MazzardL-Regular.ttf */ = {isa = PBXFileReference; name = "MazzardL-Regular.ttf"; path = "../src/assets/font/MazzardL-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		22AC75F2FAF444789671251A /* MazzardL-Regular.woff */ = {isa = PBXFileReference; name = "MazzardL-Regular.woff"; path = "../src/assets/font/MazzardL-Regular.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		12DF598F654949FC9351D73F /* MazzardL-Regular.woff2 */ = {isa = PBXFileReference; name = "MazzardL-Regular.woff2"; path = "../src/assets/font/MazzardL-Regular.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		995F6DA520BF4F9298C0B237 /* MazzardL-SemiBold.ttf */ = {isa = PBXFileReference; name = "MazzardL-SemiBold.ttf"; path = "../src/assets/font/MazzardL-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3F2C41E37FDF4E749D460C2F /* MazzardL-SemiBold.woff */ = {isa = PBXFileReference; name = "MazzardL-SemiBold.woff"; path = "../src/assets/font/MazzardL-SemiBold.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B0479BD134CC411EABE6D438 /* MazzardL-SemiBold.woff2 */ = {isa = PBXFileReference; name = "MazzardL-SemiBold.woff2"; path = "../src/assets/font/MazzardL-SemiBold.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5637FD32AC804BC681829EA8 /* MazzardL-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "MazzardL-SemiBoldItalic.ttf"; path = "../src/assets/font/MazzardL-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		711BC142D4BB40FC9B628A22 /* MazzardL-SemiBoldItalic.woff */ = {isa = PBXFileReference; name = "MazzardL-SemiBoldItalic.woff"; path = "../src/assets/font/MazzardL-SemiBoldItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F710A5F5680040EDA89A536E /* MazzardL-SemiBoldItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardL-SemiBoldItalic.woff2"; path = "../src/assets/font/MazzardL-SemiBoldItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		063866FC44CC434D8102718C /* MazzardL-Thin.ttf */ = {isa = PBXFileReference; name = "MazzardL-Thin.ttf"; path = "../src/assets/font/MazzardL-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		159F80DB6BEE4A1FA062CB92 /* MazzardL-Thin.woff */ = {isa = PBXFileReference; name = "MazzardL-Thin.woff"; path = "../src/assets/font/MazzardL-Thin.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		239AD94DE9B148449CABDB6F /* MazzardL-Thin.woff2 */ = {isa = PBXFileReference; name = "MazzardL-Thin.woff2"; path = "../src/assets/font/MazzardL-Thin.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2D5868AFDC6441EEA78E9337 /* MazzardL-ThinItalic.ttf */ = {isa = PBXFileReference; name = "MazzardL-ThinItalic.ttf"; path = "../src/assets/font/MazzardL-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3F555CED85C645F180C3FB69 /* MazzardL-ThinItalic.woff */ = {isa = PBXFileReference; name = "MazzardL-ThinItalic.woff"; path = "../src/assets/font/MazzardL-ThinItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E2215B1B5615471D9598D56E /* MazzardL-ThinItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardL-ThinItalic.woff2"; path = "../src/assets/font/MazzardL-ThinItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		053FB54DBD8A4D6B8D8C6980 /* MazzardM-Black.ttf */ = {isa = PBXFileReference; name = "MazzardM-Black.ttf"; path = "../src/assets/font/MazzardM-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		301EC3F5EB3F45B3AAFE31A2 /* MazzardM-Black.woff */ = {isa = PBXFileReference; name = "MazzardM-Black.woff"; path = "../src/assets/font/MazzardM-Black.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F946E333C004496288066F20 /* MazzardM-Black.woff2 */ = {isa = PBXFileReference; name = "MazzardM-Black.woff2"; path = "../src/assets/font/MazzardM-Black.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8E40EAD41DA4406C94058479 /* MazzardM-BlackItalic.ttf */ = {isa = PBXFileReference; name = "MazzardM-BlackItalic.ttf"; path = "../src/assets/font/MazzardM-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		56FF866348474C7EAFB88F89 /* MazzardM-BlackItalic.woff */ = {isa = PBXFileReference; name = "MazzardM-BlackItalic.woff"; path = "../src/assets/font/MazzardM-BlackItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1FE10ED25DAD46B899B7E270 /* MazzardM-BlackItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardM-BlackItalic.woff2"; path = "../src/assets/font/MazzardM-BlackItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AC54263A8E1A4037B70AF84A /* MazzardM-Bold.ttf */ = {isa = PBXFileReference; name = "MazzardM-Bold.ttf"; path = "../src/assets/font/MazzardM-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BD703C1CA9F74C8AAF66BCC9 /* MazzardM-Bold.woff */ = {isa = PBXFileReference; name = "MazzardM-Bold.woff"; path = "../src/assets/font/MazzardM-Bold.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DBD1B60BC8364DFF97E41CF9 /* MazzardM-Bold.woff2 */ = {isa = PBXFileReference; name = "MazzardM-Bold.woff2"; path = "../src/assets/font/MazzardM-Bold.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5D72F3CBE74542D18C03314F /* MazzardM-BoldItalic.ttf */ = {isa = PBXFileReference; name = "MazzardM-BoldItalic.ttf"; path = "../src/assets/font/MazzardM-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B482CCCCD9F5408085549331 /* MazzardM-BoldItalic.woff */ = {isa = PBXFileReference; name = "MazzardM-BoldItalic.woff"; path = "../src/assets/font/MazzardM-BoldItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BCD0B47F1D1E44268C43A790 /* MazzardM-BoldItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardM-BoldItalic.woff2"; path = "../src/assets/font/MazzardM-BoldItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AF960704F63F42F59716ABF3 /* MazzardM-ExtraBold.ttf */ = {isa = PBXFileReference; name = "MazzardM-ExtraBold.ttf"; path = "../src/assets/font/MazzardM-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5713D663FC9B43B9871E32CE /* MazzardM-ExtraBold.woff */ = {isa = PBXFileReference; name = "MazzardM-ExtraBold.woff"; path = "../src/assets/font/MazzardM-ExtraBold.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B09E88C2E98A4046AE840F86 /* MazzardM-ExtraBold.woff2 */ = {isa = PBXFileReference; name = "MazzardM-ExtraBold.woff2"; path = "../src/assets/font/MazzardM-ExtraBold.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		30EE6D194383469CB2A9915C /* MazzardM-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "MazzardM-ExtraBoldItalic.ttf"; path = "../src/assets/font/MazzardM-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1BE839816A5D4257A3BD8A7D /* MazzardM-ExtraBoldItalic.woff */ = {isa = PBXFileReference; name = "MazzardM-ExtraBoldItalic.woff"; path = "../src/assets/font/MazzardM-ExtraBoldItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		51995979056B4A9AA6FED616 /* MazzardM-ExtraBoldItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardM-ExtraBoldItalic.woff2"; path = "../src/assets/font/MazzardM-ExtraBoldItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AD11A29418ED4206A99E44F0 /* MazzardM-ExtraLight.ttf */ = {isa = PBXFileReference; name = "MazzardM-ExtraLight.ttf"; path = "../src/assets/font/MazzardM-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5B72E6200C14476A90F6EF8E /* MazzardM-ExtraLight.woff */ = {isa = PBXFileReference; name = "MazzardM-ExtraLight.woff"; path = "../src/assets/font/MazzardM-ExtraLight.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9B53E44172234A8FA44C43A7 /* MazzardM-ExtraLight.woff2 */ = {isa = PBXFileReference; name = "MazzardM-ExtraLight.woff2"; path = "../src/assets/font/MazzardM-ExtraLight.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C0D8011B16124C3E916E98AF /* MazzardM-ExtraLightItalic.ttf */ = {isa = PBXFileReference; name = "MazzardM-ExtraLightItalic.ttf"; path = "../src/assets/font/MazzardM-ExtraLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E8BC701A9E204993837A566F /* MazzardM-ExtraLightItalic.woff */ = {isa = PBXFileReference; name = "MazzardM-ExtraLightItalic.woff"; path = "../src/assets/font/MazzardM-ExtraLightItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D86514565E1848B19004D2D1 /* MazzardM-ExtraLightItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardM-ExtraLightItalic.woff2"; path = "../src/assets/font/MazzardM-ExtraLightItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4AECDF8F1E1040D2AF6BC716 /* MazzardM-Italic.ttf */ = {isa = PBXFileReference; name = "MazzardM-Italic.ttf"; path = "../src/assets/font/MazzardM-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9C801BC33D4E473D95AEBDD9 /* MazzardM-Italic.woff */ = {isa = PBXFileReference; name = "MazzardM-Italic.woff"; path = "../src/assets/font/MazzardM-Italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4F543E9AB1204A129005890C /* MazzardM-Italic.woff2 */ = {isa = PBXFileReference; name = "MazzardM-Italic.woff2"; path = "../src/assets/font/MazzardM-Italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0D07F762F7C540E183E9F0D1 /* MazzardM-Light.ttf */ = {isa = PBXFileReference; name = "MazzardM-Light.ttf"; path = "../src/assets/font/MazzardM-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5BB43ED5EF194A17924E47D5 /* MazzardM-Light.woff */ = {isa = PBXFileReference; name = "MazzardM-Light.woff"; path = "../src/assets/font/MazzardM-Light.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8D1C58E703D54B5885AB6AED /* MazzardM-Light.woff2 */ = {isa = PBXFileReference; name = "MazzardM-Light.woff2"; path = "../src/assets/font/MazzardM-Light.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		07DE8608CECB4234B92FAC15 /* MazzardM-LightItalic.ttf */ = {isa = PBXFileReference; name = "MazzardM-LightItalic.ttf"; path = "../src/assets/font/MazzardM-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5E810AE14F4247F7B47276DA /* MazzardM-LightItalic.woff */ = {isa = PBXFileReference; name = "MazzardM-LightItalic.woff"; path = "../src/assets/font/MazzardM-LightItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2B9CE763A5A2457B803B92E7 /* MazzardM-LightItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardM-LightItalic.woff2"; path = "../src/assets/font/MazzardM-LightItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2303420AEA3A46DBA1C3F4B0 /* MazzardM-Medium.ttf */ = {isa = PBXFileReference; name = "MazzardM-Medium.ttf"; path = "../src/assets/font/MazzardM-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		008350EBA00E47DC9612DDA6 /* MazzardM-Medium.woff */ = {isa = PBXFileReference; name = "MazzardM-Medium.woff"; path = "../src/assets/font/MazzardM-Medium.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DE268DE433D14000A7EAB229 /* MazzardM-Medium.woff2 */ = {isa = PBXFileReference; name = "MazzardM-Medium.woff2"; path = "../src/assets/font/MazzardM-Medium.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B503B70C194B4BA58D15145B /* MazzardM-MediumItalic.ttf */ = {isa = PBXFileReference; name = "MazzardM-MediumItalic.ttf"; path = "../src/assets/font/MazzardM-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8BDC2E3BD00141E3ACAA8283 /* MazzardM-MediumItalic.woff */ = {isa = PBXFileReference; name = "MazzardM-MediumItalic.woff"; path = "../src/assets/font/MazzardM-MediumItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5794FB4C1D6E4201A2875C37 /* MazzardM-MediumItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardM-MediumItalic.woff2"; path = "../src/assets/font/MazzardM-MediumItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		96EA8A5773DE45E88CFA2028 /* MazzardM-Regular.ttf */ = {isa = PBXFileReference; name = "MazzardM-Regular.ttf"; path = "../src/assets/font/MazzardM-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ABF5B38A3A22455086696ABB /* MazzardM-Regular.woff */ = {isa = PBXFileReference; name = "MazzardM-Regular.woff"; path = "../src/assets/font/MazzardM-Regular.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		12A669828770482389BCFE30 /* MazzardM-Regular.woff2 */ = {isa = PBXFileReference; name = "MazzardM-Regular.woff2"; path = "../src/assets/font/MazzardM-Regular.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		54631C3D2E6D42B4A1E321EA /* MazzardM-SemiBold.ttf */ = {isa = PBXFileReference; name = "MazzardM-SemiBold.ttf"; path = "../src/assets/font/MazzardM-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D0280F78002F4EA0A00711D2 /* MazzardM-SemiBold.woff */ = {isa = PBXFileReference; name = "MazzardM-SemiBold.woff"; path = "../src/assets/font/MazzardM-SemiBold.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1F071CC4ED014656A07CE698 /* MazzardM-SemiBold.woff2 */ = {isa = PBXFileReference; name = "MazzardM-SemiBold.woff2"; path = "../src/assets/font/MazzardM-SemiBold.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D71A0532698347679EA10222 /* MazzardM-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "MazzardM-SemiBoldItalic.ttf"; path = "../src/assets/font/MazzardM-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6E1F761DBC8446E296F5D56F /* MazzardM-SemiBoldItalic.woff */ = {isa = PBXFileReference; name = "MazzardM-SemiBoldItalic.woff"; path = "../src/assets/font/MazzardM-SemiBoldItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4CCCCE6B5D194F2585C7F1CD /* MazzardM-SemiBoldItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardM-SemiBoldItalic.woff2"; path = "../src/assets/font/MazzardM-SemiBoldItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D7668A6D2F604EDFA85446E6 /* MazzardM-Thin.ttf */ = {isa = PBXFileReference; name = "MazzardM-Thin.ttf"; path = "../src/assets/font/MazzardM-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		60757F641483486FB6F6B94E /* MazzardM-Thin.woff */ = {isa = PBXFileReference; name = "MazzardM-Thin.woff"; path = "../src/assets/font/MazzardM-Thin.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		334618178D3943FC9FAF0801 /* MazzardM-Thin.woff2 */ = {isa = PBXFileReference; name = "MazzardM-Thin.woff2"; path = "../src/assets/font/MazzardM-Thin.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9BE5E86E6B994BBA91ECF619 /* MazzardM-ThinItalic.ttf */ = {isa = PBXFileReference; name = "MazzardM-ThinItalic.ttf"; path = "../src/assets/font/MazzardM-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6FA9EACC36E6426FB013A189 /* MazzardM-ThinItalic.woff */ = {isa = PBXFileReference; name = "MazzardM-ThinItalic.woff"; path = "../src/assets/font/MazzardM-ThinItalic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9DDDCAC40D6B4B6CB7AA53A3 /* MazzardM-ThinItalic.woff2 */ = {isa = PBXFileReference; name = "MazzardM-ThinItalic.woff2"; path = "../src/assets/font/MazzardM-ThinItalic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +464,7 @@
 				00E356EF1AD99517003FC87E /* snagItTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				31E4348FDA0C48C891FCD05C /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -156,6 +481,176 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		31E4348FDA0C48C891FCD05C /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				E37B983900D54EBC9E5F05DA /* MazzardH-Black.ttf */,
+				3DE4A23308C9467A8471FE95 /* MazzardH-Black.woff */,
+				15FE112EE35A44CE84611A83 /* MazzardH-Black.woff2 */,
+				5F83CA87E4864CB29ED9F842 /* MazzardH-BlackItalic.ttf */,
+				D0409F7D04AF4DAF83D1EBAA /* MazzardH-BlackItalic.woff */,
+				A36FD840EC3441EBBCECE905 /* MazzardH-BlackItalic.woff2 */,
+				B0CFE283BC0C4EB09DE331E7 /* MazzardH-Bold.ttf */,
+				4A1CADA993164F7C9D489D68 /* MazzardH-Bold.woff */,
+				0B3AE0EB90434195937DF748 /* MazzardH-Bold.woff2 */,
+				39D5C7EF14D54346A86B0019 /* MazzardH-BoldItalic.ttf */,
+				720E2631785644518AE94AE5 /* MazzardH-BoldItalic.woff */,
+				F8AC38BCBD1845CCB22D8456 /* MazzardH-BoldItalic.woff2 */,
+				F00D579F469D4A3FBFC1CE2C /* MazzardH-ExtraBold.ttf */,
+				AF67B81B9119438C9FF48D95 /* MazzardH-ExtraBold.woff */,
+				E7165BF8755043B996DA8150 /* MazzardH-ExtraBold.woff2 */,
+				4751EB70B5274D189A22C206 /* MazzardH-ExtraBoldItalic.ttf */,
+				B7CAD2068BEC4504840524CC /* MazzardH-ExtraBoldItalic.woff */,
+				6CE9AF02AB2540E2A5DEC97F /* MazzardH-ExtraBoldItalic.woff2 */,
+				59DD242F711C4D088F0C8F0F /* MazzardH-ExtraLight.ttf */,
+				85BDD584DB614D5987CB7708 /* MazzardH-ExtraLight.woff */,
+				31E79B8525B04F33BC3A449B /* MazzardH-ExtraLight.woff2 */,
+				8EE7241F0B944A518583C959 /* MazzardH-ExtraLightItalic.ttf */,
+				E2D5C9065A3E42AC8568A69F /* MazzardH-ExtraLightItalic.woff */,
+				F1344ECE18DE43C683630488 /* MazzardH-ExtraLightItalic.woff2 */,
+				4E044EFCAA144D12812AAA84 /* MazzardH-Italic.ttf */,
+				A6F92B72FE964365B643FB1E /* MazzardH-Italic.woff */,
+				C3A2A35DEE9C499890B83275 /* MazzardH-Italic.woff2 */,
+				E1D2A40BCC2A4017B4A85015 /* MazzardH-Light.ttf */,
+				A3FD30EF230D4C0FB6F0E372 /* MazzardH-Light.woff */,
+				B36469D972E9493889495E76 /* MazzardH-Light.woff2 */,
+				8873140C64A949E893A915A1 /* MazzardH-LightItalic.ttf */,
+				BC85C073CDCC4F6F8426AF5E /* MazzardH-LightItalic.woff */,
+				33EDBE5E08E24B71B4CF4FF8 /* MazzardH-LightItalic.woff2 */,
+				2374D3FEA48940F896F52A05 /* MazzardH-Medium.ttf */,
+				9C4D10EAB36540C6BC8673DB /* MazzardH-Medium.woff */,
+				AEDB5CAF911C473B9AF6FB55 /* MazzardH-Medium.woff2 */,
+				A331037982DC4B7288E95247 /* MazzardH-MediumItalic.ttf */,
+				BAD4410EF97B4868A4077A58 /* MazzardH-MediumItalic.woff */,
+				DEB88690847C45FF8A46B4CE /* MazzardH-MediumItalic.woff2 */,
+				DDF493AEC2BD4514B52A747D /* MazzardH-Regular.ttf */,
+				5C8497C6DD4D4A27B290E3F7 /* MazzardH-Regular.woff */,
+				B7438D053C8E44BF9395DA24 /* MazzardH-Regular.woff2 */,
+				E5BC2101877D4C13B79ED339 /* MazzardH-SemiBold.ttf */,
+				FC594F67A36941509E8C259E /* MazzardH-SemiBold.woff */,
+				E7236A67BADB412CB8D7CCD6 /* MazzardH-SemiBold.woff2 */,
+				265879ED576C487BA0055847 /* MazzardH-SemiBoldItalic.ttf */,
+				C06EBAA492A04836822DD5A9 /* MazzardH-SemiBoldItalic.woff */,
+				CFC31CEF806A4788B765C726 /* MazzardH-SemiBoldItalic.woff2 */,
+				ABAB42E844134E6EB0B10C02 /* MazzardH-Thin.ttf */,
+				419242AD247542878C4F1066 /* MazzardH-Thin.woff */,
+				CF722C90260E4BDB8A4F021B /* MazzardH-Thin.woff2 */,
+				66B30F61D7854C008DFB43A9 /* MazzardH-ThinItalic.ttf */,
+				31834B3147E54782BD500D67 /* MazzardH-ThinItalic.woff */,
+				9D790EE4C52C448E83C4B4E7 /* MazzardH-ThinItalic.woff2 */,
+				BD4FF8F9983C4F5183F2ADEA /* MazzardL-Black.ttf */,
+				218264A77E844CCAA0FF23FA /* MazzardL-Black.woff */,
+				A2FA1522B90746D293DA55B0 /* MazzardL-Black.woff2 */,
+				B7B79337AA294A358411D5EA /* MazzardL-BlackItalic.ttf */,
+				09B8256851F54399B155BEB3 /* MazzardL-BlackItalic.woff */,
+				073DE20D32FA4A06942DAAD9 /* MazzardL-BlackItalic.woff2 */,
+				ECFED5DC0D49426DBD784F6B /* MazzardL-Bold.ttf */,
+				83019EA9E69E4323AAE10B02 /* MazzardL-Bold.woff */,
+				816EC1F41EE6428E90DE5A86 /* MazzardL-Bold.woff2 */,
+				5C3B85D4EDF24EBAA762BC98 /* MazzardL-BoldItalic.ttf */,
+				85994F22BD694C89A5875B66 /* MazzardL-BoldItalic.woff */,
+				1AEECB0C6AB14154ADB7435E /* MazzardL-BoldItalic.woff2 */,
+				56392CC888DD49A397BFA34E /* MazzardL-ExtraBold.ttf */,
+				A7E7E90294BF44FD85013C5E /* MazzardL-ExtraBold.woff */,
+				89F720FC7C7944DF8E459B8C /* MazzardL-ExtraBold.woff2 */,
+				170D02389ED243B8A3E3A2AA /* MazzardL-ExtraBoldItalic.ttf */,
+				4A2BEB810AC043D19EE10868 /* MazzardL-ExtraBoldItalic.woff */,
+				D95D80DA22DB48929E3B6DC1 /* MazzardL-ExtraBoldItalic.woff2 */,
+				267E2AEB423A4C858153D68A /* MazzardL-ExtraLight.ttf */,
+				FEF3B548F1B74FC6B32BFB60 /* MazzardL-ExtraLight.woff */,
+				1CC8A2D1EB0C43E692950AF9 /* MazzardL-ExtraLight.woff2 */,
+				AB524A946A194735AFEB3FC7 /* MazzardL-ExtraLightItalic.ttf */,
+				E5B18E42076E4D6AB059391C /* MazzardL-ExtraLightItalic.woff */,
+				6AE2E4FCBB0D4B5899EB9EC7 /* MazzardL-ExtraLightItalic.woff2 */,
+				8B432B1937914831938ED1A5 /* MazzardL-Italic.ttf */,
+				4C0240B6D90C4F87A8E889F2 /* MazzardL-Italic.woff */,
+				B89BD51FBB244825959D8A07 /* MazzardL-Italic.woff2 */,
+				E13186CB2C7343B9BC2BC497 /* MazzardL-Light.ttf */,
+				9C314B81471F45959CC71E4D /* MazzardL-Light.woff */,
+				B427B75B782A4C8EB99D4D27 /* MazzardL-Light.woff2 */,
+				385C44D4C9ED40D2986EED93 /* MazzardL-LightItalic.ttf */,
+				AC7C27F664D6458199FBB841 /* MazzardL-LightItalic.woff */,
+				6F398B4146224682BCE0A7AB /* MazzardL-LightItalic.woff2 */,
+				45D9428A8AF84C45877D41AA /* MazzardL-Medium.ttf */,
+				CDC45201F6D940C2AC7C2A07 /* MazzardL-Medium.woff */,
+				18BB81D5619343F5AD3222C1 /* MazzardL-Medium.woff2 */,
+				FAD2003924FB4F3B8D215A46 /* MazzardL-MediumItalic.ttf */,
+				A8D154DED7D54E6ABACD4186 /* MazzardL-MediumItalic.woff */,
+				A8A4A012DFAB4FD98875D767 /* MazzardL-MediumItalic.woff2 */,
+				26A8B6C3C506455DA66E5B2F /* MazzardL-Regular.ttf */,
+				22AC75F2FAF444789671251A /* MazzardL-Regular.woff */,
+				12DF598F654949FC9351D73F /* MazzardL-Regular.woff2 */,
+				995F6DA520BF4F9298C0B237 /* MazzardL-SemiBold.ttf */,
+				3F2C41E37FDF4E749D460C2F /* MazzardL-SemiBold.woff */,
+				B0479BD134CC411EABE6D438 /* MazzardL-SemiBold.woff2 */,
+				5637FD32AC804BC681829EA8 /* MazzardL-SemiBoldItalic.ttf */,
+				711BC142D4BB40FC9B628A22 /* MazzardL-SemiBoldItalic.woff */,
+				F710A5F5680040EDA89A536E /* MazzardL-SemiBoldItalic.woff2 */,
+				063866FC44CC434D8102718C /* MazzardL-Thin.ttf */,
+				159F80DB6BEE4A1FA062CB92 /* MazzardL-Thin.woff */,
+				239AD94DE9B148449CABDB6F /* MazzardL-Thin.woff2 */,
+				2D5868AFDC6441EEA78E9337 /* MazzardL-ThinItalic.ttf */,
+				3F555CED85C645F180C3FB69 /* MazzardL-ThinItalic.woff */,
+				E2215B1B5615471D9598D56E /* MazzardL-ThinItalic.woff2 */,
+				053FB54DBD8A4D6B8D8C6980 /* MazzardM-Black.ttf */,
+				301EC3F5EB3F45B3AAFE31A2 /* MazzardM-Black.woff */,
+				F946E333C004496288066F20 /* MazzardM-Black.woff2 */,
+				8E40EAD41DA4406C94058479 /* MazzardM-BlackItalic.ttf */,
+				56FF866348474C7EAFB88F89 /* MazzardM-BlackItalic.woff */,
+				1FE10ED25DAD46B899B7E270 /* MazzardM-BlackItalic.woff2 */,
+				AC54263A8E1A4037B70AF84A /* MazzardM-Bold.ttf */,
+				BD703C1CA9F74C8AAF66BCC9 /* MazzardM-Bold.woff */,
+				DBD1B60BC8364DFF97E41CF9 /* MazzardM-Bold.woff2 */,
+				5D72F3CBE74542D18C03314F /* MazzardM-BoldItalic.ttf */,
+				B482CCCCD9F5408085549331 /* MazzardM-BoldItalic.woff */,
+				BCD0B47F1D1E44268C43A790 /* MazzardM-BoldItalic.woff2 */,
+				AF960704F63F42F59716ABF3 /* MazzardM-ExtraBold.ttf */,
+				5713D663FC9B43B9871E32CE /* MazzardM-ExtraBold.woff */,
+				B09E88C2E98A4046AE840F86 /* MazzardM-ExtraBold.woff2 */,
+				30EE6D194383469CB2A9915C /* MazzardM-ExtraBoldItalic.ttf */,
+				1BE839816A5D4257A3BD8A7D /* MazzardM-ExtraBoldItalic.woff */,
+				51995979056B4A9AA6FED616 /* MazzardM-ExtraBoldItalic.woff2 */,
+				AD11A29418ED4206A99E44F0 /* MazzardM-ExtraLight.ttf */,
+				5B72E6200C14476A90F6EF8E /* MazzardM-ExtraLight.woff */,
+				9B53E44172234A8FA44C43A7 /* MazzardM-ExtraLight.woff2 */,
+				C0D8011B16124C3E916E98AF /* MazzardM-ExtraLightItalic.ttf */,
+				E8BC701A9E204993837A566F /* MazzardM-ExtraLightItalic.woff */,
+				D86514565E1848B19004D2D1 /* MazzardM-ExtraLightItalic.woff2 */,
+				4AECDF8F1E1040D2AF6BC716 /* MazzardM-Italic.ttf */,
+				9C801BC33D4E473D95AEBDD9 /* MazzardM-Italic.woff */,
+				4F543E9AB1204A129005890C /* MazzardM-Italic.woff2 */,
+				0D07F762F7C540E183E9F0D1 /* MazzardM-Light.ttf */,
+				5BB43ED5EF194A17924E47D5 /* MazzardM-Light.woff */,
+				8D1C58E703D54B5885AB6AED /* MazzardM-Light.woff2 */,
+				07DE8608CECB4234B92FAC15 /* MazzardM-LightItalic.ttf */,
+				5E810AE14F4247F7B47276DA /* MazzardM-LightItalic.woff */,
+				2B9CE763A5A2457B803B92E7 /* MazzardM-LightItalic.woff2 */,
+				2303420AEA3A46DBA1C3F4B0 /* MazzardM-Medium.ttf */,
+				008350EBA00E47DC9612DDA6 /* MazzardM-Medium.woff */,
+				DE268DE433D14000A7EAB229 /* MazzardM-Medium.woff2 */,
+				B503B70C194B4BA58D15145B /* MazzardM-MediumItalic.ttf */,
+				8BDC2E3BD00141E3ACAA8283 /* MazzardM-MediumItalic.woff */,
+				5794FB4C1D6E4201A2875C37 /* MazzardM-MediumItalic.woff2 */,
+				96EA8A5773DE45E88CFA2028 /* MazzardM-Regular.ttf */,
+				ABF5B38A3A22455086696ABB /* MazzardM-Regular.woff */,
+				12A669828770482389BCFE30 /* MazzardM-Regular.woff2 */,
+				54631C3D2E6D42B4A1E321EA /* MazzardM-SemiBold.ttf */,
+				D0280F78002F4EA0A00711D2 /* MazzardM-SemiBold.woff */,
+				1F071CC4ED014656A07CE698 /* MazzardM-SemiBold.woff2 */,
+				D71A0532698347679EA10222 /* MazzardM-SemiBoldItalic.ttf */,
+				6E1F761DBC8446E296F5D56F /* MazzardM-SemiBoldItalic.woff */,
+				4CCCCE6B5D194F2585C7F1CD /* MazzardM-SemiBoldItalic.woff2 */,
+				D7668A6D2F604EDFA85446E6 /* MazzardM-Thin.ttf */,
+				60757F641483486FB6F6B94E /* MazzardM-Thin.woff */,
+				334618178D3943FC9FAF0801 /* MazzardM-Thin.woff2 */,
+				9BE5E86E6B994BBA91ECF619 /* MazzardM-ThinItalic.ttf */,
+				6FA9EACC36E6426FB013A189 /* MazzardM-ThinItalic.woff */,
+				9DDDCAC40D6B4B6CB7AA53A3 /* MazzardM-ThinItalic.woff2 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -295,6 +790,168 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				28331ECA5DEC4972A6D9DB74 /* MazzardH-Black.ttf in Resources */,
+				22DBF4B6016E416B8257A13C /* MazzardH-Black.woff in Resources */,
+				78A4586313654915AEC74048 /* MazzardH-Black.woff2 in Resources */,
+				723DC4D642CF4633A5504E90 /* MazzardH-BlackItalic.ttf in Resources */,
+				BEA8BF0ABB314E6595803BF3 /* MazzardH-BlackItalic.woff in Resources */,
+				1665926BEB6D45E49043B05A /* MazzardH-BlackItalic.woff2 in Resources */,
+				E8D83D7378E947398B521452 /* MazzardH-Bold.ttf in Resources */,
+				CEB1181CB6614548B8027877 /* MazzardH-Bold.woff in Resources */,
+				3C0E85AC37DF4F6C9A7276B0 /* MazzardH-Bold.woff2 in Resources */,
+				7083AD6916424B04B1F73C49 /* MazzardH-BoldItalic.ttf in Resources */,
+				2C0E5AF9FE8C40F78DB6EC98 /* MazzardH-BoldItalic.woff in Resources */,
+				23785EBCF8EA4BD191CEE1EF /* MazzardH-BoldItalic.woff2 in Resources */,
+				3E34CD89CB0B4BD8BC4958CA /* MazzardH-ExtraBold.ttf in Resources */,
+				20396FB49E034D9783EEEA11 /* MazzardH-ExtraBold.woff in Resources */,
+				B6F265A8ABE64442A3B4C216 /* MazzardH-ExtraBold.woff2 in Resources */,
+				5228CEE82302437DA817A9E0 /* MazzardH-ExtraBoldItalic.ttf in Resources */,
+				3019D91987AE4EB998740D34 /* MazzardH-ExtraBoldItalic.woff in Resources */,
+				271E5DB9256B4B1880478357 /* MazzardH-ExtraBoldItalic.woff2 in Resources */,
+				A90B6B6F200C4BD38EDA590C /* MazzardH-ExtraLight.ttf in Resources */,
+				F3A2E573D4134F7F8AC098E9 /* MazzardH-ExtraLight.woff in Resources */,
+				B7B3AFB8F7504BF39F6BC206 /* MazzardH-ExtraLight.woff2 in Resources */,
+				7F69F823843B4D23BCD522B4 /* MazzardH-ExtraLightItalic.ttf in Resources */,
+				FD7BBF38266E4BE4B6B7AA67 /* MazzardH-ExtraLightItalic.woff in Resources */,
+				963965ED45AC426B99E0BE4A /* MazzardH-ExtraLightItalic.woff2 in Resources */,
+				1B798373E875478D8F784106 /* MazzardH-Italic.ttf in Resources */,
+				0CD8B5FEB29E4244BBE33507 /* MazzardH-Italic.woff in Resources */,
+				658E94CA7E2A47888C55483C /* MazzardH-Italic.woff2 in Resources */,
+				1288ECE33E644A77BB5AA73A /* MazzardH-Light.ttf in Resources */,
+				C04B77EBD2AA46C19E77CF84 /* MazzardH-Light.woff in Resources */,
+				4F026B6D2EC14818B28C712E /* MazzardH-Light.woff2 in Resources */,
+				86556BAC246447AC98949F2B /* MazzardH-LightItalic.ttf in Resources */,
+				F607BFD4AFB240508793CF09 /* MazzardH-LightItalic.woff in Resources */,
+				C6483164AA8F4480AC82A679 /* MazzardH-LightItalic.woff2 in Resources */,
+				66AA26F51DE84A59843F4774 /* MazzardH-Medium.ttf in Resources */,
+				FC94A3E233B54ACC88C63B5E /* MazzardH-Medium.woff in Resources */,
+				770503C021024E8C908712AD /* MazzardH-Medium.woff2 in Resources */,
+				5AE89DBFCABE4DBCBC2860C1 /* MazzardH-MediumItalic.ttf in Resources */,
+				49E873824BDD41488324CA2D /* MazzardH-MediumItalic.woff in Resources */,
+				7BEF5FF3E59841569D8D2878 /* MazzardH-MediumItalic.woff2 in Resources */,
+				850333366EAE40EAA749D826 /* MazzardH-Regular.ttf in Resources */,
+				96DAA773FC11423092E6604F /* MazzardH-Regular.woff in Resources */,
+				8F5EAE562B694F5D9BBA42A2 /* MazzardH-Regular.woff2 in Resources */,
+				CF6DAA222A9C494D94835C72 /* MazzardH-SemiBold.ttf in Resources */,
+				D82F67BCDCC44044ACC15D19 /* MazzardH-SemiBold.woff in Resources */,
+				3DA1291D04C340178B7F4104 /* MazzardH-SemiBold.woff2 in Resources */,
+				C066A041D0C04A7984857009 /* MazzardH-SemiBoldItalic.ttf in Resources */,
+				87AFD4CEB3984730AE06F4EC /* MazzardH-SemiBoldItalic.woff in Resources */,
+				32D131CF8AEA4DFDB328C3D3 /* MazzardH-SemiBoldItalic.woff2 in Resources */,
+				71D491A1F5354309BBF76067 /* MazzardH-Thin.ttf in Resources */,
+				8A0CE012E4D241FDA3D5E272 /* MazzardH-Thin.woff in Resources */,
+				B1D5395352E44A2F87EE2ACB /* MazzardH-Thin.woff2 in Resources */,
+				EF5FFE971BD249E7B2FE313C /* MazzardH-ThinItalic.ttf in Resources */,
+				69E174EBDC0A4AE3873BABE2 /* MazzardH-ThinItalic.woff in Resources */,
+				F50B7CCB2724452583C53D15 /* MazzardH-ThinItalic.woff2 in Resources */,
+				C396EF56D21349D6A5F52B02 /* MazzardL-Black.ttf in Resources */,
+				6B587064085349739C4FDCD2 /* MazzardL-Black.woff in Resources */,
+				216F2A67EFD543B797A1B348 /* MazzardL-Black.woff2 in Resources */,
+				B0BCF31BE1FF439BB9FED917 /* MazzardL-BlackItalic.ttf in Resources */,
+				CFEDF86A3F144A2A9A389852 /* MazzardL-BlackItalic.woff in Resources */,
+				629EBDFE425C44B19694BC82 /* MazzardL-BlackItalic.woff2 in Resources */,
+				145104E908514DA7BE0FEBFD /* MazzardL-Bold.ttf in Resources */,
+				A91140CE3D8A43B6A409C5D4 /* MazzardL-Bold.woff in Resources */,
+				0FB737D48A6F44D6A3387A98 /* MazzardL-Bold.woff2 in Resources */,
+				C637F9A46ABE401186BCF803 /* MazzardL-BoldItalic.ttf in Resources */,
+				66085C710B4740208D297D43 /* MazzardL-BoldItalic.woff in Resources */,
+				B336E3A3EAE040C8A5248F35 /* MazzardL-BoldItalic.woff2 in Resources */,
+				5E5EAC0E0F1142CA80A0632B /* MazzardL-ExtraBold.ttf in Resources */,
+				69E5A2DF0FE04990AC74847B /* MazzardL-ExtraBold.woff in Resources */,
+				273B7F3F47EC4D07BD52F7FF /* MazzardL-ExtraBold.woff2 in Resources */,
+				25585D49976A454D8C560B65 /* MazzardL-ExtraBoldItalic.ttf in Resources */,
+				475A7EEC5909405BA4DD27F5 /* MazzardL-ExtraBoldItalic.woff in Resources */,
+				F043407B3B7B487AA83CEF19 /* MazzardL-ExtraBoldItalic.woff2 in Resources */,
+				73367E385F5649348AC7042D /* MazzardL-ExtraLight.ttf in Resources */,
+				E4D718C845E64070B1936DF9 /* MazzardL-ExtraLight.woff in Resources */,
+				4D35396F455E4D70B2B955AE /* MazzardL-ExtraLight.woff2 in Resources */,
+				8C70AEBB3979471DAD7E085E /* MazzardL-ExtraLightItalic.ttf in Resources */,
+				24EFADF2A61242FDB182F25F /* MazzardL-ExtraLightItalic.woff in Resources */,
+				293F352A35E44A3EAF65C946 /* MazzardL-ExtraLightItalic.woff2 in Resources */,
+				5B60D3E49A2343488DE185F9 /* MazzardL-Italic.ttf in Resources */,
+				8EC5949B22D2497998A1D27F /* MazzardL-Italic.woff in Resources */,
+				2661E1003B204F52AF1AD7DA /* MazzardL-Italic.woff2 in Resources */,
+				54146AE6600649D3AA2BCDA2 /* MazzardL-Light.ttf in Resources */,
+				92A26CFED7F946C6AD0614F1 /* MazzardL-Light.woff in Resources */,
+				B2A5D74CCDC2466088E2AE0D /* MazzardL-Light.woff2 in Resources */,
+				4D03D656046F486184E7EF81 /* MazzardL-LightItalic.ttf in Resources */,
+				0EC7A90EEE804072A43124D8 /* MazzardL-LightItalic.woff in Resources */,
+				DE417CEE328747AAB1142C91 /* MazzardL-LightItalic.woff2 in Resources */,
+				C90CFA9F30E541E781A4E774 /* MazzardL-Medium.ttf in Resources */,
+				CC90E6E025AE42FEBC59170E /* MazzardL-Medium.woff in Resources */,
+				2898111F6A1E4DEEA9F3851F /* MazzardL-Medium.woff2 in Resources */,
+				4B9E69D6771D49768BB3A0D3 /* MazzardL-MediumItalic.ttf in Resources */,
+				4CBFB8AC72754E499251FC77 /* MazzardL-MediumItalic.woff in Resources */,
+				092A02CEA35D45D3BDE1BD0C /* MazzardL-MediumItalic.woff2 in Resources */,
+				470A3A15C37A4913B4DE2DE1 /* MazzardL-Regular.ttf in Resources */,
+				D3202483DACF468CBF8E3872 /* MazzardL-Regular.woff in Resources */,
+				3C41A8A314EC4EABA0E005E2 /* MazzardL-Regular.woff2 in Resources */,
+				6D48ADBAD1A645C783E706B9 /* MazzardL-SemiBold.ttf in Resources */,
+				37776E18CB874D868071AC17 /* MazzardL-SemiBold.woff in Resources */,
+				1E92F1A12C1A4470AD268E04 /* MazzardL-SemiBold.woff2 in Resources */,
+				5072A4D11C5C4EDEB153933A /* MazzardL-SemiBoldItalic.ttf in Resources */,
+				60496747567E40F4B8BB52DD /* MazzardL-SemiBoldItalic.woff in Resources */,
+				7114FD2C69554C1B84CFCAFB /* MazzardL-SemiBoldItalic.woff2 in Resources */,
+				6303E7EF369042D7BC21FEBE /* MazzardL-Thin.ttf in Resources */,
+				B12B3606F5154FEEA62B3F70 /* MazzardL-Thin.woff in Resources */,
+				E648B23E3D6F4EE194BBCA14 /* MazzardL-Thin.woff2 in Resources */,
+				65C92C4309C44E12B9188DEC /* MazzardL-ThinItalic.ttf in Resources */,
+				4C35E9F97AC74CBABDF1A0D2 /* MazzardL-ThinItalic.woff in Resources */,
+				CB40A8E27AC84CEB98F22E6E /* MazzardL-ThinItalic.woff2 in Resources */,
+				280F914C04AC4F70BB456793 /* MazzardM-Black.ttf in Resources */,
+				E04D5A17CE7F44CA98FEE036 /* MazzardM-Black.woff in Resources */,
+				C57A509A3D384E8D91B253BD /* MazzardM-Black.woff2 in Resources */,
+				829AE90E381C49FF991A808C /* MazzardM-BlackItalic.ttf in Resources */,
+				1EC6A3682104472698F6DF48 /* MazzardM-BlackItalic.woff in Resources */,
+				A96BE3632B764040B4FAF703 /* MazzardM-BlackItalic.woff2 in Resources */,
+				4262815335B84C1BBBC93592 /* MazzardM-Bold.ttf in Resources */,
+				D7286B03588D439EA0576C4B /* MazzardM-Bold.woff in Resources */,
+				7C90DA1B45194341A206AE61 /* MazzardM-Bold.woff2 in Resources */,
+				6470A664AC724CA5B542D4A3 /* MazzardM-BoldItalic.ttf in Resources */,
+				EC06241B1EE8446899F86332 /* MazzardM-BoldItalic.woff in Resources */,
+				4CB80E61E8E74F52A31033AF /* MazzardM-BoldItalic.woff2 in Resources */,
+				DFE19E24D7EC45B4A12FAD2E /* MazzardM-ExtraBold.ttf in Resources */,
+				03A2ED8908C344F49AD5CF65 /* MazzardM-ExtraBold.woff in Resources */,
+				B4C6B3B4CDED4F9CB4308B03 /* MazzardM-ExtraBold.woff2 in Resources */,
+				8A2E912982514BE081A9BE64 /* MazzardM-ExtraBoldItalic.ttf in Resources */,
+				4F4B1FBAF9C3447DBB5BF469 /* MazzardM-ExtraBoldItalic.woff in Resources */,
+				1D3F8BD4BE5E4EC3850774B4 /* MazzardM-ExtraBoldItalic.woff2 in Resources */,
+				D117326FC0FB42A09BF79391 /* MazzardM-ExtraLight.ttf in Resources */,
+				880452F2716A41DB964BFFE7 /* MazzardM-ExtraLight.woff in Resources */,
+				94A1F231C0794C8ABFD53F9A /* MazzardM-ExtraLight.woff2 in Resources */,
+				0D912D8252C04B8491828605 /* MazzardM-ExtraLightItalic.ttf in Resources */,
+				7B478CD16C6B45A8BEBF3AF4 /* MazzardM-ExtraLightItalic.woff in Resources */,
+				9BA795A5F324405CB323B2F1 /* MazzardM-ExtraLightItalic.woff2 in Resources */,
+				929498023A364D95A825974C /* MazzardM-Italic.ttf in Resources */,
+				84026CB3A3504B1E8180F030 /* MazzardM-Italic.woff in Resources */,
+				91197782A54741C78ED13E48 /* MazzardM-Italic.woff2 in Resources */,
+				B8A6032B3D43444896DE121A /* MazzardM-Light.ttf in Resources */,
+				CBBD94499C2B4E29BF895199 /* MazzardM-Light.woff in Resources */,
+				1B76D03052FA4BFFB1972B2B /* MazzardM-Light.woff2 in Resources */,
+				5D30225DA6A2493B8D5BE91E /* MazzardM-LightItalic.ttf in Resources */,
+				28B3F27FB8DB4C42ABBCBBC3 /* MazzardM-LightItalic.woff in Resources */,
+				153FC42E7D8E412686EE4FA2 /* MazzardM-LightItalic.woff2 in Resources */,
+				F9F6F1EF449F43F6A83DE7F3 /* MazzardM-Medium.ttf in Resources */,
+				B9DB59EDF0AF4296AA68D64A /* MazzardM-Medium.woff in Resources */,
+				82B827FE94F04B518A205336 /* MazzardM-Medium.woff2 in Resources */,
+				3F6B4D30A0444433B4FE5CC0 /* MazzardM-MediumItalic.ttf in Resources */,
+				D8D4D7C10A864C57B4CDFF5D /* MazzardM-MediumItalic.woff in Resources */,
+				0C24C0CD65494187ADE1C27F /* MazzardM-MediumItalic.woff2 in Resources */,
+				C71D7A8F31B144B99AAE0A77 /* MazzardM-Regular.ttf in Resources */,
+				531EE2EC30C944E392EAC8FD /* MazzardM-Regular.woff in Resources */,
+				FE6FC3C3A9F44BBCA741E907 /* MazzardM-Regular.woff2 in Resources */,
+				38157E078A184944BC4EE88D /* MazzardM-SemiBold.ttf in Resources */,
+				736E46C39E9C4B2A87DE9325 /* MazzardM-SemiBold.woff in Resources */,
+				A19D461271B04703AB514C7C /* MazzardM-SemiBold.woff2 in Resources */,
+				7D0DEEFD6F4242288BF0C668 /* MazzardM-SemiBoldItalic.ttf in Resources */,
+				5FEFCA6D414048C988D85F32 /* MazzardM-SemiBoldItalic.woff in Resources */,
+				B11D5D43D72146B3BAB0C45B /* MazzardM-SemiBoldItalic.woff2 in Resources */,
+				8D1FFD8056D74645AB6DE98F /* MazzardM-Thin.ttf in Resources */,
+				9EB1ABE7B39C4E2FA3299FEF /* MazzardM-Thin.woff in Resources */,
+				730FC8EC71994EC4B1BB3399 /* MazzardM-Thin.woff2 in Resources */,
+				66D2395D34834FF0A425AAC6 /* MazzardM-ThinItalic.ttf in Resources */,
+				96946CF67D9D4D57B4FC748E /* MazzardM-ThinItalic.woff in Resources */,
+				36E4A257B3284834850C7868 /* MazzardM-ThinItalic.woff2 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,7 +29,7 @@ export const ProductsDisplay = styled.View`
 export const ProductsCategory = styled.Text`
   paddingTop: 15px;
   height: 39px;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -71,7 +71,7 @@ export const ProductImage = styled.Image`
 `
 
 export const ProductTitle = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;

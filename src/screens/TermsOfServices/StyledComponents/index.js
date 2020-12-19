@@ -28,7 +28,7 @@ export const BackArrow = styled.TouchableOpacity`
 `
 
 export const MainHeading = styled.Text`
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
@@ -39,7 +39,7 @@ export const MainHeading = styled.Text`
 
 export const DescriptionHeading = styled.Text`
   width: 100%;
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -51,7 +51,7 @@ export const DescriptionHeading = styled.Text`
 
 export const Description = styled.Text`
   width: 100%;
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -69,29 +69,4 @@ export const Options = styled.View`
 export const OptionDetails = styled.View`
   flex-direction: column;
   justify-content: center;
-`
-
-export const OptionTag = styled.Text`
-  font-family: Mazzard;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  text-transform: capitalize;
-  color: #1E201D;
-`
-
-export const OptionText = styled.Text`
-  font-family: Mazzard;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-  color: #545454
-`
-
-export const OptionIcon = styled.Image`
-  width: 58px;
-  height: 58px;
-  margin-right: 16px;
 `

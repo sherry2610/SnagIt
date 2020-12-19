@@ -30,7 +30,7 @@ export const BackArrow = styled.TouchableOpacity`
 
 export const MainHeading = styled.Text`
   
-  font-family: Mazzard;
+  font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
@@ -41,7 +41,7 @@ export const MainHeading = styled.Text`
 
 export const Description = styled.Text`
   width: 100%;
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -64,7 +64,7 @@ export const Option = styled.Text`
   width: 73%;
   height: 42px;
 
-  font-family: Mazzard;
+  font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
