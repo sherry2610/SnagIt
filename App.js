@@ -4,7 +4,6 @@ enableScreens ();
 import  React, { useEffect }  from  'react' ;
 import  { enableScreens }  from  'react-native-screens' ;
 import { Text, StatusBar, View } from 'react-native';
-import SplashScreen from './src/screens/Splash'
 import ProductInformation from './src/screens/ProductInformation'
 import Home from './src/screens/Home'
 import Profile from './src/screens/Profile'
@@ -23,10 +22,16 @@ import { AppFooter } from './src/Components/CommonComponets/FooterContent'
 import MyCart from './src/Components/MyCart'
 import Navigation from './src/Navigations/NavigationContainer'
 import {Provider} from 'react-redux';
+import SplashScreen from 'react-native-splash-screen'
 
 import {store} from './src/redux/configureStore';
 
 export default App = () => {
+
+  useEffect(()=>{
+    SplashScreen.hide();
+  },[])
+
   return (
     <Provider store={store}>
     <Navigation  />
