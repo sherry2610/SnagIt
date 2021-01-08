@@ -3,6 +3,11 @@ import { Dimensions } from 'react-native'
 
 const winWidth = Dimensions.get('window').width
 
+export const Wrapper = styled.View`
+  width: 100%;
+  background: #fff;
+`
+
 export const ChangePasswordWrapper = styled.ScrollView`
   width: ${winWidth - 32}px;
   margin: 0px auto;

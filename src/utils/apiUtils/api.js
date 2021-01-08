@@ -1,4 +1,4 @@
-const baseUrl = 'http://10.0.2.2:3000';
+const baseUrl = 'https://snagit-server.herokuapp.com';
 
 export default {
   signUpApi,
@@ -35,6 +35,22 @@ async function signInApi (payload) {
   };
 
   const response = await fetch(`${baseUrl}/users/login`, requestOptions)
+
+  return response.json()
+}
+
+async function getAllProducts () {
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow',
+    mode: 'no-cors'
+  };
+
+  const response = await fetch(`${baseUrl}/products`, requestOptions)
 
   return response.json()
 }

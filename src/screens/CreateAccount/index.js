@@ -139,7 +139,7 @@ const CreateAccount = ({navigation}) => {
         </InputWrapper>
 
         <InputWrapper>
-          <Legend widthValue='40px' display={phoneFocus} >Phone</Legend>
+          <Legend widthValue='50px' display={phoneFocus} >Phone</Legend>
           <PhoneInput
             placeholder="Phone no."
             keyboardType = 'numeric'

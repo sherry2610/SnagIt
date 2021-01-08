@@ -17,7 +17,8 @@ export const CategoryWidget = styled.Image`
 
 export const CategoryWidgetSeparator = styled.View`  
   width: ${winWidth-32}px;
-  margin: 15px auto;
+  margin: 0px auto;
+  margin-bottom: 15px;
   border: 1px solid #E9E9E9;
 `
 export const ProductsDisplay = styled.View`
@@ -65,9 +66,9 @@ export const ProductInfoIcon = styled.TouchableOpacity`
 `
 
 export const ProductImage = styled.Image`
-  margin: 18px 29px 0px 19px;
-  width: 106px;
-  height: 106px;
+
+
+  
 `
 
 export const ProductTitle = styled.Text`
@@ -77,7 +78,7 @@ export const ProductTitle = styled.Text`
   font-size: 16px;
   line-height: 20px;
   color: #545454;
-  margin: 5px 0px 5px 17px
+  margin: 0px 0px 5px 17px
 `
 
 export const ProductPrice = styled.Image`

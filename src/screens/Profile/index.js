@@ -60,18 +60,18 @@ const Profile = (props) => {
         </ProfileImageWrapper>
 
         <ProfileName>
-        {/* {userProfile ? `${userProfile.firstname} ${userProfile.lastname}` : 'Jonathan Davis'} */}
-        {userProfile && `${userProfile.firstname} ${userProfile.lastname}`}
+        {userProfile ? `${userProfile.firstname} ${userProfile.lastname}` : 'Jonathan Davis'}
+        {/* {userProfile && `${userProfile.firstname} ${userProfile.lastname}`} */}
         </ProfileName>
 
         <ProfileContactDetail>
           <ProfileEmail>
-            {/* {userProfile ? userProfile.email : 'jonithan123@gmail.com'} */}
-            {userProfile && userProfile.email }
+            {userProfile ? userProfile.email : 'jonithan123@gmail.com'}
+            {/* {userProfile && userProfile.email } */}
           </ProfileEmail>
           <ProfileContact>
-            {/* {userProfile ? userProfile.phone_num : '123-321-1234'} */}
-            {userProfile && userProfile.phone_num }
+            {userProfile ? userProfile.phone_num : '123-321-1234'}
+            {/* {userProfile && userProfile.phone_num } */}
           </ProfileContact>
         </ProfileContactDetail>
         

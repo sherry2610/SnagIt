@@ -7,18 +7,18 @@ import {
 } from '@react-navigation/drawer';
 import MainStack from './MainStack';
 import skip from '../assets/general/skip.png';
-import topSellerIcon from '../assets/Menu/topseller.png';
-import aboutIcon from '../assets/Menu/about.png';
-import candyIcon from '../assets/Menu/candy.png';
-import contactIcon from '../assets/Menu/contact.png';
-import drinksIcon from '../assets/Menu/drinks.png';
-import foodIcon from '../assets/Menu/food.png';
-import newIcon from '../assets/Menu/new.png';
-import orderStatusIcon from '../assets/Menu/orderstatus.png';
-import pastOrdersIcon from '../assets/Menu/pastorders.png';
-import settingIcon from '../assets/Menu/setting.png';
-import ToSIcon from '../assets/Menu/ToS.png';
-import snacksIcon from '../assets/Menu/snacks.png';
+import topSellerIcon from '../assets/images/leftDrawer/topSeller.png';
+import aboutIcon from '../assets/images/leftDrawer/about.png';
+import candyIcon from '../assets/images/leftDrawer/candy.png';
+import contactIcon from '../assets/images/leftDrawer/contact.png';
+import drinksIcon from '../assets/images/leftDrawer/drinks.png';
+import foodIcon from '../assets/images/leftDrawer/food.png';
+import newIcon from '../assets/images/leftDrawer/new.png';
+import orderStatusIcon from '../assets/images/leftDrawer/orderstatus.png';
+import pastOrdersIcon from '../assets/images/leftDrawer/pastorders.png';
+import settingIcon from '../assets/images/leftDrawer/settings.png';
+import ToSIcon from '../assets/images/leftDrawer/tos.png';
+import snacksIcon from '../assets/images/leftDrawer/snacks.png';
 import {
   Wrapper,
   SkipButton,
@@ -70,7 +70,7 @@ export const CustomDrawerComp = (props) => {
               resizeMode="contain"
             />
           )}
-          onPress={() => navigation.navigate('Home')}
+          onPress={() =>  navigation.navigate("Home",{mode:'topSellers'})}
         />
 
 <DrawerItem
@@ -92,7 +92,7 @@ export const CustomDrawerComp = (props) => {
               resizeMode="contain"
             />
           )}
-          onPress={() => alert("navigation is not decided on this route!")}
+          onPress={() => navigation.navigate("Home",{mode:'New'})}
         />
 
 <DrawerItem
@@ -114,7 +114,7 @@ export const CustomDrawerComp = (props) => {
               resizeMode="contain"
             />
           )}
-          onPress={() => alert("navigation is not decided on this route!")}
+          onPress={() => navigation.navigate("Home",{mode:'Drinks'})}
         />
 
 <DrawerItem
@@ -136,7 +136,7 @@ export const CustomDrawerComp = (props) => {
               resizeMode="contain"
             />
           )}
-          onPress={() => alert("navigation is not decided on this route!")}
+          onPress={() => navigation.navigate("Home",{mode:'Food'})}
         />
 
 <DrawerItem
@@ -158,7 +158,7 @@ export const CustomDrawerComp = (props) => {
               resizeMode="contain"
             />
           )}
-          onPress={() => alert("navigation is not decided on this route!")}
+          onPress={() => navigation.navigate("Home",{mode:'Snacks'})}
         />
 
 <DrawerItem
@@ -180,7 +180,7 @@ export const CustomDrawerComp = (props) => {
               resizeMode="contain"
             />
           )}
-          onPress={() => alert("navigation is not decided on this route!")}
+          onPress={() => navigation.navigate("Home",{mode:'Candy'})}
         />
 
 <DrawerItem
@@ -247,7 +247,7 @@ export const CustomDrawerComp = (props) => {
               resizeMode="contain"
             />
           )}
-          onPress={() => alert("this screen is under maintainance! Sorry for the inconvenience")}
+          onPress={() => navigation.navigate('PastOrders')}
         />
 
         <DrawerItem

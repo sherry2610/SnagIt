@@ -2,7 +2,8 @@ import React from 'react';
 import {useDispatch} from 'react-redux';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
-import {Image, TouchableOpacity, View} from 'react-native';
+import {Image, Text, TouchableOpacity, View} from 'react-native';
+// import SvgUri from 'react-native-svg-uri';
 import {AppConfigActions} from '../redux/actions';
 import Home from '../screens/Home';
 import Profile from '../screens/Profile';

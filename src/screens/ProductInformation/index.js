@@ -8,7 +8,9 @@ import { AppFooter } from '../../Components/CommonComponets/FooterContent'
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default Splash = ({navigation}) => {
+export default Splash = ({navigation, route}) => {
+
+  console.log("route in prodInfo",route.params)
 
   return (
     <>

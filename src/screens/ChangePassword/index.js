@@ -15,6 +15,7 @@ import {
   SaveButton,
   ExitButton,
   Legend,
+  Wrapper
 } from './StyledComponent';
 import { Image } from 'react-native';
 
@@ -26,6 +27,7 @@ const ChangePassword = (props) => {
 
   const { navigation } = props
   return (
+    <Wrapper>
     <ChangePasswordWrapper
       contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}}
       showsVerticalScrollIndicator={false}
@@ -37,7 +39,7 @@ const ChangePassword = (props) => {
       <ChangePasswordContent behavior="padding">
         <ChangePasswordHeading>Change Password</ChangePasswordHeading>
         <InputWrapper>
-          {oldPassFocus && <Legend widthValue='80px' >Old Password</Legend>}
+          {oldPassFocus && <Legend widthValue='100px' >Old Password</Legend>}
 
           <OldPasswordInput
             placeholder="Enter Old Password"
@@ -49,7 +51,7 @@ const ChangePassword = (props) => {
         </InputWrapper>
 
         <InputWrapper>
-          {newPassFocus && <Legend widthValue='120px' >Enter new password</Legend>}
+          {newPassFocus && <Legend widthValue='140px' >Enter new password</Legend>}
           <NewPasswordInput
             placeholder="Enter New Password"
             onFocus={() => setNewPassFocus(true)}
@@ -60,7 +62,7 @@ const ChangePassword = (props) => {
         </InputWrapper>
 
         <InputWrapper>
-          {confirmNewPassFocus && <Legend widthValue='140px' >Confirm new password</Legend>}
+          {confirmNewPassFocus && <Legend widthValue='160px' >Confirm new password</Legend>}
           <ConfirmNewPasswordInput
             placeholder="Confirm new password"
             onFocus={() => setConfirmNewPassFocus(true)}
@@ -74,6 +76,7 @@ const ChangePassword = (props) => {
 
       </ChangePasswordContent>
     </ChangePasswordWrapper>
+    </Wrapper>
   );
 };
 
