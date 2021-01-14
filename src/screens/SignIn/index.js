@@ -1,9 +1,12 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import React, {useState} from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, ActivityIndicator } from 'react-native';
 import emailIcon from '../../assets/editProfile/email.png';
-import api from '../../utils/apiUtils/api';
+// import api from '../../utils/apiUtils/api';
+import { SignInRequest } from '../../redux/actionCreators'
+import {useDispatch, useSelector} from 'react-redux';
 import { validateEmail } from '../../utils/helperUtils/generalUtils';
+import SignInFirst from '../../Components/SignInFirst'
 import {
   SignInWrapper,
   SignInContent,
@@ -19,48 +22,85 @@ import {
   SignUpLink
 } from './StyledComponents';
 
-const SignIn = ({navigation}) => {
+const SignIn = ({navigation, route}) => {
+  const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
   const [passwordFocus, setPasswordFocus] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const isComingFromProfile = route.params ? route.params.fromProfileScreen : false
 
   const handleSubmit = async () => {
-
+    setIsLoading(true)
     if(!email || !password ){
+      setIsLoading(false)
       alert("All fields are required")
       return
     }
 
-    if(!validateEmail(email)) return
+    if(!validateEmail(email)) {
+      setIsLoading(false)
+      alert("Email is not valid")
+      return
+    }
 
-    const payload = {
+    const pay = {
       username: email,
       password,
   }
-
-  api.signInApi(payload)
-  .then(data => {
-    console.log("res ------",data); // JSON data parsed by `data.json()` call
-    if(data.success){
-      setEmail('')
-      setPassword('')
-      console.log("user registered!!!",data.user)
-      AsyncStorage.setItem("userData",JSON.stringify(data.user))
-      navigation.navigate('HomeScreen')
-      alert("Login Successfull")
-    } else {
-      if(data.err){
-        alert(data.err.message)
+  
+  dispatch(SignInRequest(pay)).then(res=>{
+    if (!res.payload.signInFailed){
+      if(isComingFromProfile){
+        navigation.navigate('Profile')
+      }else{
+        navigation.navigate('HomeScreen')
       }
+      setIsLoading(false)
+    }
+    else{
+      if (res.payload.err){
+        if (res.payload.err.name === "IncorrectUsernameError"){
+            alert("Incorrect Username");
+            setIsLoading(false)
+        }
+        else if (res.payload.err.name === "IncorrectPasswordError"){
+            alert("Incorrect Password");
+            setIsLoading(false)
+        } 
+    }
+    else{
+        alert("Ops! Login Failed");
+        setIsLoading(false)
+    }
     }
   })
-  .catch(err=>{
-    console.log("error in signup ------", err)
-    alert("Something went wrong")
-  })
+
+  // api.signInApi(payload)
+  // .then(data => {
+  //   console.log("res ------",data); // JSON data parsed by `data.json()` call
+  //   if(data.success){
+  //     setEmail('')
+  //     setPassword('')
+  //     console.log("user registered!!!",data.user)
+  //     AsyncStorage.setItem("userData",JSON.stringify(data.user))
+  //     navigation.navigate('HomeScreen')
+  //     alert("Login Successfull")
+  //   } else {
+  //     if(data.err){
+  //       alert(data.err.message)
+  //     }
+  //   }
+  // })
+  // .catch(err=>{
+  //   console.log("error in signup ------", err)
+  //   alert("Something went wrong")
+  // })
 
   }
+
+  // console.log("isComingFromProfile",isComingFromProfile, route.params)
 
   return (
     <Wrapper>
@@ -68,6 +108,8 @@ const SignIn = ({navigation}) => {
       contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}}
       showsVerticalScrollIndicator={false}
       >
+        {/* {isComingFromProfile && <SignInFirst />} */}
+        
 
       <SignInContent behavior="padding">
         <SignInHeading>Sign In</SignInHeading>
@@ -101,9 +143,12 @@ const SignIn = ({navigation}) => {
           <InputIcon source={emailIcon} />
         </InputWrapper>
 
-        <TouchableOpacity onPress={()=>handleSubmit()}>
-        <SaveButton>GET SNAG'N</SaveButton>
-        </TouchableOpacity>
+        {isLoading ? 
+          <ActivityIndicator size="large" color="red" /> :
+          <TouchableOpacity onPress={()=>handleSubmit()}>
+          <SaveButton>GET SNAG'N</SaveButton>
+          </TouchableOpacity>
+        }
         <LastRow>
           <RandomText>
           Don't have an account? 

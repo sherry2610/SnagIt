@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { View, Image, ScrollView, Dimensions, TouchableOpacity } from 'react-native'
+import { View, Image, ScrollView } from 'react-native'
 import BottomSearch from '../BottomSearch'
 import { 
   CategoryWidget,
@@ -13,165 +13,28 @@ import {
   ProductTitle,
   ProductPrice,
   Wrapper,
+  FromText
 } from './StyledComponent'
-import categoryWidget from '../../assets/productHome/categoryWidget.png'
+import unfilledCart from '../../assets/images/unfilledCart.png'
+import filledCart from '../../assets/images/filled.jpg'
 import prodInfoIcon from '../../assets/productHome/prodInfo.png'
 import loader from '../../assets/productHome/loader.png'
-import prodImage1 from '../../assets/images/prod1.png'
-import prodImage2 from '../../assets/images/prod2.png'
-import prodImage3 from '../../assets/images/prod3.png'
-import prodImage4 from '../../assets/images/prod4.png'
-import prodImage5 from '../../assets/images/prod5.png'
-import prodImage6 from '../../assets/images/prod6.png'
-import prodImage7 from '../../assets/images/prod7.png'
-import prodImage8 from '../../assets/images/prod8.png'
-import prodImage9 from '../../assets/images/prod9.png'
-import prodImage10 from '../../assets/images/prod10.png'
-import priceTag from '../../assets/productHome/priceTag.png'
+import { useSelector } from 'react-redux'
 
+export default ProductsHome = ({navigation, route, category}) => {
 
-
-const prods = {
-  topSellers : [
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage2,
-      price: priceTag
-    },
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage3,
-      price: priceTag
-    },
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage4,
-      price: priceTag
-    },
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage3,
-      price: priceTag
-    },
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage2,
-      price: priceTag
-    },
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage3,
-      price: priceTag
-    }
-  ],
-  New : [
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage5,
-      price: priceTag
-    },
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage6,
-      price: priceTag
-    },
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage1,
-      price: priceTag
-    }
-  ],
-  Drinks: [
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage8,
-      price: priceTag
-    },
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage9,
-      price: priceTag
-    },
-  ],
-  Food: [
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage10,
-      price: priceTag
-    },
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage4,
-      price: priceTag
-    },
-  ],
-  Food: [
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage4,
-      price: priceTag
-    },
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage10,
-      price: priceTag
-    },
-  ],
-  Snacks: [
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage10,
-      price: priceTag
-    },
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage9,
-      price: priceTag
-    },
-  ],
-  Candy: [
-    {
-      title: 'Lorem Ipsum',
-      image: prodImage1,
-      price: priceTag
-    },
-  ],
-}
-
-
-
-const winHeight = Dimensions.get('screen').height
-
-
-
-
-export default ProductsHome = ({navigation, route, products, category}) => {
-  const [activeCategory, setActiveCategory] = useState(category==="Nicotine"?prods["New"]:prods[category])
-
+  const {products} = useSelector(state=>state.productReducer)
+  console.log("product state from redux store", products)
+  
+  const [activeCategory, setActiveCategory] = useState(products[category])
+  
 
   useEffect(()=>{
-    setActiveCategory(category==="Nicotine"?prods["New"]:prods[category])
-  },[category])
-
-  // console.log("route",route)
-
-  // console.log("navigation",navigation)
-
-  // useEffect(()=>{
-  // if(route.params){
-  //   const { mode } = route.params
-  //   const categoryToShow =  mode == 'New' ? New : topSellers
-  //   setActiveCategory(categoryToShow)
-  // }else{
-  //   setActiveCategory(topSellers)
-  // }
-  // },[])
-
-console.log("activeCategory",activeCategory)
-console.log("category",category)
+    setActiveCategory(products[category])
+    console.log("mark")
+  },[category,products])
 
   return (
-    // <View >
     <Wrapper>
         <CategoryWidgetSeparator></CategoryWidgetSeparator>
       <ScrollView >
@@ -182,7 +45,10 @@ console.log("category",category)
             <ProductsWrapper>
               {activeCategory.map((data,i)=>(
                 <ProductContainer key={i}>
-                <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation',{mode:'prodInfo'})}>
+                <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation',{
+                  mode:'prodInfo',
+                  prodInfo: data
+                  })}>
                   <Image source={prodInfoIcon} />
                 </ProductInfoIcon>
                 <View style={{
@@ -190,15 +56,23 @@ console.log("category",category)
                   height:115,
                   marginLeft:15,
                   marginTop:19,
-                  // borderWidth:1,
-                  // borderColor:'#000',
                   justifyContent:'center',
                   alignItems:'center'
                   }} >
-                <ProductImage source={data.image} />
+                <ProductImage 
+                  source={{uri:`https://snagit-server.herokuapp.com/${data.image}`}} 
+                  style={{width:100,height:100}}
+                  />
                 </View>
-                <ProductTitle>{data.title}</ProductTitle>
-                <ProductPrice source={data.price} />
+                <ProductTitle>{data.name}</ProductTitle>
+                <View style={{flexDirection:"row"}}>
+                <FromText>From</FromText>
+                <ProductPrice>
+                  {data.price}
+                </ProductPrice>
+                <Image source={filledCart} style={{width:30,height:30,marginLeft:30}} />
+                </View>
+
               </ProductContainer>
               ))}
 
@@ -210,7 +84,6 @@ console.log("category",category)
           </View>
           <BottomSearch />
       </ScrollView>
-    {/* </View> */}
     </Wrapper>
 
   )

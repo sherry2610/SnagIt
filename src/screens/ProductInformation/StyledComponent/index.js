@@ -8,9 +8,10 @@ const winWidth = Dimensions.get('window').width
 export const ProdInfoWrapper = styled.ScrollView`
   display:flex;
   width: ${winWidth - 32}px;
-  margin: 0px auto;
+  margin: 20px auto;
   flex-direction:column;
   position:relative;
+  margin-bottom: 70px;
   
 `
 
@@ -90,10 +91,9 @@ export const PriceText = styled.Text`
   font-family: MazzardH-Bold;
   font-style: normal;
   font-weight: 100;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 54px;
 
   text-align: center;
 
-  color: #545454;
+  color: #EDA920;
 `

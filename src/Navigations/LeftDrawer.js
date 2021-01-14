@@ -70,7 +70,7 @@ export const CustomDrawerComp = (props) => {
               resizeMode="contain"
             />
           )}
-          onPress={() =>  navigation.navigate("Home",{mode:'topSellers'})}
+          onPress={() =>  navigation.navigate("Home",{mode:'TopSeller'})}
         />
 
 <DrawerItem
@@ -114,7 +114,7 @@ export const CustomDrawerComp = (props) => {
               resizeMode="contain"
             />
           )}
-          onPress={() => navigation.navigate("Home",{mode:'Drinks'})}
+          onPress={() => navigation.navigate("Home",{mode:'Drink'})}
         />
 
 <DrawerItem

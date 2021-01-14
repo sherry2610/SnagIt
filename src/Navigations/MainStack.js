@@ -1,10 +1,9 @@
-import React from 'react';
-import {useDispatch} from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import {Image, Text, TouchableOpacity, View} from 'react-native';
-// import SvgUri from 'react-native-svg-uri';
-import {AppConfigActions} from '../redux/actions';
+import {drawerActions} from '../redux/actionCreators';
 import Home from '../screens/Home';
 import Profile from '../screens/Profile';
 import Settings from '../screens/Settings';
@@ -34,6 +33,7 @@ const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const HomeScreen = () => {
+  const {authedUser} = useSelector(state => state.authedUser)
   return (
   <Tab.Navigator
     initialRouteName="Home"
@@ -67,7 +67,7 @@ const HomeScreen = () => {
 
   >
     
-    <Tab.Screen name="Profile" component={Profile} />
+    <Tab.Screen name="Profile" component={Profile} screenProps={{ loggedIn: authedUser.token?true:false }} />
     <Tab.Screen name="Home" component={Home} />
     <Tab.Screen name="PastOrders" component={PastOrders} />
   </Tab.Navigator>
@@ -77,6 +77,22 @@ const HomeScreen = () => {
 export default ({navigation}) => {
 
   const dispatch = useDispatch();
+  const {authedUser} = useSelector((state) => state.authedUser)
+  
+  const [isUserSignedIn, setIsUserSignedIn] = useState(false)
+
+
+  useEffect(()=>{
+    function sessionCheck(){
+      if(authedUser.token){
+        setIsUserSignedIn(true)
+      }else{
+        setIsUserSignedIn(false)
+      }
+
+    }
+    sessionCheck()
+  },[authedUser.token])
 
   const options = {
     headerLeft: () => (
@@ -115,37 +131,30 @@ export default ({navigation}) => {
       </TouchableOpacity>
       <TouchableOpacity
         style={{marginLeft:15}}
-        onPress={() => dispatch(AppConfigActions.toggleRightDrawer())}>
+        onPress={() => dispatch(drawerActions.toggleRightDrawer())}>
         <Image source={cartIcon} />
       </TouchableOpacity>
       </View>
     ),
   };
 
-  
-  
-
-
   return (
     <>
-      <Stack.Navigator initialRouteName="SignIn" >
-      <Stack.Screen options={{...options,headerShown:false}} name="CreateAccount" component={CreateAccount} />
-      <Stack.Screen options={{...options,headerShown:false}} name="SignIn" component={SignIn} />
+      <Stack.Navigator >
       <Stack.Screen options={options} name="HomeScreen" component={HomeScreen} />
       <Stack.Screen options={{...options,headerShown:false}} name="ProductInformation" component={ProductInformation} />
       <Stack.Screen options={options} name="Settings" component={Settings} />
       <Stack.Screen options={options} name="AboutUs" component={AboutUs} />
       <Stack.Screen options={options} name="ContactUs" component={ContactUs} />
       <Stack.Screen options={options} name="TermsOfServices" component={TermsOfServices} />
-      {/* <Stack.Screen options={options} name="PastOrders" component={PastOrders} /> */}
-      {/* <Stack.Screen options={options} name="Profile" component={Profile} /> */}
       <Stack.Screen options={{...options,headerShown:false}} name="EditProfile" component={EditProfile} />
       <Stack.Screen options={{...options,headerShown:false}} name="ChangePassword" component={ChangePassword} />
       <Stack.Screen options={options} name="PaymentMethod" component={PaymentMethod} />
       <Stack.Screen options={{...options,headerShown:false}} name="OnlinePayment" component={OnlinePayment} />
       <Stack.Screen options={{...options,headerShown:false}} name="CardDetail" component={CardDetail} />
       <Stack.Screen options={{...options,headerShown:false}} name="Search" component={Search} />
-      
+      <Stack.Screen options={{...options,headerShown:false}} name="SignIn" component={SignIn} />
+      <Stack.Screen options={{...options,headerShown:false}} name="CreateAccount" component={CreateAccount} />
       </Stack.Navigator>
       <AppFooter />
       </>

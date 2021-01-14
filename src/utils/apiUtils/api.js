@@ -2,7 +2,9 @@ const baseUrl = 'https://snagit-server.herokuapp.com';
 
 export default {
   signUpApi,
-  signInApi
+  signInApi,
+  getAllProducts,
+  getProductsByCategory
 }
 
 async function signUpApi (payload) {
@@ -51,6 +53,22 @@ async function getAllProducts () {
   };
 
   const response = await fetch(`${baseUrl}/products`, requestOptions)
+
+  return response.json()
+}
+
+async function getProductsByCategory (cat) {
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow',
+    mode: 'no-cors'
+  };
+
+  const response = await fetch(`${baseUrl}/products/category/${cat}`, requestOptions)
 
   return response.json()
 }

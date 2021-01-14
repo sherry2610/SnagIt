@@ -78,11 +78,21 @@ export const ProductTitle = styled.Text`
   font-size: 16px;
   line-height: 20px;
   color: #545454;
-  margin: 0px 0px 5px 17px
+  margin: 0px 0px 0px 17px
+`
+export const FromText = styled.Text`
+  font-family: MazzardH-Regular;
+  font-style: normal;
+  font-size: 12px;
+  margin: 2px 0px 0px 17px;
+  width: 40px;
 `
 
-export const ProductPrice = styled.Image`
-  margin: 0px 0px 0px 17px;
-  width: 82px;
-  height: 14px;
+export const ProductPrice = styled.Text`
+  font-family: MazzardH-Bold;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: #EDA920;
 `

@@ -12,6 +12,9 @@ export default Splash = ({navigation, route}) => {
 
   console.log("route in prodInfo",route.params)
 
+  const {name,price,description,image} = route.params.prodInfo
+
+  console.log("prodInfo in prodInfo",{name,price,description,image})
   return (
     <>
     <ProdInfoWrapper 
@@ -21,27 +24,29 @@ export default Splash = ({navigation, route}) => {
       }} 
       showsVerticalScrollIndicator={false} >
       <ProductNameSection>
-        <ProductName>Product Name</ProductName>
+        <ProductName>{name}</ProductName>
         <TouchableOpacity onPress={()=>{navigation.goBack()}}>
         <Image source={skip} />
         </TouchableOpacity>
       </ProductNameSection>
       
       <ProductImageSection>
-        <Image source={prod1} />
+        <Image 
+          source={{uri:`https://snagit-server.herokuapp.com/${image}`}} 
+          style={{width:270,height:270}}
+        />
       </ProductImageSection>
 
       <ProductDescriptionSection>
         <DescriptionHeading>Product Info</DescriptionHeading>
         <DescriptionText>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        {description}
         </DescriptionText>
       </ProductDescriptionSection>
 
       <ProductPriceSection>
-        {/* <FromText>From</FromText>
-        <PriceText>$4.59</PriceText> */}
-        <Image source={priceTag} />
+        <FromText>From</FromText>
+        <PriceText>${price}</PriceText>
       </ProductPriceSection>
       
     </ProdInfoWrapper>

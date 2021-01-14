@@ -20,7 +20,7 @@ export default Home = ({navigation, route}) => {
   const [category, setCategory] = useState('')
 
   useEffect(()=>{
-    const mode = route.params ? route.params.mode : 'topSellers'
+    const mode = route.params ? route.params.mode : 'TopSeller'
     setCategory(mode)
   },[route.params])
 
@@ -36,7 +36,7 @@ export default Home = ({navigation, route}) => {
         }}
         horizontal={true}
         showsHorizontalScrollIndicator={false}>
-            <CategoryWidgetContainer onPress={()=>setCategory('topSellers')} >
+            <CategoryWidgetContainer onPress={()=>setCategory('TopSeller')} >
               <Badge bg='#FCEDEC' >
                 <Image source={topSellerWidget} style={{width:40,height:40}} />
               </Badge>
@@ -57,7 +57,7 @@ export default Home = ({navigation, route}) => {
               <WidgetTitle>Nicotine</WidgetTitle>
             </CategoryWidgetContainer>
 
-            <CategoryWidgetContainer onPress={()=>setCategory('Drinks')} >
+            <CategoryWidgetContainer onPress={()=>setCategory('Drink')} >
               <Badge bg='#D51E16' >
               <Image source={drinksWidget} style={{width:40,height:40}} />
               </Badge>
@@ -86,7 +86,7 @@ export default Home = ({navigation, route}) => {
             </CategoryWidgetContainer>
         </CategoryWidgetRow>
 
-      {!route.params && <ProductHome navigation={navigation} route={route} products='topSellers' category={category || 'topSellers'} />}
+      {!route.params && <ProductHome navigation={navigation} route={route} products='TopSeller' category={category || 'TopSeller'} />}
       {route.params && <ProductHome navigation={navigation} route={route} products={route.params.mode} category={category || route.params.mode} />}
     </HomeWrapper>
   );

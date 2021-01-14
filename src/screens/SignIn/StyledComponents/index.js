@@ -15,6 +15,7 @@ export const SignInWrapper = styled.ScrollView`
   width: ${winWidth - 32}px;
   margin: 0px auto;
   position: relative;
+  padding-top:30px;
 `
 
 export const SignInContent = styled.KeyboardAvoidingView`

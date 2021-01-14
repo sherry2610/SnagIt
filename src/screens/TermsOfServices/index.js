@@ -9,9 +9,6 @@ import {
   DescriptionHeading,
   Description,
 } from './StyledComponents';
-import { DrawerActions } from '@react-navigation/native';
-import { AppConfigActions } from '../../redux/actions';
-import { useDispatch } from 'react-redux';
 
 const TermsOfServices = ({ navigation }) => {
 

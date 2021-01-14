@@ -7,23 +7,23 @@ import {
 import LeftDrawer from './LeftDrawer';
 import {useDispatch, useSelector} from 'react-redux';
 import {DrawerActions} from '@react-navigation/native';
-import {AppConfigActions} from '../redux/actions';
+// import {AppConfigActions} from '../redux/actions';
+import {drawerActions} from '../redux/actionCreators';
 import {View} from 'react-native';
 import MyCart from '../Components/MyCart'
 
 const Drawer = createDrawerNavigator();
 
 export default ({navigation}) => {
-  const {rightDrawerState} = useSelector((state) => state.appConfig);
+  const state = useSelector((state) => state.drawerReducer);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (rightDrawerState === 'toggle') {
+    if (state.rightDrawerState === 'toggle') {
       navigation.dispatch(DrawerActions.openDrawer());
-      dispatch(AppConfigActions.resetRightDrawer());
+      dispatch(drawerActions.resetRightDrawer());
     }
-  }, [rightDrawerState === 'toggle']);
-
+  }, [state.rightDrawerState === 'toggle']);
   return (
     <Drawer.Navigator
       drawerPosition="right"

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Image, TouchableOpacity } from 'react-native';
+import { Image, TouchableOpacity, ActivityIndicator } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage'
 import skipIcon from '../../assets/editProfile/skip.png';
 import userIcon from '../../assets/editProfile/person.png';
@@ -34,6 +34,8 @@ import {
   Wrapper
 } from './StyledComponents';
 import api from '../../utils/apiUtils/api'
+import { SignUpRequest } from '../../redux/actionCreators'
+import {useDispatch, useSelector} from 'react-redux';
 import { validateEmail } from '../../utils/helperUtils/generalUtils'
 
 const initialState = {
@@ -45,6 +47,7 @@ const initialState = {
 }
 
 const CreateAccount = ({navigation}) => {
+  const [isLoading, setIsLoading] = useState(false);
   const [firstNameFocus, setFirstNameFocus] = useState(false);
   const [lastNameFocus, setLastNameFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
@@ -52,11 +55,18 @@ const CreateAccount = ({navigation}) => {
   const [passwordFocus, setPasswordFocus] = useState(false);
   const [formData, setFormData] = useState(initialState)
 
+  const state = useSelector((state) => state.authedUser);
+  const dispatch = useDispatch()
+
+  console.log("state from reducer", state);
+
   const handleSubmit = async () => {
-    
+
+    setIsLoading(true);
     const { email, password, firstName, lastName, phone } = formData
     
     if(!email || !password || !firstName || !lastName || !phone){
+      setIsLoading(false);
       alert("All fields are required")
       return
     }
@@ -64,13 +74,15 @@ const CreateAccount = ({navigation}) => {
     if(!validateEmail(email)) return
 
     if(password.length < 4) {
+      setIsLoading(false);
       alert("Password should be atleast of 4 digits")
+      
       return
     }
 
     console.log("state ",{...formData,username:email})
 
-    const payload = {
+    const pay = {
       email,
       username: email,
       firstname: firstName,
@@ -79,24 +91,48 @@ const CreateAccount = ({navigation}) => {
       password,
   }
 
-  api.signUpApi(payload)
-  .then(data => {
-    console.log("res ------",data); // JSON data parsed by `data.json()` call
-    if(data.success){
-      console.log("user registered!!!",data.user)
-      AsyncStorage.setItem("userData",JSON.stringify(data.user))
+  dispatch(SignUpRequest(pay)).then(res=>{
+    console.log("res.payload",res.payload)
+    if (!res.payload.signUpFailed){
       navigation.navigate('HomeScreen')
-      alert("Registration Successfull")
-    } else {
-      if(data.err){
-        alert(data.err.message)
-      }
+      setIsLoading(false);
     }
+  else{
+      if (res.payload.err.name === "UserExistsError"){
+          alert("Username Unavailable!");
+          setIsLoading(false);
+      }
+      else if (res.payload.err.name === "Email Already Exists!"){
+          alert("Email Already in Use!");
+          setIsLoading(false);
+      }
+      else{
+          alert("Oops! SignUp Failed. Error: Unknown");
+          setIsLoading(false);
+      }
+  }
   })
-  .catch(err=>{
-    console.log("error in signup ------", err)
-    alert("Something went wrong")
-  })
+
+  
+
+  // api.signUpApi(payload)
+  // .then(data => {
+  //   console.log("res ------",data); // JSON data parsed by `data.json()` call
+  //   if(data.success){
+  //     console.log("user registered!!!",data.user)
+  //     AsyncStorage.setItem("userData",JSON.stringify(data.user))
+  //     navigation.navigate('HomeScreen')
+  //     alert("Registration Successfull")
+  //   } else {
+  //     if(data.err){
+  //       alert(data.err.message)
+  //     }
+  //   }
+  // })
+  // .catch(err=>{
+  //   console.log("error in signup ------", err)
+  //   alert("Something went wrong")
+  // })
 
   }
 
@@ -195,9 +231,14 @@ const CreateAccount = ({navigation}) => {
           <TermsOfServicesText>Terms of Service</TermsOfServicesText>
         </TermsAndServicesRow>
 
+        {isLoading ? 
+        <ActivityIndicator size="large" color="red" /> :
         <TouchableOpacity onPress={()=>handleSubmit()} >
         <SaveButton>GET SNAG'N</SaveButton>
         </TouchableOpacity>
+        }
+
+
 
       </CreateAccountContent>
     </CreateAccountWrapper>

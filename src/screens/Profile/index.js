@@ -20,34 +20,45 @@ import {
   PaymentMethod,
   Logout
 } from './StyledComponents';
+import { useDispatch, useSelector } from 'react-redux';
+import { signOut } from '../../redux/actionCreators'
 
 const height = Dimensions.get('window').height;
 
 const Profile = (props) => {
 
-  const [userProfile, setUserProfile] = useState(false)
+  const dispatch = useDispatch()
+  const {authedUser} = useSelector(state=> state.authedUser)
+
+  const [userProfile, setUserProfile] = useState(authedUser)
 
   const { navigation } = props
 
 
   useEffect(()=>{
-    async function fetchProfile() {
-      const userData = await AsyncStorage.getItem('userData')
-      if(userData !== null){
-        console.log("userData",JSON.parse(userData))
-        setUserProfile(JSON.parse(userData))
+    function fetchProfile() {
+      const { user } = authedUser
+      if(user){
+        console.log("userData in profile",user)
+        setUserProfile(user)
       }else{
         setUserProfile(false)
       }      
     }  
     fetchProfile();
-  },[])
+  },[authedUser.token])
 
 
   // fetchProfile();
   console.log("userProfile ------",userProfile)
 
+  const handleLogout = () => {
+    dispatch(signOut())
+  }
 
+  console.log("loggedIn or not?",authedUser.token?true:false)
+
+  if(authedUser.token){
   return (
     <ScrollView>
       <ProfileContent>
@@ -86,10 +97,7 @@ const Profile = (props) => {
             Payment Method
           </PaymentMethod>
           
-            <Logout onPress={()=>{
-              navigation.navigate('SignIn')
-              AsyncStorage.clear()
-              }} >
+            <Logout onPress={handleLogout} >
               Logout
             </Logout>
           
@@ -97,7 +105,13 @@ const Profile = (props) => {
       </ProfileContent>
 
     </ScrollView>
-  );
+    );
+  }else {
+    props.navigation.navigate('SignIn',{
+      fromProfileScreen:true
+    })
+    return null
+  }
 };
 
 export default Profile;
