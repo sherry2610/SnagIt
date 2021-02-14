@@ -4,7 +4,8 @@ import AsyncStorage from '@react-native-community/async-storage';
 export const AuthedUser = (state = {
     isLoading: false,
     errMess: null,
-    authedUser: {}
+    authedUser: {},
+    card_name:''
 }, action) => {
         switch(action.type) {
             case ActionTypes.SIGN_IN_SUCCESS:
@@ -12,7 +13,7 @@ export const AuthedUser = (state = {
                 AsyncStorage.clear();
                 var token = action.payload.token;
                 AsyncStorage.setItem('token', token);
-                return {...state, isLoading: false, errMess: null, authedUser: {user: action.payload.user, token}};
+                return {...state, isLoading: false, errMess: null, authedUser: {user: action.payload.user, token}} 
 
             // case ActionTypes.SIGNIN_LOADING:
             //     return {...state, isLoading: true, errMess: null, authedUser: {}};  
@@ -29,6 +30,11 @@ export const AuthedUser = (state = {
 
             case ActionTypes.SET_PROFILE_DATA:
                 return {...state, authedUser: {...state.authedUser, user: action.payload.user}}
+
+
+                case ActionTypes.SET_CARD_NAME:
+                    return {...state, card_name: action.payload}
+    
 
             default:
                 return state;

@@ -3,12 +3,12 @@ import { Dimensions } from 'react-native'
 
 const winWidth = Dimensions.get('window').width
 
-export const Wrapper = styled.View`
+export const Wrapper = styled.ScrollView`
+  flex: 1;
   width: ${winWidth - 32}px;
   margin: 30px auto;
+  margin-bottom: 70px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: relative;
 `
 
@@ -68,6 +68,7 @@ export const CardNumber = styled.Text`
 export const AddCard = styled.View`
   width: 100%;
   margin-top: 25px;
+  margin-bottom: 185px;
   flex-direction: row;
 `
 

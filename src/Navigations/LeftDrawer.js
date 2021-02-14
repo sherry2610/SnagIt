@@ -247,7 +247,7 @@ export const CustomDrawerComp = (props) => {
               resizeMode="contain"
             />
           )}
-          onPress={() => navigation.navigate('PastOrders')}
+          onPress={() => navigation.navigate('OrderStatus')}
         />
 
         <DrawerItem

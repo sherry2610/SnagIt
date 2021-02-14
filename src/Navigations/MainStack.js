@@ -12,7 +12,7 @@ import PastOrders from '../screens/PastOrders';
 import AboutUs from '../screens/AboutUs';
 import ContactUs from '../screens/ContactUs';
 import appLogo from '../assets/general/mainLogo.png'
-import cartIcon from '../assets/appHeader/cartWithTwoItems.png'
+import cartIcon from '../assets/appHeader/emptyCart.png'
 import hamburger from '../assets/appHeader/hamburger.png'
 import searchIcon from '../assets/appHeader/search.png'
 import ProductInformation from '../screens/ProductInformation';
@@ -21,11 +21,13 @@ import EditProfile from '../screens/EditProfile';
 import PaymentMethod from '../screens/PaymentMethod';
 import OnlinePayment from '../screens/OnlinePayment';
 import CardDetail from '../screens/CardDetail';
+import OrderStatus from '../screens/OrderStatus'
 import homeTabIcon from '../assets/general/homeTab.png'
 import profileTabIcon from '../assets/general/profileTab.png'
 import historyTabIcon from '../assets/general/historyTab.png'
 import { AppFooter } from '../Components/CommonComponets/FooterContent';
 import CreateAccount from '../screens/CreateAccount';
+import PaypalScreen from '../screens/Paypal'
 import SignIn from '../screens/SignIn';
 import Search from '../screens/Search';
 
@@ -78,21 +80,10 @@ export default ({navigation}) => {
 
   const dispatch = useDispatch();
   const {authedUser} = useSelector((state) => state.authedUser)
-  
-  const [isUserSignedIn, setIsUserSignedIn] = useState(false)
+  const {cart} = useSelector((state) => state.cartReducer)
 
+  // console.log("cart---",cart.length&&"reachedddd!!")
 
-  useEffect(()=>{
-    function sessionCheck(){
-      if(authedUser.token){
-        setIsUserSignedIn(true)
-      }else{
-        setIsUserSignedIn(false)
-      }
-
-    }
-    sessionCheck()
-  },[authedUser.token])
 
   const options = {
     headerLeft: () => (
@@ -130,8 +121,16 @@ export default ({navigation}) => {
         <Image source={searchIcon} />
       </TouchableOpacity>
       <TouchableOpacity
-        style={{marginLeft:15}}
+        style={{marginLeft:15,zIndex:1}}
         onPress={() => dispatch(drawerActions.toggleRightDrawer())}>
+{
+    cart.length?
+    <Text style={{width:19,height:19,borderRadius:19,backgroundColor:'black',position:'absolute',color:'white',zIndex:10,fontSize:12,paddingLeft:6,top:0,right:0}}>{cart.length}</Text>
+    :
+    console.log('cart is empty')
+}
+
+        
         <Image source={cartIcon} />
       </TouchableOpacity>
       </View>
@@ -147,10 +146,12 @@ export default ({navigation}) => {
       <Stack.Screen options={options} name="AboutUs" component={AboutUs} />
       <Stack.Screen options={options} name="ContactUs" component={ContactUs} />
       <Stack.Screen options={options} name="TermsOfServices" component={TermsOfServices} />
+      <Stack.Screen options={{...options,headerShown:false}} name="OrderStatus" component={OrderStatus} />
       <Stack.Screen options={{...options,headerShown:false}} name="EditProfile" component={EditProfile} />
       <Stack.Screen options={{...options,headerShown:false}} name="ChangePassword" component={ChangePassword} />
       <Stack.Screen options={options} name="PaymentMethod" component={PaymentMethod} />
       <Stack.Screen options={{...options,headerShown:false}} name="OnlinePayment" component={OnlinePayment} />
+      <Stack.Screen options={options} name="PaypalScreen" component={PaypalScreen} />
       <Stack.Screen options={{...options,headerShown:false}} name="CardDetail" component={CardDetail} />
       <Stack.Screen options={{...options,headerShown:false}} name="Search" component={Search} />
       <Stack.Screen options={{...options,headerShown:false}} name="SignIn" component={SignIn} />

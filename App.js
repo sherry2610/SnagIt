@@ -6,9 +6,10 @@ import  { enableScreens }  from  'react-native-screens' ;
 import Main from './Main'
 import {Provider} from 'react-redux';
 import SplashScreen from 'react-native-splash-screen'
-import {ConfigureStore} from './src/redux/store';
+import {store} from './src/redux/store';
+// import OrderStatus from './src/screens/OrderStatus'
 
-const store = ConfigureStore();
+// const store = ConfigureStore();
 
 export default App = () => {
 

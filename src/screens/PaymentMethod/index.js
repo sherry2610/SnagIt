@@ -34,11 +34,20 @@ const PaymentMethod = ({ navigation }) => {
 
         <PaymentOptions  >
           <RadioButton source={radioBtn} />
-          <Option>Online Payment</Option>
+          <Option>Credit/Debit Card</Option>
           <ForwardIcon  onPress={()=>navigation.navigate('OnlinePayment')}>
             <Image source={miniForward} />
           </ForwardIcon>
         </PaymentOptions>
+
+        <PaymentOptions  >
+          <RadioButton source={radioBtn} />
+          <Option>Paypal</Option>
+          <ForwardIcon  onPress={()=>navigation.navigate('PaypalScreen')}>
+            <Image source={miniForward} />
+          </ForwardIcon>
+        </PaymentOptions>
+
       </PaymentMethodWrapper>
     </>
   );

@@ -99,13 +99,13 @@ const CreateAccount = ({navigation}) => {
     }
   else{
       if (res.payload.err.name === "UserExistsError"){
-          alert("Username Unavailable!");
-          setIsLoading(false);
-      }
-      else if (res.payload.err.name === "Email Already Exists!"){
           alert("Email Already in Use!");
           setIsLoading(false);
       }
+      // else if (res.payload.err.name === "Email Already Exists!"){
+      //     alert("Email Already in Use!");
+      //     setIsLoading(false);
+      // }
       else{
           alert("Oops! SignUp Failed. Error: Unknown");
           setIsLoading(false);

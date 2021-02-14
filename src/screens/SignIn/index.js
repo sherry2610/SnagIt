@@ -3,10 +3,10 @@ import React, {useState} from 'react';
 import { TouchableOpacity, ActivityIndicator } from 'react-native';
 import emailIcon from '../../assets/editProfile/email.png';
 // import api from '../../utils/apiUtils/api';
-import { SignInRequest } from '../../redux/actionCreators'
+import { SignInRequest, getCartRequest, editCartRequest } from '../../redux/actionCreators'
 import {useDispatch, useSelector} from 'react-redux';
 import { validateEmail } from '../../utils/helperUtils/generalUtils';
-import SignInFirst from '../../Components/SignInFirst'
+import SignInFirst from '../../Components/SignInFirst' 
 import {
   SignInWrapper,
   SignInContent,
@@ -24,13 +24,15 @@ import {
 
 const SignIn = ({navigation, route}) => {
   const dispatch = useDispatch();
+  const {allProducts} = useSelector(state=> state.productReducer)
+  const {cart} = useSelector(state=> state.cartReducer)
   const [isLoading, setIsLoading] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
   const [passwordFocus, setPasswordFocus] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const isComingFromProfile = route.params ? route.params.fromProfileScreen : false
-
+console.log("checking allProducts in signin", allProducts)
   const handleSubmit = async () => {
     setIsLoading(true)
     if(!email || !password ){
@@ -49,20 +51,35 @@ const SignIn = ({navigation, route}) => {
       username: email,
       password,
   }
-  
-  dispatch(SignInRequest(pay)).then(res=>{
+
+  dispatch(SignInRequest(pay)).then( async (res)=>{
     if (!res.payload.signInFailed){
-      if(isComingFromProfile){
-        navigation.navigate('Profile')
-      }else{
-        navigation.navigate('HomeScreen')
-      }
+        dispatch(getCartRequest({
+          allProducts,
+          token: res.payload.token
+        }))
+        console.log("just above",cart,res.payload.token)
+        await dispatch(editCartRequest({
+        payload: {
+          "lst": cart
+          },
+          token: res.payload.token
+        })).then(resp=>{
+            console.log("res++++++",resp)
+        })
+
+        if(isComingFromProfile){
+          navigation.navigate('Profile')
+        }else{
+          navigation.navigate('HomeScreen')
+        }
+
       setIsLoading(false)
     }
     else{
       if (res.payload.err){
         if (res.payload.err.name === "IncorrectUsernameError"){
-            alert("Incorrect Username");
+            alert("Email is incorrect!");
             setIsLoading(false)
         }
         else if (res.payload.err.name === "IncorrectPasswordError"){

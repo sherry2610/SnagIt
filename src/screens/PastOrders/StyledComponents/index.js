@@ -7,6 +7,7 @@ const winWidth = Dimensions.get('window').width
 export const Wrapper = styled.ScrollView`
   width: ${winWidth - 32}px;
   margin: 0px auto;
+  margin-bottom:70px;
 `
 
 export const HeadingView = styled.View`

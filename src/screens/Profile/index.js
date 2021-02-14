@@ -50,7 +50,7 @@ const Profile = (props) => {
 
 
   // fetchProfile();
-  console.log("userProfile ------",userProfile)
+  console.log("userProfile ------",userProfile,authedUser.token)
 
   const handleLogout = () => {
     dispatch(signOut())
@@ -110,7 +110,7 @@ const Profile = (props) => {
     props.navigation.navigate('SignIn',{
       fromProfileScreen:true
     })
-    return null
+    return <></>
   }
 };
 
