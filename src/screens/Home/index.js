@@ -15,7 +15,6 @@ import drinksWidget from '../../assets/images/categoryWidget/drink.png'
 import foodWidget from '../../assets/images/categoryWidget/food.png'
 
 export default Home = ({navigation, route}) => {
-  console.log("route in main home", route.params)
 
   const [category, setCategory] = useState('')
 

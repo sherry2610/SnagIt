@@ -20,7 +20,40 @@ export const CartHeader = styled.View`
   justify-content: space-around;
   padding-top: 20px;
   margin-bottom: 25px;
+`
 
+export const CounterView = styled.View`
+  flex-direction: row;
+`
+
+export const FunctionBtnDec = styled.View`
+  position: relative;
+  width:25px;
+  height:22px;
+  background: #EDA920;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+`
+
+export const FunctionBtnInc = styled.View`
+  position: relative;
+  width:25px;
+  height:22px;
+  background: #EDA920;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+`
+
+export const Quantity = styled.Text`
+  width: 38px;
+  text-align: center;
+  padding-top: 4px;
+  font-family: MazzardH-Regular;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10.5797px;
+  line-height: 13px;
+  color: #686868;
 `
 
 export const HeadingView = styled.View`

@@ -10,8 +10,6 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default Splash = ({navigation, route}) => {
 
-  console.log("route in prodInfo",route.params)
-
   const {name,price,description,image} = route.params.prodInfo
 
   console.log("prodInfo in prodInfo",{name,price,description,image})

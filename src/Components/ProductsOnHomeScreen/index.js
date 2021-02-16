@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { View, Image, ScrollView } from 'react-native'
+import { View, Image, ScrollView, TouchableOpacity } from 'react-native'
 import BottomSearch from '../BottomSearch'
 import { 
   CategoryWidget,
@@ -19,20 +19,133 @@ import unfilledCart from '../../assets/images/unfilledCart.png'
 import filledCart from '../../assets/images/filled.jpg'
 import prodInfoIcon from '../../assets/productHome/prodInfo.png'
 import loader from '../../assets/productHome/loader.png'
-import { useSelector } from 'react-redux'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { handleToggleCart, editCartRequest, totalAmount } from '../../redux/actionCreators'
 export default ProductsHome = ({navigation, route, category}) => {
 
+  const dispatch = useDispatch()
+
   const {products} = useSelector(state=>state.productReducer)
-  console.log("product state from redux store", products)
-  
+  const {allProducts} = useSelector(state=> state.productReducer)
+  const {cart, Total} = useSelector(state=>state.cartReducer)
+  const {authedUser} = useSelector(state=>state.authedUser)
+
+  console.log("checking allProducts in producthomescreen", allProducts)
+
   const [activeCategory, setActiveCategory] = useState(products[category])
-  
 
   useEffect(()=>{
-    setActiveCategory(products[category])
-    console.log("mark")
+    const cartItemIds = cart.map(c=>c.product_id)
+    const updatedProducts = products[category].map(prod=>{
+      console.log("matched",cartItemIds.includes(prod._id))
+      if(!cartItemIds.includes(prod._id)){
+          return {
+            ...prod,
+            inCart: false
+            }
+          }else{ 
+            return  {
+              ...prod,
+              inCart: true
+            }
+          }
+    })
+    setActiveCategory(updatedProducts)
   },[category,products])
+
+  const handleCartBtn = (id,cat,price) => {
+
+    const cartItemIds = cart.map(c=>c.product_id)
+    const updatedProducts = activeCategory.map(prod=>{
+      console.log("condition",cartItemIds.includes(id))
+      if(prod._id===id){
+          if(cartItemIds.includes(id)){
+          return {
+            ...prod,
+            inCart: false
+            }
+          }else{ 
+            return  {
+              ...prod,
+              inCart: true
+            }
+          }
+        }else{
+          return prod
+        }
+    })
+    console.log("updateProd---",updatedProducts)
+    setActiveCategory(updatedProducts)
+    if(authedUser.token){
+
+      let inCart = false;
+      let amountAfterSubtracting = 0;
+      console.log("cart just above",cart)
+      cart.forEach(c=>{
+          if(id===c.product_id || id==c.product){
+              inCart = true
+              amountAfterSubtracting = Number(price) * Number(c.quantity)
+          }
+      })
+
+      console.log("amountAfterSubtracting0",amountAfterSubtracting)
+      console.log("inCart",inCart)
+
+      let fnlCart = inCart ? cart.map(c=>{
+        if(id==c.product_id || id==c.product){
+          return {
+            ...c,
+            quantity : "0",
+          }
+        }else{
+          return c
+        }
+      }) : [...cart, {quantity:'1',product_id:id}]
+
+      console.log("fnlCart",fnlCart)
+    
+
+      fnlCart = fnlCart.map(fc=>{
+        if(!fc.product_id){
+          return {
+            ...fc,
+            product_id: fc.product
+          }
+        }else{
+          return fc
+        }
+      })
+
+      const fnlTotal = inCart ? 
+        cart.length==1 ? 0 : Total - amountAfterSubtracting
+        :
+        Number(Total)+Number(price)
+
+      dispatch(totalAmount(fnlTotal))
+
+      dispatch(editCartRequest({
+        payload: {
+        "lst": fnlCart
+        },
+        token: authedUser.token
+    }))
+      // dispatch(handleToggleCart({
+      //     payload: {
+      //     quantity:'1',
+      //     product_id: id
+      //     },
+      // },cat)
+      // )
+    }else{
+    dispatch(handleToggleCart({
+      payload: {
+      quantity:'1',
+      product_id: id
+      },
+      price,
+    },cat))
+  }
+  }
 
   return (
     <Wrapper>
@@ -70,7 +183,13 @@ export default ProductsHome = ({navigation, route, category}) => {
                 <ProductPrice>
                   {data.price}
                 </ProductPrice>
-                <Image source={filledCart} style={{width:30,height:30,marginLeft:30}} />
+                <TouchableOpacity onPress={()=>handleCartBtn(data._id,category,data.price)}>
+                  {data.inCart ?
+                  <Image source={filledCart} style={{width:25,height:25,marginLeft:30}} />:
+                  <Image source={unfilledCart} style={{width:25,height:25,marginLeft:30}} />
+                  }
+                  
+                </TouchableOpacity>
                 </View>
 
               </ProductContainer>
@@ -80,7 +199,7 @@ export default ProductsHome = ({navigation, route, category}) => {
             </ProductsWrapper>
           </ProductsDisplay>
           <View style={{width: '100%',alignItems: 'center', marginTop:25, marginBottom:25}}>
-          <Image source={loader}  />
+          {/* <Image source={loader}  /> */}
           </View>
           <BottomSearch />
       </ScrollView>
