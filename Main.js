@@ -72,6 +72,9 @@ export default Main = () => {
     prodFetch("Food")
     prodFetch("Snacks")
     prodFetch("Candy")
+    prodFetch("Vapes")
+    prodFetch("Smokes")
+    prodFetch("Student Essential")
   },[])
   console.log("order status reducer state",{minutesInReducer,secondsInReducer,timeStampAtWhichOrderPlaced,isOrderInPlace})
   return (

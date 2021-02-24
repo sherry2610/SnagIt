@@ -30,7 +30,7 @@ export default Splash = ({navigation, route}) => {
       
       <ProductImageSection>
         <Image 
-          source={{uri:`https://snagit-server.herokuapp.com/${image}`}} 
+          source={{uri:`${image}`}} 
           style={{width:270,height:270}}
         />
       </ProductImageSection>

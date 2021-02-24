@@ -32,6 +32,8 @@ const SignIn = ({navigation, route}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const isComingFromProfile = route.params ? route.params.fromProfileScreen : false
+  const isComingFromPastOrders = route.params ? route.params.fromPastOrders : false
+  
 console.log("checking allProducts in signin", allProducts)
   const handleSubmit = async () => {
     setIsLoading(true)
@@ -70,7 +72,11 @@ console.log("checking allProducts in signin", allProducts)
 
         if(isComingFromProfile){
           navigation.navigate('Profile')
-        }else{
+        }
+        else if(isComingFromPastOrders){
+          navigation.navigate('PastOrders')
+        }
+        else{
           navigation.navigate('HomeScreen')
         }
 

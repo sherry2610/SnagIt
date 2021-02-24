@@ -81,6 +81,9 @@ export default ({navigation}) => {
   const dispatch = useDispatch();
   const {authedUser} = useSelector((state) => state.authedUser)
   const {cart} = useSelector((state) => state.cartReducer)
+  const {footerColor} = useSelector(state => state.orderStatusReducer)
+
+  console.log("footerColor",footerColor)
 
   // console.log("cart---",cart.length&&"reachedddd!!")
 
@@ -157,7 +160,7 @@ export default ({navigation}) => {
       <Stack.Screen options={{...options,headerShown:false}} name="SignIn" component={SignIn} />
       <Stack.Screen options={{...options,headerShown:false}} name="CreateAccount" component={CreateAccount} />
       </Stack.Navigator>
-      <AppFooter />
+      <AppFooter bgColor={footerColor} />
       </>
   );
 };

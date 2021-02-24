@@ -341,3 +341,10 @@ export const setSecondsForReducer = (payload) => {
     payload
   }
 }
+
+export const setFooterColor = (payload) => {
+  return {
+    type: ActionTypes.SET_FOOTER_COLOR,
+    payload
+  }
+}
