@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {View, Text, Image, TouchableOpacity} from 'react-native'
+import {View, Text, Image, TouchableOpacity, StatusBar, BackHandler} from 'react-native'
 import { 
   Wrapper,
   TimeLeft,
@@ -9,10 +9,19 @@ import {
 } from './StyledComponents'
 import heroImage from '../../assets/images/order.png'
 import { useDispatch, useSelector } from 'react-redux'
-import {setMinutesForReducer, setSecondsForReducer} from '../../redux/actionCreators'
+import {setFooterColor, setMinutesForReducer, setSecondsForReducer} from '../../redux/actionCreators'
+import { useIsFocused } from '@react-navigation/native';
+
+function FocusAwareStatusBar(props) {
+  const isFocused = useIsFocused();
+
+  return isFocused ? <StatusBar {...props} /> : null;
+}
 
 export default ({navigation}) => {
 
+
+  const [focus,setFocus] = useState(useIsFocused())
 
   const dispatch = useDispatch()
 
@@ -25,6 +34,24 @@ export default ({navigation}) => {
   })
 
   const { timeStampAtWhichOrderPlaced, isOrderInPlace, secondsInReducer, minutesInReducer } = useSelector(state => state.orderStatusReducer )
+
+  // useEffect(()=>{
+  //   focus && dispatch(setFooterColor(orderStatus.color))
+
+  //   const backAction = () => {
+  //     dispatch(setFooterColor('white'))
+  //     navigation.goBack()
+  //     return true;
+  //   };
+
+  //   const backHandler = BackHandler.addEventListener(
+  //     "hardwareBackPress",
+  //     backAction
+  //   );
+
+  //   return () => backHandler.remove();
+
+  // },[])
 
   useEffect(()=>{
     
@@ -61,6 +88,8 @@ export default ({navigation}) => {
   else {
     return (
       <Wrapper color={orderStatus.color}>
+        <FocusAwareStatusBar barStyle="light-content" backgroundColor={orderStatus.color} />
+
         <OrderStatusHeading>Order status</OrderStatusHeading>
 
         {!isOrderInPlace && <Text>Currently there is no Order in placed!</Text>}

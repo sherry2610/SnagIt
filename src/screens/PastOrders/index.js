@@ -99,7 +99,11 @@ const PastOrders = (props) => {
     </>
   );
 }else{
-  return <Wrapper><Text>Sign In Required!</Text></Wrapper>
+  navigation.navigate('SignIn',{
+    fromPastOrders:true
+  })
+  return <></>
+  // return <Wrapper><Text>Sign In Required!</Text></Wrapper>
 }
 };
 

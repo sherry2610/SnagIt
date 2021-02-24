@@ -8,8 +8,11 @@ export const ProductReducer = (state = {
     Candy: [],
     Snacks: [],
     New: [],
-    'TopSeller': [],
+    TopSeller: [],
     Food: [],
+    Vapes:[],
+    'Student Essential': [],
+    Smokes: [],
     allProducts: []
     }
 }, action) => {

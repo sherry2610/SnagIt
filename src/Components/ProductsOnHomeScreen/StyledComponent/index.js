@@ -49,7 +49,7 @@ export const ProductsWrapper = styled.View`
 export const ProductContainer = styled.View`
   position: relative;
   flex: 0 46%;
-  height: 190px;
+
   width: 100%;
   background: #FFFFFF;
   margin: 10px 10px 0px 0px;

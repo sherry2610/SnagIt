@@ -5,7 +5,7 @@ export const Footer = styled.View`
   width: 100%;
   height: 48px;
   bottom: 0px;
-  background: #FFFFFF;
+  background: ${props => props.bgColor ? props.bgColor : '#FFF'};
 `
 
 export const FooterContent = styled.View`

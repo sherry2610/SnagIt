@@ -53,7 +53,7 @@ export default Home = ({navigation, route}) => {
               <Badge bg='#D51E16' >
               <Image source={nicotineWidget} style={{width:40,height:40}} />
               </Badge>
-              <WidgetTitle>Nicotine</WidgetTitle>
+              <WidgetTitle>Nicotines</WidgetTitle>
             </CategoryWidgetContainer>
 
             <CategoryWidgetContainer onPress={()=>setCategory('Drink')} >
@@ -67,7 +67,7 @@ export default Home = ({navigation, route}) => {
               <Badge bg='#D51E16' >
               <Image source={foodWidget} style={{width:40,height:40}} />
               </Badge>
-              <WidgetTitle>Food</WidgetTitle>
+              <WidgetTitle>Foods</WidgetTitle>
             </CategoryWidgetContainer>
 
             <CategoryWidgetContainer onPress={()=>setCategory('Snacks')} >
@@ -82,6 +82,27 @@ export default Home = ({navigation, route}) => {
               <Image source={foodWidget} style={{width:40,height:40}} />
               </Badge>
               <WidgetTitle>Candy</WidgetTitle>
+            </CategoryWidgetContainer>
+
+            <CategoryWidgetContainer onPress={()=>setCategory('Student Essential')} >
+              <Badge bg='#D51E16' >
+              <Image source={foodWidget} style={{width:40,height:40}} />
+              </Badge>
+              <WidgetTitle>Student Essentials</WidgetTitle>
+            </CategoryWidgetContainer>
+
+            <CategoryWidgetContainer onPress={()=>setCategory('Smokes')} >
+              <Badge bg='#D51E16' >
+              <Image source={foodWidget} style={{width:40,height:40}} />
+              </Badge>
+              <WidgetTitle>Smokes</WidgetTitle>
+            </CategoryWidgetContainer>
+
+            <CategoryWidgetContainer onPress={()=>setCategory('Vapes')} >
+              <Badge bg='#D51E16' >
+              <Image source={foodWidget} style={{width:40,height:40}} />
+              </Badge>
+              <WidgetTitle>Vapes</WidgetTitle>
             </CategoryWidgetContainer>
         </CategoryWidgetRow>
 

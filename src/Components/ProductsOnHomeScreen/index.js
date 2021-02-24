@@ -30,7 +30,7 @@ export default ProductsHome = ({navigation, route, category}) => {
   const {cart, Total} = useSelector(state=>state.cartReducer)
   const {authedUser} = useSelector(state=>state.authedUser)
 
-  console.log("checking allProducts in producthomescreen", allProducts)
+  console.log("in producthomescreen", {allProducts, products})
 
   const [activeCategory, setActiveCategory] = useState(products[category])
 
@@ -147,17 +147,40 @@ export default ProductsHome = ({navigation, route, category}) => {
   }
   }
 
+  console.log("activeCategory",{activeCategory})
+
+  const headings = {
+    TopSeller: 'Top Sellers',
+    New: "New",
+    Nicotine: "Nicotines",
+    Drink: "Drinks",
+    Food: "Foods",
+    Snacks: "Snacks",
+    Candy: "Candy",
+    "Student Essential": "Student Essentials",
+    Smokes: "Smokes",
+    Vapes: "Vapes"
+  }
+
+  function setHeading(key){
+    return headings[key]
+  }
+
   return (
     <Wrapper>
         <CategoryWidgetSeparator></CategoryWidgetSeparator>
       <ScrollView >
           <ProductsDisplay>
             <ProductsCategory>
-              {category}
+              {setHeading(category)}
             </ProductsCategory>
             <ProductsWrapper>
               {activeCategory.map((data,i)=>(
                 <ProductContainer key={i}>
+                  <TouchableOpacity onPress={()=>navigation.navigate('ProductInformation',{
+                  mode:'prodInfo',
+                  prodInfo: data
+                  })} >
                 <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation',{
                   mode:'prodInfo',
                   prodInfo: data
@@ -173,7 +196,7 @@ export default ProductsHome = ({navigation, route, category}) => {
                   alignItems:'center'
                   }} >
                 <ProductImage 
-                  source={{uri:`https://snagit-server.herokuapp.com/${data.image}`}} 
+                  source={{uri:`${data.image}`}} 
                   style={{width:100,height:100}}
                   />
                 </View>
@@ -191,7 +214,7 @@ export default ProductsHome = ({navigation, route, category}) => {
                   
                 </TouchableOpacity>
                 </View>
-
+                </TouchableOpacity>
               </ProductContainer>
               ))}
 

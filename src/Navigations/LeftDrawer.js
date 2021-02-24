@@ -118,7 +118,7 @@ export const CustomDrawerComp = (props) => {
         />
 
 <DrawerItem
-          label="Food"
+          label="Foods"
           style={{
             width: 220,
             paddingBottom: 5,
@@ -182,6 +182,73 @@ export const CustomDrawerComp = (props) => {
           )}
           onPress={() => navigation.navigate("Home",{mode:'Candy'})}
         />
+
+<DrawerItem
+          label="Vapes"
+          style={{
+            width: 220,
+            paddingBottom: 5,
+            borderBottomWidth: 1,
+            borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
+          }}
+          labelStyle={{
+            marginLeft: -10,
+          }}
+          icon={({focused, color, size}) => (
+            <Image
+              source={candyIcon}
+              style={{height: size, width: size}}
+              resizeMode="contain"
+            />
+          )}
+          onPress={() => navigation.navigate("Home",{mode:'Vapes'})}
+        />
+
+<DrawerItem
+          label="Smokes"
+          style={{
+            width: 220,
+            paddingBottom: 5,
+            borderBottomWidth: 1,
+            borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
+          }}
+          labelStyle={{
+            marginLeft: -10,
+          }}
+          icon={({focused, color, size}) => (
+            <Image
+              source={candyIcon}
+              style={{height: size, width: size}}
+              resizeMode="contain"
+            />
+          )}
+          onPress={() => navigation.navigate("Home",{mode:'Smokes'})}
+        />
+
+<DrawerItem
+          label="Student Essentials"
+          style={{
+            width: 220,
+            paddingBottom: 5,
+            borderBottomWidth: 1,
+            borderBottomColor: '#ECECEC',
+            fontFamily: 'MazzardH-Regular',
+          }}
+          labelStyle={{
+            marginLeft: -10,
+          }}
+          icon={({focused, color, size}) => (
+            <Image
+              source={candyIcon}
+              style={{height: size, width: size}}
+              resizeMode="contain"
+            />
+          )}
+          onPress={() => navigation.navigate("Home",{mode:'Student Essential'})}
+        />
+
 
 <DrawerItem
           label="Past Orders"
