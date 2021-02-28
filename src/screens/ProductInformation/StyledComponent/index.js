@@ -23,7 +23,7 @@ export const ProductNameSection = styled.View`
   margin:10px 50px 50px 0px;
 `
 export const ProductName = styled.Text`
-  width: 253px;
+  width: 233px;
   height: 74px;
   font-family: MazzardH-Bold;
   font-style: normal;

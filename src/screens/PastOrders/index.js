@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Image, Text } from 'react-native'
+import { Image, Text, TouchableOpacity } from 'react-native'
 import {
   Wrapper,
   HeadingView,
@@ -55,7 +55,9 @@ const PastOrders = (props) => {
   if(authedUser.token){
   return (
     <>
-    <Wrapper>
+    <Wrapper
+    showsVerticalScrollIndicator={false}
+    >
       <HeadingView>
         <BackArrow onPress={()=>navigation.goBack()} >
           <Image source={back} />
@@ -76,14 +78,19 @@ const PastOrders = (props) => {
             <OrderId>Order ID #{order._id.substring(order._id.length - 8)}</OrderId>
             <ItemCount>Items ({order.items.length})</ItemCount>
             <ItemNames>{order.items.map(it=>{
-              return `${getProductNameById(it.product,allProducts)}, `
+              return `${getProductNameById(it.product,allProducts)?getProductNameById(it.product,allProducts):'Not exist now'}, `
             })}</ItemNames>
             
           </OrderSubContainer1>
   
           <OrderSubContainer2>
-            <Amount>$12.18</Amount>
+            <Amount>{order.total} $</Amount>
+            <TouchableOpacity onPress={()=>{
+              // alert("re-order screen is not active yet!")
+              navigation.navigate("ReOrder",{orderDetails:order})
+              }}>
             <ReOrder>RE-ORDER</ReOrder>
+            </TouchableOpacity>
           </OrderSubContainer2>
           <DeleteOrder source={remove} />
   

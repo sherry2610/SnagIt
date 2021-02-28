@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'snagIt' do
+target 'Snag' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
@@ -18,7 +18,7 @@ target 'snagIt' do
 
   pod 'react-native-webview', :path => '../node_modules/react-native-webview'
 
-  target 'snagItTests' do
+  target 'SnagTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -33,10 +33,10 @@ target 'snagIt' do
   end
 end
 
-target 'snagIt-tvOS' do
-  # Pods for snagIt-tvOS
+target 'Snag-tvOS' do
+  # Pods for Snag-tvOS
 
-  target 'snagIt-tvOSTests' do
+  target 'Snag-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

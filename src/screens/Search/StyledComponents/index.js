@@ -13,6 +13,10 @@ export const Wrapper = styled.KeyboardAvoidingView`
 
 `
 
+export const ResultItem = styled.TouchableOpacity`
+
+`
+
 export const InputWrapper = styled.View`
   width: 100%;
   margin-top: 16px;

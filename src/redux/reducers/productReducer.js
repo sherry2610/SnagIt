@@ -13,7 +13,6 @@ export const ProductReducer = (state = {
     Vapes:[],
     'Student Essential': [],
     Smokes: [],
-    allProducts: []
     }
 }, action) => {
         switch(action.type) {

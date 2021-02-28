@@ -2,14 +2,15 @@ import styled from 'styled-components'
 
 export const HomeWrapper = styled.View`
   flex: 1;
+  background-color: #FFF;
 `
 
 
 export const CategoryWidgetRow = styled.ScrollView`
   flex-direction: row;
   height: 0px;
-  margin-top: -90px;
-  margin-bottom: -90px;
+  margin-top: -125px;
+  margin-bottom: -125px;
 `
 
 export const CategoryWidgetContainer = styled.TouchableOpacity`

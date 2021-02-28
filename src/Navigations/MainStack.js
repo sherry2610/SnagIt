@@ -30,6 +30,7 @@ import CreateAccount from '../screens/CreateAccount';
 import PaypalScreen from '../screens/Paypal'
 import SignIn from '../screens/SignIn';
 import Search from '../screens/Search';
+import ReOrder from '../screens/ReOrder';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -153,12 +154,13 @@ export default ({navigation}) => {
       <Stack.Screen options={{...options,headerShown:false}} name="EditProfile" component={EditProfile} />
       <Stack.Screen options={{...options,headerShown:false}} name="ChangePassword" component={ChangePassword} />
       <Stack.Screen options={options} name="PaymentMethod" component={PaymentMethod} />
-      <Stack.Screen options={{...options,headerShown:false}} name="OnlinePayment" component={OnlinePayment} />
       <Stack.Screen options={options} name="PaypalScreen" component={PaypalScreen} />
       <Stack.Screen options={{...options,headerShown:false}} name="CardDetail" component={CardDetail} />
       <Stack.Screen options={{...options,headerShown:false}} name="Search" component={Search} />
+      <Stack.Screen options={{...options,headerShown:false}} name="ReOrder" component={ReOrder} />
       <Stack.Screen options={{...options,headerShown:false}} name="SignIn" component={SignIn} />
       <Stack.Screen options={{...options,headerShown:false}} name="CreateAccount" component={CreateAccount} />
+      <Stack.Screen options={{...options,headerShown:false}} name="OnlinePayment" component={OnlinePayment} />
       </Stack.Navigator>
       <AppFooter bgColor={footerColor} />
       </>

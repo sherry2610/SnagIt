@@ -22,6 +22,21 @@ export const setCardName = (payload) => ({
   payload
 })
 
+export const addCardOnSignup = (payload) => ({
+  type: ActionTypes.ADD_CARD_ON_SIGNUP,
+  payload
+})
+
+export const setComingForCheckout = (payload) => ({
+  type: "COMING_FOR_CHECKOUT",
+  payload
+})
+
+export const setProfileData = (payload) => ({
+  type: ActionTypes.SET_PROFILE_DATA,
+  payload
+})
+
 export const signInSuccess = (res) => ({
   type: ActionTypes.SIGN_IN_SUCCESS,
   payload: res
@@ -317,6 +332,14 @@ export const setCartToInitialState = () => ({
 export const setOrderInPlace = (payload) => {
   return {
     type: ActionTypes.SET_IS_ORDER_IN_PLACE,
+    payload
+  }
+}
+
+
+export const setOrderPayload = (payload) => {
+  return {
+    type: 'SET_PAYLOAD_FOR_ORDER',
     payload
   }
 }

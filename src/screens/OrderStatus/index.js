@@ -8,6 +8,7 @@ import {
   GoToHomeButton
 } from './StyledComponents'
 import heroImage from '../../assets/images/order.png'
+import appLogo from '../../assets/general/mainLogo.png'
 import { useDispatch, useSelector } from 'react-redux'
 import {setFooterColor, setMinutesForReducer, setSecondsForReducer} from '../../redux/actionCreators'
 import { useIsFocused } from '@react-navigation/native';
@@ -35,23 +36,23 @@ export default ({navigation}) => {
 
   const { timeStampAtWhichOrderPlaced, isOrderInPlace, secondsInReducer, minutesInReducer } = useSelector(state => state.orderStatusReducer )
 
-  // useEffect(()=>{
-  //   focus && dispatch(setFooterColor(orderStatus.color))
+  useEffect(()=>{
+    focus && dispatch(setFooterColor(orderStatus.color))
 
-  //   const backAction = () => {
-  //     dispatch(setFooterColor('white'))
-  //     navigation.goBack()
-  //     return true;
-  //   };
+    const backAction = () => {
+      dispatch(setFooterColor('white'))
+      navigation.goBack()
+      return true;
+    };
 
-  //   const backHandler = BackHandler.addEventListener(
-  //     "hardwareBackPress",
-  //     backAction
-  //   );
+    const backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      backAction
+    );
 
-  //   return () => backHandler.remove();
+    return () => backHandler.remove();
 
-  // },[])
+  },[])
 
   useEffect(()=>{
     
@@ -61,6 +62,7 @@ export default ({navigation}) => {
         time:'08:00',
         status: 'Scootn Over!'
       })
+      dispatch(setFooterColor('#EDA920'))
     }
     if(minutesInReducer==0 && secondsInReducer==0){
       setOrderStatus({
@@ -68,6 +70,7 @@ export default ({navigation}) => {
         time:'00:00',
         status: 'Arrived! ORDER COMPLETE!!'
       })
+      dispatch(setFooterColor('#D51E16'))
     }
     
   },[minutesInReducer])
@@ -94,12 +97,19 @@ export default ({navigation}) => {
 
         {!isOrderInPlace && <Text>Currently there is no Order in placed!</Text>}
 
+        <View style={{position:"relative"}}>
         <Image source={heroImage} />
+        <Image source={appLogo} style={{position:"absolute",top:90,left:60}} />
+        </View>
+        
 
         <OrderStatus>{orderStatus.status}</OrderStatus>
         <TimeLeft>{minutesInReducer}:{secondsInReducer < 10 ?  `0${secondsInReducer}` : secondsInReducer}</TimeLeft>
 
-        <TouchableOpacity onPress={()=>navigation.navigate('HomeScreen')} >
+        <TouchableOpacity onPress={()=>{
+          dispatch(setFooterColor('white'))
+          navigation.navigate('HomeScreen')
+          }} >
         <GoToHomeButton>Go To Home</GoToHomeButton>
         </TouchableOpacity>
 

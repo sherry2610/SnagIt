@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Image, TouchableOpacity, ActivityIndicator } from 'react-native';
-import AsyncStorage from '@react-native-community/async-storage'
 import skipIcon from '../../assets/editProfile/skip.png';
 import userIcon from '../../assets/editProfile/person.png';
 import emailIcon from '../../assets/editProfile/email.png';
@@ -34,7 +33,7 @@ import {
   Wrapper
 } from './StyledComponents';
 import api from '../../utils/apiUtils/api'
-import { SignUpRequest } from '../../redux/actionCreators'
+import { getUpdatedUserRecordRequest, setComingForCheckout, SignUpRequest } from '../../redux/actionCreators'
 import {useDispatch, useSelector} from 'react-redux';
 import { validateEmail } from '../../utils/helperUtils/generalUtils'
 
@@ -46,7 +45,7 @@ const initialState = {
   password: '',
 }
 
-const CreateAccount = ({navigation}) => {
+const CreateAccount = ({navigation, route}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [firstNameFocus, setFirstNameFocus] = useState(false);
   const [lastNameFocus, setLastNameFocus] = useState(false);
@@ -55,10 +54,16 @@ const CreateAccount = ({navigation}) => {
   const [passwordFocus, setPasswordFocus] = useState(false);
   const [formData, setFormData] = useState(initialState)
 
-  const state = useSelector((state) => state.authedUser);
+  const {cardsOnSignup} = useSelector((state) => state.authedUser);
   const dispatch = useDispatch()
 
-  console.log("state from reducer", state);
+  console.log("cardsOnSignup", {cardsOnSignup});
+
+  console.log("condition",route.params && route.params.formData ? route.params.formData : initialState)
+  useEffect(()=>{
+    setFormData(route.params && route.params.formData ? route.params.formData : initialState)
+  },[])
+
 
   const handleSubmit = async () => {
 
@@ -91,9 +96,18 @@ const CreateAccount = ({navigation}) => {
       password,
   }
 
-  dispatch(SignUpRequest(pay)).then(res=>{
+  dispatch(SignUpRequest(pay)).then(async res=>{
     console.log("res.payload",res.payload)
     if (!res.payload.signUpFailed){
+      
+      if(cardsOnSignup.length){
+        await api.addCard(cardsOnSignup[0],res.payload.token)
+        .then(resp=>{
+          console.log("response from add-card/ api",resp)
+          dispatch(getUpdatedUserRecordRequest(res.payload.token))
+        })
+        .catch(error=>console.log("error from add-card/ api",error))
+      }
       navigation.navigate('HomeScreen')
       setIsLoading(false);
     }
@@ -155,6 +169,7 @@ const CreateAccount = ({navigation}) => {
           <FirstNameInput
             placeholder="First name"
             onChangeText={text=>setFormData({...formData,'firstName':text})}
+            value={formData.firstName}
             onFocus={() => setFirstNameFocus(true)}
             onBlur={() => setFirstNameFocus(false)}
             isFocused={firstNameFocus}
@@ -166,6 +181,7 @@ const CreateAccount = ({navigation}) => {
           <Legend widthValue='70px' display={lastNameFocus} >Last Name</Legend>
           <LastNameInput
             placeholder="Last name"
+            value={formData.lastName}
             onChangeText={text=>setFormData({...formData,'lastName':text})}
             onFocus={() => setLastNameFocus(true)}
             onBlur={() => setLastNameFocus(false)}
@@ -178,6 +194,7 @@ const CreateAccount = ({navigation}) => {
           <Legend widthValue='50px' display={phoneFocus} >Phone</Legend>
           <PhoneInput
             placeholder="Phone no."
+            value={formData.phone}
             keyboardType = 'numeric'
             onChangeText={text=>setFormData({...formData,'phone':text})}
             onFocus={() => setPhoneFocus(true)}
@@ -191,6 +208,7 @@ const CreateAccount = ({navigation}) => {
           <Legend widthValue='40px' display={emailFocus} >Email</Legend>
           <EmailInput
             placeholder="Email address"
+            value={formData.email}
             onChangeText={text=>setFormData({...formData,'email':text})}
             onFocus={() => setEmailFocus(true)}
             onBlur={() => setEmailFocus(false)}
@@ -204,6 +222,7 @@ const CreateAccount = ({navigation}) => {
           <EmailInput
             placeholder="Password"
             secureTextEntry={true}
+            value={formData.password}
             onChangeText={text=>setFormData({...formData,'password':text})}
             onFocus={() => setPasswordFocus(true)}
             onBlur={() => setPasswordFocus(false)}
@@ -218,12 +237,19 @@ const CreateAccount = ({navigation}) => {
           position: 'relative',
           right: 15,
         }} />
-
-        <PaymentOptions>
-          <RadioButton source={radioBtn} />
-          <Option>Online Payment</Option>
-          <ForwardIcon source={miniForward} />
-        </PaymentOptions>
+        
+        <TouchableOpacity onPress={()=>{
+          // dispatch(setComingForCheckout(false))
+          console.log("reahed")
+          navigation.navigate('CardDetail',{formData})
+          
+        }}>
+          <PaymentOptions>
+            <RadioButton source={radioBtn} />
+            <Option>Online Payment</Option>
+            <ForwardIcon source={miniForward} />
+          </PaymentOptions>
+        </TouchableOpacity>
 
         <TermsAndServicesRow>
           <TermRadioBtn source={termRadio} />

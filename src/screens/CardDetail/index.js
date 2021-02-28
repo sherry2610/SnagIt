@@ -23,7 +23,7 @@ import dropdown from '../../assets/cardDetail/dropdown.png'
 import { Image, TouchableOpacity } from 'react-native';
 import api from '../../utils/apiUtils/api'
 import { useDispatch, useSelector } from 'react-redux';
-import { getUpdatedUserRecordRequest } from '../../redux/actionCreators'
+import { addCardOnSignup, getUpdatedUserRecordRequest } from '../../redux/actionCreators'
 // import stripe from 'tipsi-stripe'
 
 // stripe.setOptions({
@@ -33,7 +33,7 @@ import { getUpdatedUserRecordRequest } from '../../redux/actionCreators'
 const CardDetail = (props) => {
 
   const dispatch = useDispatch()
-  const {authedUser} = useSelector(state=> state.authedUser)
+  const {authedUser, comingForCheckout} = useSelector(state=> state.authedUser)
 
   const [cardNumber, setCardNumber] = useState('')
   const [expiryMonth, setExpiryMonth] = useState('')
@@ -63,7 +63,8 @@ const CardDetail = (props) => {
   console.log("res outside",res)
 
   if(res.id){
-  await api.addCard({
+    if(comingForCheckout){
+    await api.addCard({
     token: res.id,
     card_name: res.card.last4
   },authedUser.token)
@@ -74,7 +75,14 @@ const CardDetail = (props) => {
   })
   .catch(error=>console.log("error from add-card/ api",error))
 }else{
-  alert("something went wrong with fetching from stripe api!")
+  dispatch(addCardOnSignup({
+    token: res.id,
+    card_name: res.card.last4
+  }))
+  props.navigation.navigate("CreateAccount",{formData:props.route.params.formData})
+}
+}else{
+  alert("something went wrong with fetching from stripe api or adding card on signup!")
 }
 }
 

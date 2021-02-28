@@ -37,7 +37,7 @@ export const CartReducer = (state = {
 
                 console.log("TotalTobe",TotalToBe)
 
-                return {...state, errMess: null, cart: [...state.cart,...carts], Total: TotalToBe};
+                return {...state, errMess: null, cart: [...state.cart,...carts], Total: Number(Number(TotalToBe).toFixed(2))};
 
             case ActionTypes.EDIT_CART_SUCCESS:
                 let cart = action.payload.map(item=>{
@@ -96,13 +96,13 @@ export const CartReducer = (state = {
                 console.log("quantity to be",quantity)
 
 
-                return action.payload.items ? {...state,cart:action.payload.items,Total:fnl}
-                    : {...state,cart:updatedCart,Total:fnl}
+                return action.payload.items ? {...state,cart:action.payload.items,Total:Number(Number(fnl).toFixed(2))}
+                    : {...state,cart:updatedCart,Total:Number(Number(fnl).toFixed(2))}
             
 
             
                 case ActionTypes.TOTAL_AMOUNT:
-                    return {...state,Total:action.payload}
+                    return {...state,Total:Number(Number(action.payload).toFixed(2))}
 
             default:
                 return state;

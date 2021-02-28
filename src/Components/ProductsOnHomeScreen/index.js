@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { View, Image, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Image, ScrollView, TouchableOpacity, Dimensions } from 'react-native'
 import BottomSearch from '../BottomSearch'
 import { 
   CategoryWidget,
@@ -24,13 +24,19 @@ import { handleToggleCart, editCartRequest, totalAmount } from '../../redux/acti
 export default ProductsHome = ({navigation, route, category}) => {
 
   const dispatch = useDispatch()
-
+  const {productReducer} = useSelector(state=>state)
   const {products} = useSelector(state=>state.productReducer)
   const {allProducts} = useSelector(state=> state.productReducer)
   const {cart, Total} = useSelector(state=>state.cartReducer)
   const {authedUser} = useSelector(state=>state.authedUser)
 
-  console.log("in producthomescreen", {allProducts, products})
+  
+  const [showSearchBar,setShowSearchBar] = useState(false)
+  const [scrollToIndex, setScrollToIndex] = useState(0);
+  const [ref, setRef] = useState(null);
+
+
+  console.log("in producthomescreen", {allProducts, products,productReducer})
 
   const [activeCategory, setActiveCategory] = useState(products[category])
 
@@ -51,6 +57,7 @@ export default ProductsHome = ({navigation, route, category}) => {
           }
     })
     setActiveCategory(updatedProducts)
+    
   },[category,products])
 
   const handleCartBtn = (id,cat,price) => {
@@ -162,14 +169,108 @@ export default ProductsHome = ({navigation, route, category}) => {
     Vapes: "Vapes"
   }
 
+  const iterators = [
+    'TopSeller',
+    "New",
+    "Nicotine",
+    "Drink",
+    "Food",
+    "Snacks",
+    "Candy",
+    "Student Essential",
+    "Smokes",
+    "Vapes"
+  ]
+
+    const scrollHandler = () => {
+    console.log(iterators.length, scrollToIndex);
+    if (iterators.length > scrollToIndex) {
+      ref.scrollTo({
+        x: 0,
+        y: iterators[scrollToIndex - 1],
+        animated: true,
+      });
+    } else {
+      alert('Out of Max Index');
+    }
+  };
+
+
+  function handleScroll(e) {
+    var windowHeight = Dimensions.get('window').height,
+          height = e.nativeEvent.contentSize.height,
+          offset = e.nativeEvent.contentOffset.y;
+    if( windowHeight + offset >= height ){
+    console.log('End Scroll ++++++======================')
+    setShowSearchBar(true)
+    }else if( (height/2)-150 <= windowHeight+offset && windowHeight+offset <= (height/2)+150 ){
+      console.log('halfway Scroll ++++++======================')
+      setShowSearchBar(true)      
+    }
+    else{
+      setShowSearchBar(false)
+    }
+    console.log({offset,windowHeight,height,sum:windowHeight+offset});
+    
+  }
+
   function setHeading(key){
     return headings[key]
   }
 
+  // {iterators.map((cat,index)=>{
+  //   return products[cat].map((data,i)=>{
+  //   return <ProductContainer key={i}>
+  //     <TouchableOpacity onPress={()=>navigation.navigate('ProductInformation',{
+  //     mode:'prodInfo',
+  //     prodInfo: data
+  //     })} >
+  //   <ProductInfoIcon onPress={()=>navigation.navigate('ProductInformation',{
+  //     mode:'prodInfo',
+  //     prodInfo: data
+  //     })}>
+  //     <Image source={prodInfoIcon} />
+  //   </ProductInfoIcon>
+  //   <View style={{
+  //     width:115,
+  //     height:115,
+  //     marginLeft:15,
+  //     marginTop:19,
+  //     justifyContent:'center',
+  //     alignItems:'center'
+  //     }} >
+  //   <ProductImage 
+  //     source={{uri:`${data.image}`}} 
+  //     style={{width:100,height:100}}
+  //     />
+  //   </View>
+  //   <ProductTitle>{data.name}</ProductTitle>
+  //   <View style={{flexDirection:"row"}}>
+  //   <FromText>From</FromText>
+  //   <ProductPrice>
+  //     {data.price}
+  //   </ProductPrice>
+  //   <TouchableOpacity onPress={()=>handleCartBtn(data._id,category,data.price)}>
+  //     {data.inCart ?
+  //     <Image source={filledCart} style={{width:25,height:25,marginLeft:10,marginBottom:10}} />:
+  //     <Image source={unfilledCart} style={{width:25,height:25,marginLeft:10,marginBottom:10}} />
+  //     }
+      
+  //   </TouchableOpacity>
+  //   </View>
+  //   </TouchableOpacity>
+  // </ProductContainer>
+  //   })
+
+  // })}
+
   return (
     <Wrapper>
         <CategoryWidgetSeparator></CategoryWidgetSeparator>
-      <ScrollView >
+      <ScrollView 
+        onScroll={(e)=>handleScroll(e)}
+        scrollEventThrottle={16}
+      >
           <ProductsDisplay>
             <ProductsCategory>
               {setHeading(category)}
@@ -195,27 +296,28 @@ export default ProductsHome = ({navigation, route, category}) => {
                   justifyContent:'center',
                   alignItems:'center'
                   }} >
-                <ProductImage 
-                  source={{uri:`${data.image}`}} 
-                  style={{width:100,height:100}}
-                  />
-                </View>
-                <ProductTitle>{data.name}</ProductTitle>
-                <View style={{flexDirection:"row"}}>
-                <FromText>From</FromText>
-                <ProductPrice>
-                  {data.price}
-                </ProductPrice>
-                <TouchableOpacity onPress={()=>handleCartBtn(data._id,category,data.price)}>
-                  {data.inCart ?
-                  <Image source={filledCart} style={{width:25,height:25,marginLeft:30}} />:
-                  <Image source={unfilledCart} style={{width:25,height:25,marginLeft:30}} />
-                  }
-                  
-                </TouchableOpacity>
-                </View>
-                </TouchableOpacity>
-              </ProductContainer>
+
+    <ProductImage 
+      source={{uri:`${data.image}`}} 
+      style={{width:100,height:100}}
+      />
+    </View>
+    <ProductTitle>{data.name}</ProductTitle>
+    <View style={{flexDirection:"row"}}>
+    <FromText>From</FromText>
+    <ProductPrice>
+      {data.price}
+    </ProductPrice>
+    <TouchableOpacity onPress={()=>handleCartBtn(data._id,category,data.price)}>
+      {data.inCart ?
+      <Image source={filledCart} style={{width:25,height:25,marginLeft:10,marginBottom:10}} />:
+      <Image source={unfilledCart} style={{width:25,height:25,marginLeft:10,marginBottom:10}} />
+      }
+      
+    </TouchableOpacity>
+    </View>
+    </TouchableOpacity>
+  </ProductContainer>
               ))}
 
               
@@ -224,8 +326,9 @@ export default ProductsHome = ({navigation, route, category}) => {
           <View style={{width: '100%',alignItems: 'center', marginTop:25, marginBottom:25}}>
           {/* <Image source={loader}  /> */}
           </View>
-          <BottomSearch />
+          
       </ScrollView>
+      {showSearchBar && <BottomSearch />}
     </Wrapper>
 
   )

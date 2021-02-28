@@ -3,7 +3,6 @@ import {Dimensions, View, Image, Text, ScrollView, TouchableOpacity} from 'react
 import profilePic from '../../assets/profile/profilepic.png';
 import editIcon from '../../assets/profile/edit.png';
 import addProfilePic from '../../assets/profile/addprofilepic.png';
-import AsyncStorage from '@react-native-community/async-storage'
 import {
   ProfileContent,
   ProfileImage,
@@ -21,7 +20,7 @@ import {
   Logout
 } from './StyledComponents';
 import { useDispatch, useSelector } from 'react-redux';
-import { signOut } from '../../redux/actionCreators'
+import { setComingForCheckout, signOut } from '../../redux/actionCreators'
 
 const height = Dimensions.get('window').height;
 
@@ -46,13 +45,14 @@ const Profile = (props) => {
       }      
     }  
     fetchProfile();
-  },[authedUser.token])
+  },[authedUser.token,authedUser])
 
 
   // fetchProfile();
-  console.log("userProfile ------",userProfile,authedUser.token)
+  console.log("userProfile ------",userProfile,authedUser)
 
   const handleLogout = () => {
+    dispatch(setComingForCheckout(false))
     dispatch(signOut())
   }
 

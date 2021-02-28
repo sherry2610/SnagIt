@@ -40,13 +40,13 @@ const PaymentMethod = ({ navigation }) => {
           </ForwardIcon>
         </PaymentOptions>
 
-        <PaymentOptions  >
+        {/* <PaymentOptions  >
           <RadioButton source={radioBtn} />
           <Option>Paypal</Option>
           <ForwardIcon  onPress={()=>navigation.navigate('PaypalScreen')}>
             <Image source={miniForward} />
           </ForwardIcon>
-        </PaymentOptions>
+        </PaymentOptions> */}
 
       </PaymentMethodWrapper>
     </>

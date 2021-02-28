@@ -23,7 +23,7 @@ export default Splash = ({navigation, route}) => {
       showsVerticalScrollIndicator={false} >
       <ProductNameSection>
         <ProductName>{name}</ProductName>
-        <TouchableOpacity onPress={()=>{navigation.goBack()}}>
+        <TouchableOpacity onPress={()=>{navigation.goBack()}} >
         <Image source={skip} />
         </TouchableOpacity>
       </ProductNameSection>

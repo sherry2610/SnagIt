@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Image, Modal, Text, TouchableHighlight, StyleSheet } from 'react-native'
+import { View, Image, Modal, Text, TouchableHighlight, StyleSheet, Picker } from 'react-native'
 import { DrawerContentScrollView } from '@react-navigation/drawer';
 import {
   Wrapper,
@@ -58,7 +58,9 @@ import {
   setCartToInitialState,
   setCardName,
   setTimeStampAtWhichOrderPlaced,
-  setOrderInPlace
+  setOrderInPlace,
+  setComingForCheckout,
+  setOrderPayload
 } from '../../redux/actionCreators';
 import { getProductById } from '../../utils/helperUtils/generalUtils'
 import _ from 'underscore'
@@ -74,6 +76,38 @@ const MyCart = ({ navigation }) => {
   const [allProducts, setAllProducts] = useState([])
   const [deliveryAddress, setDeliveryAddress] = useState('')
   const [modalVisible, setModalVisible] = useState(false);
+  const [selectedTip, setSelectedTip] = useState('');
+  const [pastAddressess, setPastAddressess] = useState([])
+  const [promoCode, setPromoCode] = useState('')
+  const [selectedAddress, setSelectedAddress] = useState('')
+  
+  
+
+
+
+  useEffect(()=>{
+
+
+    if(authedUser.token){
+      async function fetchHistory(token){
+        await api.getOrderHistory(token)
+          .then(res=>{
+            console.log("res order history",res)
+            if(res.success){
+              setPastAddressess(res.orders)
+            }else{
+              console.log("error in fetching order history")
+            }
+          })
+          .catch(error=>{
+            console.log("error order history",error)
+          })
+      }
+
+      fetchHistory(authedUser.token) 
+    }
+  },[authedUser.token])
+  
 
 useEffect(()=>{
   api.getAllProducts()
@@ -151,55 +185,72 @@ useEffect(()=>{
       alert('Cart is empty!')
       return
     }
-    else if(!deliveryAddress){
+    else if(!authedUser.token){
+      // dispatch(setComingForCheckout(true))
+      navigation.navigate("SignIn",{fromMyCart:true})
+      return
+    }
+    else if(!deliveryAddress && !selectedAddress){
       alert('Kindly provide delivery address.')
       return
     }
-    else if(!authedUser.token){
-      alert('you need to signup')
-      return
-    }
-    else if(!authedUser.user.cards.length){
-      alert("You need to add and select card details for checkout from payment method or if you want to pay from paypal just go to payment method and select paypal")
-      return
-    }
-     else if(!card_name){
-        // alert("select card from payment method -> Credit/Debit Card and then checkout from here")
-        setModalVisible(true);
-        // return <Modal><Text>abc</Text></Modal>
-        return
-      }
-      else if(isOrderInPlace){
+    else if(isOrderInPlace){
         alert("Currently there is an order processing for you. Try again when it finishes!")
         return
       }
+    else if(!authedUser.user.cards.length){
+      dispatch(setComingForCheckout(true))
+      dispatch(setOrderPayload({
+        amount: Number(Total)*100,
+        card_name,
+        deliveryAddress,
+        tip: tip ? tip : '0',
+        promoCode: promoCode ? promoCode : ''
+      }))
+      navigation.navigate("SignIn")
+    }
       else{
-        console.log('+++++++++++++++proceed to checkout',Total,card_name,api.placeOrder)
-        await api.placeOrder({
+        console.log("reached!")
+        dispatch(setComingForCheckout(true))
+        dispatch(setOrderPayload({
           amount: Number(Total)*100,
-          card_name
-        },authedUser.token)
-        .then(async (res)=>{
-          console.log("resp after order placed",res)
-          if(res.success){
-            // alert("Checkout successfull!")
-            await dispatch(setCartToInitialState())
-            await dispatch(setCardName(""))
-            console.log("CHECKER")
-            dispatch(setTimeStampAtWhichOrderPlaced(Date.now()))
-            dispatch(setOrderInPlace(true))
-            navigation.navigate("OrderStatus")
-          }else{
-            alert("something went wrong in checkout!")
-          }
-        })
-        .catch(error=>console.log("error after order placed",error))
+          card_name,
+          deliveryAddress: deliveryAddress ? deliveryAddress : selectedAddress,
+          tip: selectedTip ? selectedTip : '0',
+          promoCode: promoCode ? promoCode : ''
+        }))
+        navigation.navigate("OnlinePayment")
+        // console.log("not reached! :(")
+
+        // console.log('+++++++++++++++proceed to checkout',Total,card_name,api.placeOrder)
+        // await api.placeOrder({
+        //   amount: Number(Total)*100,
+        //   card_name,
+        //   deliveryAddress
+        // },authedUser.token)
+        // .then(async (res)=>{
+        //   console.log("resp after order placed",res)
+        //   if(res.success){
+        //     // alert("Checkout successfull!")
+        //     await dispatch(setCartToInitialState())
+        //     await dispatch(setCardName(""))
+        //     console.log("CHECKER")
+        //     dispatch(setTimeStampAtWhichOrderPlaced(Date.now()))
+        //     dispatch(setOrderInPlace(true))
+        //     navigation.navigate("OrderStatus")
+        //   }else{
+        //     alert("something went wrong in checkout!")
+        //   }
+        // })
+        // .catch(error=>console.log("error after order placed",error))
         // console.log("resp after order placed",resp)
       }
 
   }
 
   console.log("cartReducer data ",{cart,Total})
+
+  console.log("pastAddressess, promo, tip ",{pastAddressess, promoCode, selectedTip})
 
   return (
     <DrawerContentScrollView>
@@ -217,7 +268,7 @@ useEffect(()=>{
       {cartItems.map(ci=>{
       return <ItemContainer key={ci._id} >
       <CartProductImage 
-        source={{uri:`https://snagit-server.herokuapp.com/${ci.image}`}}
+        source={{uri:`${ci.image}`}}
         style={{width:40,height:40}}
       />
       <ProdNameContainer>
@@ -248,13 +299,33 @@ useEffect(()=>{
 
       <TipContainer>
         <TipHeading>Tips for Snag</TipHeading>
-        <TipDropdown>
-          <TipOption>$1</TipOption>
-          <DropdownIcon source={dropdown} />
-        </TipDropdown>
+        {/* <TipDropdown>
+          <TipOption>$1</TipOption> */}
+          <Picker
+            selectedValue={selectedTip}
+            style={{ 
+              height: 50,
+              width: 254,
+              elevation: 5,
+              paddingLeft:19
+            }}
+            onValueChange={(itemValue, itemIndex) => setSelectedTip(itemValue)}
+          >
+            <Picker.Item label="1$" value="1" />
+            <Picker.Item label="2$" value="2" />
+            <Picker.Item label="3$" value="3" />
+            <Picker.Item label="4$" value="4" />
+            <Picker.Item label="5$" value="5" />
+          </Picker>
+          {/* <DropdownIcon source={dropdown} />
+        </TipDropdown> */}
 
         <InputWrapper>
-        <PromoCodeInput placeholder="Apply promo code" />
+        <PromoCodeInput 
+          placeholder="Apply promo code"
+          value={promoCode}
+          onChangeText={text=>setPromoCode(text)}
+          />
         <InputIcon source={promoIcon} />
         </InputWrapper>
       </TipContainer>
@@ -265,7 +336,7 @@ useEffect(()=>{
         <TotalHeading>
           Total
         </TotalHeading> 
-        <TotalAmount>${Total}</TotalAmount>
+        <TotalAmount>${Number(Total).toFixed(2)}</TotalAmount>
       </TotalRow>
 
       <Separator></Separator>
@@ -278,12 +349,19 @@ useEffect(()=>{
         onChangeText={text=>setDeliveryAddress(text)}
         />
 
-      {/* <PreviousAddressHeading>Previous Address:</PreviousAddressHeading>
+ <PreviousAddressHeading>Previous Address:</PreviousAddressHeading>
+
+{
+  pastAddressess.length > 0 &&
+    pastAddressess.map(address=>address.delivery_address && <TouchableOpacity onPress={()=>setSelectedAddress(address)}>
       <AddressRow>
-        <AddressText>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</AddressText>
-        <Checked source={checked} />
-      </AddressRow>
-      
+      <AddressText>{address.delivery_address}</AddressText>
+      {address == selectedAddress && <Checked source={checked} />}
+    </AddressRow>
+    </TouchableOpacity>
+    )
+}
+{/*       
 
       <AddressRow>
         <AddressText>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</AddressText>
@@ -296,49 +374,6 @@ useEffect(()=>{
         <OrderText>Order</OrderText>
         <OrderNumber>ID #2701567</OrderNumber>
       </OrderNumberRow> */}
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          alert("Modal has been closed.");
-        }}
-      >
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <Text style={styles.modalText}>Select Card for the payment to proceed to checkout.</Text>
-<View style={{flexDirection:'row'}}>
-            <TouchableHighlight
-              style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
-              onPress={() => {
-                setModalVisible(!modalVisible);
-              }}
-            >
-              <Text style={styles.textStyle}>Close</Text>
-            </TouchableHighlight>
-
-            <TouchableHighlight
-              style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
-              onPress={() => {
-                navigation.navigate('OnlinePayment')
-                setModalVisible(!modalVisible);
-              }}
-            >
-              <Text style={styles.textStyle}>Select Card</Text>
-            </TouchableHighlight>
-            <TouchableHighlight
-              style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
-              onPress={() => {
-                navigation.navigate('PaypalScreen')
-                setModalVisible(!modalVisible);
-              }}
-            >
-              <Text style={styles.textStyle}>Pay with Paypal</Text>
-            </TouchableHighlight>
-            </View>
-          </View>
-        </View>
-      </Modal>
       <TouchableOpacity onPress={()=>handleCheckout()} style={{width:'100%'}}>
       <ProceedFromCart source={snagBtn} />
       </TouchableOpacity>

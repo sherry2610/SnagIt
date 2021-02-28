@@ -5,7 +5,8 @@ export const OrderStatusReducer = (state = {
   timeStampAtWhichOrderPlaced: '',
   secondsInReducer: 59,
   minutesInReducer: 9,
-  footerColor: 'white'
+  footerColor: 'white',
+  payloadForOrder:{}
 }, action) => {
         switch(action.type) {
 
@@ -23,6 +24,9 @@ export const OrderStatusReducer = (state = {
 
           case 'SET_FOOTER_COLOR':
             return {...state, footerColor:action.payload}
+
+          case 'SET_PAYLOAD_FOR_ORDER':
+            return {...state, payloadForOrder:action.payload}
 
             default:
                 return state;

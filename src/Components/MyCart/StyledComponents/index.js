@@ -84,7 +84,7 @@ export const ItemContainer = styled.View`
   flex-direction: row;
   justify-content: space-around;
   width: 90%;
-  height: 64px;
+  
   background: #FFFFFF;
   border: 1px solid #EFEFEF;
   box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.06);
@@ -103,6 +103,7 @@ export const ProdNameContainer = styled.View`
 `
 
 export const ProductName = styled.Text`
+  width: 120px;
   font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: normal;

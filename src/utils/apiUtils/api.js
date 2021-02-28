@@ -1,5 +1,3 @@
-import AsyncStorage from "@react-native-community/async-storage";
-
 const baseUrl = 'https://snagit-server.herokuapp.com';
 
 export default {
@@ -14,13 +12,11 @@ export default {
   getUserUpdatedRecord,
   placeOrder,
   placeOrderWithPaypal,
-  getOrderHistory
+  getOrderHistory,
+  changePwd,
+  editProfile
 }
 
-export const getToken = async () => {
-  const token = await AsyncStorage.getItem('token');
-  return token
-}
 
 async function signUpApi (payload) {
   var myHeaders = new Headers();
@@ -259,4 +255,46 @@ let result = await fetch(`${baseUrl}/orders`, requestOptions);
 
   return result.json()
 
+}
+
+async function changePwd (payload,token) {
+  // var token = getToken();
+  console.log("inside",token,payload)
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("Authorization", `Bearer ${token}`);
+
+  
+  var requestOptions = {
+    method: 'PUT',
+    headers: myHeaders,
+    body: JSON.stringify(payload),
+    redirect: 'follow',
+    mode: 'no-cors'
+  };
+
+  const response = await fetch(`${baseUrl}/users/setpwd/`, requestOptions)
+
+  return response.json()
+}
+
+async function editProfile (payload,token) {
+  // var token = getToken();
+  console.log("inside",token,payload)
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("Authorization", `Bearer ${token}`);
+
+  
+  var requestOptions = {
+    method: 'PUT',
+    headers: myHeaders,
+    body: JSON.stringify(payload),
+    redirect: 'follow',
+    mode: 'no-cors'
+  };
+
+  const response = await fetch(`${baseUrl}/users/editprofile/`, requestOptions)
+
+  return response.json()
 }

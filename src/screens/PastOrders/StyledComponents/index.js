@@ -44,7 +44,7 @@ export const OrderCount = styled.Text`
 
 export const OrderContainer = styled.View`
   width: 100%;
-  height: 96px;
+  height: 110px;
   background: #FFFFFF;
   border: 1px solid #EFEFEF;
   box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.06);
@@ -94,6 +94,7 @@ export const ItemCount = styled.Text`
 `
 
 export const ItemNames = styled.Text`
+  width: 243px;
   font-family: MazzardH-Regular;
   font-style: normal;
   font-weight: normal;

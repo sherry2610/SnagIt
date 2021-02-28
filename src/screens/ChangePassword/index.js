@@ -17,15 +17,44 @@ import {
   Legend,
   Wrapper
 } from './StyledComponent';
-import { Image } from 'react-native';
+import { Image, TouchableOpacity } from 'react-native';
+import api from '../../utils/apiUtils/api';
+import { useSelector } from 'react-redux';
 
 const ChangePassword = (props) => {
+  const {authedUser} = useSelector(state => state.authedUser)
   const [oldPassFocus, setOldPassFocus] = useState(false);
   const [newPassFocus, setNewPassFocus] = useState(false);
   const [confirmNewPassFocus, setConfirmNewPassFocus] = useState(false);
   const [phoneFocus, setPhoneFocus] = useState(false);
+  const [oldPassword,setOldPassword] = useState('')
+  const [newPassword,setNewPassword] = useState('')
+  const [newPassword2,setNewPassword2] = useState('')
+
+  const onSubmit = () => {
+    if(!oldPassword || !newPassword || !newPassword2){
+      alert("all fields are required!")
+      return
+    }
+    if(newPassword!==newPassword2){
+      alert("Password did not match!")
+      return
+    }
+
+    api.changePwd({password: newPassword},authedUser.token)
+    .then(res=>{
+      alert("password change sucessfully!")
+      console.log("change password res",res)
+      props.navigation.navigate("Profile")
+    })
+    .catch(err=>{
+      alert("Password change unsuccessfull, Please try again!  ")
+    })
+  }
 
   const { navigation } = props
+
+  console.log({oldPassword,newPassword,newPassword2})
   return (
     <Wrapper>
     <ChangePasswordWrapper
@@ -46,6 +75,7 @@ const ChangePassword = (props) => {
             onFocus={() => setOldPassFocus(true)}
             onBlur={() => setOldPassFocus(false)}
             isFocused={oldPassFocus}
+            onChangeText={(text)=>setOldPassword(text)}
           />
           <InputIcon source={userIcon} />
         </InputWrapper>
@@ -57,6 +87,7 @@ const ChangePassword = (props) => {
             onFocus={() => setNewPassFocus(true)}
             onBlur={() => setNewPassFocus(false)}
             isFocused={newPassFocus}
+            onChangeText={(text)=>setNewPassword(text)}
           />
           <InputIcon source={userIcon} />
         </InputWrapper>
@@ -68,11 +99,13 @@ const ChangePassword = (props) => {
             onFocus={() => setConfirmNewPassFocus(true)}
             onBlur={() => setConfirmNewPassFocus(false)}
             isFocused={confirmNewPassFocus}
+            onChangeText={(text)=>setNewPassword2(text)}
           />
           <InputIcon source={emailIcon} />
         </InputWrapper>
-
+    <TouchableOpacity onPress={()=>onSubmit()}>
         <SaveButton>Save</SaveButton>
+        </TouchableOpacity>
 
       </ChangePasswordContent>
     </ChangePasswordWrapper>

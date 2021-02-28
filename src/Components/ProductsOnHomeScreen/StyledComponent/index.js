@@ -44,18 +44,24 @@ export const ProductsWrapper = styled.View`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0px 0px 0px 18px;
 `
 
 export const ProductContainer = styled.View`
   position: relative;
+  
   flex: 0 46%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   width: 100%;
   background: #FFFFFF;
   margin: 10px 10px 0px 0px;
-  border: 5px solid #EFEFEF;
-  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.06);
+  elevation: 5;
   border-radius: 24px;
+  
 `
 
 export const ProductInfoIcon = styled.TouchableOpacity`

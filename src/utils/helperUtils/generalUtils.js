@@ -14,7 +14,19 @@ export function getProductById(id,prodArray){
 export function getProductNameById(id,prodArray){
   const updatedProdArray = prodArray.filter(prod=>prod._id===id)
 
-  return updatedProdArray.length ? updatedProdArray[0].name : []
+  return updatedProdArray.length ? updatedProdArray[0].name : false
+}
+
+export function getProductImageById(id,prodArray){
+  const updatedProdArray = prodArray.filter(prod=>prod._id===id)
+
+  return updatedProdArray.length ? updatedProdArray[0].image : false
+}
+
+export function getProductPriceById(id,prodArray){
+  const updatedProdArray = prodArray.filter(prod=>prod._id===id)
+
+  return updatedProdArray.length ? updatedProdArray[0].price : false
 }
 
 function minutesDifference(timestamp1, timestamp2) {

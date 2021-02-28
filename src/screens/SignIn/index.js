@@ -1,4 +1,3 @@
-import AsyncStorage from '@react-native-community/async-storage';
 import React, {useState} from 'react';
 import { TouchableOpacity, ActivityIndicator } from 'react-native';
 import emailIcon from '../../assets/editProfile/email.png';
@@ -33,6 +32,7 @@ const SignIn = ({navigation, route}) => {
   const [password, setPassword] = useState('');
   const isComingFromProfile = route.params ? route.params.fromProfileScreen : false
   const isComingFromPastOrders = route.params ? route.params.fromPastOrders : false
+  const isComingFromMyCart = route.params ? route.params.fromMyCart : false
   
 console.log("checking allProducts in signin", allProducts)
   const handleSubmit = async () => {
@@ -75,6 +75,9 @@ console.log("checking allProducts in signin", allProducts)
         }
         else if(isComingFromPastOrders){
           navigation.navigate('PastOrders')
+        }
+        else if(isComingFromMyCart){
+          navigation.navigate('PaymentMethod')
         }
         else{
           navigation.navigate('HomeScreen')
